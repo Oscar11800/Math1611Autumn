@@ -16,7 +16,7 @@ Suppose we have a set $X$ with elements $\{a_1, a_2, < ... < a_n\}$. We can esse
 Consider *Theorem 3.5* where we proved each point in a subset of a continuum $C$ to a symbol $a_1, a_2,...,a_n$ in ascending order. In this case, points assigned to index $i$ would be less than points $i+1$. 
 
 **Exercise 3.8**: 
-**a**. We define a relation $<$ on $\Z$ by $m < n $ if $n = m + c$ for some $c \in \N$. Show that, $\Z$, with the ordering $<$, satisfies *Axion 1-3*. 
+**a. We define a relation $<$ on $\Z$ by $m < n $ if $n = m + c$ for some $c \in \N$. Show that, $\Z$, with the ordering $<$, satisfies *Axion 1-3*.**
 
 Let us be reminded of *Axioms 1-3*.
 *Axiom 1. A continuum is a nonempty set $C$.* 
@@ -30,9 +30,25 @@ Next we must prove transitivity for all $m,n,l \in \Z$ so if  $m < n$ and $n < l
 
 *Axiom 3. A continuum $C$ has no first or last point*
 
-**b.** Show that, for any $p = \{\frac a b\} \in \mathbb{Q}$, there is some $(a_1, b_1) \in p$ with $0 < b_1$. 
+**b. Show that, for any $p = \{\frac a b\} \in \mathbb{Q}$, there is some $(a_1, b_1) \in p$ with $0 < b_1$.**
 
-**c.** We define a relation $<_\mathbb{Q}$ on $\mathbb{Q}$ as follows. For $p, q \in \mathbb{Q}$, let $(a_1,b_1) \in p$ be such that $0 < b_1$, and let $(a_2, b_2) \in q$ be such that $0 < b_2$. Then we define $p <_\mathbb{Q} q$ if $a_1b_2 < a_2b_1$. Show that $<_\mathbb{Q}$ is a well-defined relation on $\mathbb{Q}$. 
+**c. We define a relation $<_\mathbb{Q}$ on $\mathbb{Q}$ as follows. For $p, q \in \mathbb{Q}$, let $(a_1,b_1) \in p$ be such that $0 < b_1$, and let $(a_2, b_2) \in q$ be such that $0 < b_2$. Then we define $p <_\mathbb{Q} q$ if $a_1b_2 < a_2b_1$. Show that $<_\mathbb{Q}$ is a well-defined relation on $\mathbb{Q}$.** 
 
-**d.** Show that $\mathbb{Q}$, with the ordering $<_\mathbb{Q}$, satisfies *Axioms 1-3*. 
+**d. Show that $\mathbb{Q}$, with the ordering $<_\mathbb{Q}$, satisfies *Axioms 1-3*.**
 **
+
+**Theorem 3.11: If $x$ is a point of a continuum $C$, then there exists a region $ab$ such that $x \in \underline{ab}$ .**
+
+**Theorem 3.13: If $p$ is a limit point of $A$ and $A \sub B$, then $p$ is a limit point of $B$.**
+
+Let us be reminded of *Definition 3.12: a limit point is a point $p$ of continuum $C$ in subset $A$ if every region $R$ containing $p$ has nonempty intersection with $A\backslash \{p\}$ which means for every region $R$ with $p \in R$, we have $R \cap (A \backslash \{p\}) \neq \empty$*. 
+
+**Lemma: 3.15: If $\underline{ab}$ is a region in a continuum $C$, then,  ext $\underline{ab} = \{x \in C | x < a \} \cup \{x \in C| b < x\}$**
+
+Consider *Definition 3.14: If $\underline{ab}$ is a region of continuum $C$, then $C \backslash (\{a\} \cup ab \cup \{b\})$. is called the exterior of $\underline{ab}$ denoted by ext $\underline{ab}$.*
+
+**Lemma 3.16: No point in the exterior of a region is a limit point of that region. No point of a region is a limit point of the exterior of that region.**
+
+**Theorem 3.17: If two regions have a point $x$ in common, their intersection is the region containing $x$.**
+
+**Corollary 3.18: If $n$ regions $R_1,..., R_n$ have a point $x$ in common, then their intersection $R_1 \cup ... \cap R_n$ is a region containing $x$.**
