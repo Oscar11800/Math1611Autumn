@@ -37,18 +37,50 @@ Next we must prove transitivity for all $m,n,l \in \Z$ so if  $m < n$ and $n < l
 **d. Show that $\mathbb{Q}$, with the ordering $<_\mathbb{Q}$, satisfies *Axioms 1-3*.**
 **
 
-**Theorem 3.11: If $x$ is a point of a continuum $C$, then there exists a region $ab$ such that $x \in \underline{ab}$ .**
+**Theorem 3.11: If $x$ is a point of a continuum $C$, then there exists a region $\underline{ab}$ such that $x \in \underline{ab}$ .**
+
 
 **Theorem 3.13: If $p$ is a limit point of $A$ and $A \sub B$, then $p$ is a limit point of $B$.**
 
 Let us be reminded of *Definition 3.12: a limit point is a point $p$ of continuum $C$ in subset $A$ if every region $R$ containing $p$ has nonempty intersection with $A\backslash \{p\}$ which means for every region $R$ with $p \in R$, we have $R \cap (A \backslash \{p\}) \neq \empty$*. 
 
+Since $p$ is a limit point of $A$, then for all regions $R$ containing $p$,  $R \cap (A \backslash \{p\}) \neq \empty$*. Let $q \in A$ be an intersection point and since $A \sub B$, then $q \in B$ so given an $R$ containing $p$, there is a $q \in R \cap B \backslash \{p\}$.  
+
+
 **Lemma: 3.15: If $\underline{ab}$ is a region in a continuum $C$, then,  ext $\underline{ab} = \{x \in C | x < a \} \cup \{x \in C| b < x\}$**
 
 Consider *Definition 3.14: If $\underline{ab}$ is a region of continuum $C$, then $C \backslash (\{a\} \cup ab \cup \{b\})$. is called the exterior of $\underline{ab}$ denoted by ext $\underline{ab}$.*
 
+
+We want to show ext $\underline{ab} = \{x \in C | x < a \} \cup \{x \in C| b < x\}$. We know that:
+
+if $x \nleq a$, then $x \geq a$
+if $x \ngeq b$, then $x \leq b$
+
+**MORE**
+
+
 **Lemma 3.16: No point in the exterior of a region is a limit point of that region. No point of a region is a limit point of the exterior of that region.**
+
+**FIX**
+
+Proof by contradiction: Consider the set $E = ext \; \underline{ab}$ where $E \cap R \neq \empty$. Let $e \in E$ where $e$ is a limit point of $\underline{ab}$. If $a$ and $b$ are in the continuum $C$, then $e < a$ where $a'$ is an element such that $a' < e < a$ because the continuum has no first or last point. Or $e > b$ such that there is a $b'$ where $b < e < b'$ because the continuum has no first or last point. Because $\underline{a'a} \cap  \underline{ab} \backslash e = \empty$ or $\underline{bb'} \cap \underline{ab} \backslash e = \empty$ and since $e \in \underline{ab}$, then $a < e < b$ and $a' < a$ which means that $\underline{ab} \cap \underline{a'a} \backslash \{e\} = \empty$. And thus $b < b'$ which means that $\underline ab \cap \underline{bb'} \backslash \{e\} = \empty$ or $\underline{ab} \cap E \backslash \{e\} = \empty$.
 
 **Theorem 3.17: If two regions have a point $x$ in common, their intersection is the region containing $x$.**
 
+**FIX**
+Let $x \in \underline{ab}$ and $x \in \underline{cd}$, which means $a,b,c,d \in C$ and $a < b$ and $c < d$. We can infer that $a < x$ and $x < b$ and $c < x$ and $x < d$. If $x \in \underline{ab} \cap \underline{cd}$, then $x$ is in a region, $R$, that is between the least value (whether $a$ or $c$) and the greatest value $b$ or $d$. Let $a$ be the smallest, then $c < b$. 
+
+Be aware of our four cases: $a< c < b< d$, $c < a < b< d$, $a < c <d <c$, $c < a < d < b$
+
+Because $R$ encompasses both $\underline{ab}$ and $\underline{cd}$, then $x \in (\underline{ab} \cap \underline{cd})$.
+
 **Corollary 3.18: If $n$ regions $R_1,..., R_n$ have a point $x$ in common, then their intersection $R_1 \cup ... \cap R_n$ is a region containing $x$.**
+
+**FIX**
+
+Proof by induction: If a region $R$, $R_n$ $x$, then the intersection $R$ 
+
+Base case $(n=1)$, $R_1$ contains $x$ without intersection
+Inductive hypothesis, we assume $n = k$, so if $R_1... R_k$ all contains $x$, then $R_1 \cap R_k$ contains $x$.
+Inductive step, we can show it holds for $(n = k+1)$. Let $K = R_1 \cap R_n \cap R_n$ based on our hypothesis. We know that $K$ is a region containing $x$. Thus $R_1 \cap R_2 $, $R_k \cap R_{k+1} = K \cap R_{k+1}$. The intersection of 2 regions containing $x$. By *theorem 3.17 *, we have $K \cap R_{k+1}$ is a region containing $x$.
