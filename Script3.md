@@ -14,37 +14,74 @@ Suppose we have a set $X$ with elements $\{a_1, a_2, < ... < a_n\}$. We can esse
 
 **Corollary 3.7: Of three distinct points in a continuum, one must be between the two other.**
 Consider *Theorem 3.5* where we proved each point in a subset of a continuum $C$ to a symbol $a_1, a_2,...,a_n$ in ascending order. In this case, points assigned to index $i$ would be less than points $i+1$. 
+**MORE**
 
 **Exercise 3.8**: 
 **a. We define a relation $<$ on $\Z$ by $m < n $ if $n = m + c$ for some $c \in \N$. Show that, $\Z$, with the ordering $<$, satisfies *Axion 1-3*.**
 
 Let us be reminded of *Axioms 1-3*.
 *Axiom 1. A continuum is a nonempty set $C$.* 
-First, let us identify $\Z$ as a continuum because it's a nonempty set . Next, we can identify $m$ and $n$ as distinct points in $\Z$ and $c$ as a positive integer. For *Axiom 1* to prove true, an ordering on the set represented by $\Z \times \Z$ with elements $(m,n)$ written as $m < n$ must satisfy these conditions according to *definition 3.1* . Trichotomy, where for all $m,n \in \Z$ one of the following holds: $m < n, m = n, \; \textnormal{or} \; m > n $. Because we defined $m < n$ if $n = m + c$, then trichotomy is satisfied as one of the above held true.
+First, let us identify $\Z$ as a continuum because it's a nonempty (infinite) set of integers. For example, the set $\Z$ contains elements such as $\{-1,0,1,2\}$. This means $\Z$ fulfills *axiom 1*.
 
-Next we must prove transitivity for all $m,n,l \in \Z$ so if  $m < n$ and $n < l$ then $m < l$.      
 
 *Axiom 2. A continuum $C$ has an ordering $<$*
+We can identify $m$ and $n$ as distinct points in $\Z$ and $c$ as a positive integer. For *Axiom 2* to prove true, an ordering on the set represented by $\Z \times \Z$ with elements $(m,n)$ written as $m < n$ must satisfy these conditions according to *definition 3.1*: 
 
+Trichotomy, where for all $m,n \in \Z$ one of the following holds: $m < n, m = n, \; \textnormal{or} \; m > n $. Because we defined $m < n$ if $n = m + c$, then trichotomy is satisfied as one of the above held true. This is also because when $n=m+c$ and $c \in \N$ and $c = n-m$, $m \neq n$ because $c$ would have to equal $0$, and $m \ngeq n$ because $c$ would have to be negative, both of which are not within the set $\N$ thus, $m < n$ is the only case and trichotomy is true in the continuum $Z$.
 
+Transistivity: where for all $m,n,l \in \Z$, if $m < n$ and $n < l$ then $m < l$. Let's suppose $n = m + a$, $l = n + b$, and $l = m + c$ where $a,b,c \in \N$. From this, we can deduce $n > m$ because $a = m - n$. We can substitute $m+a$ for $n$ to get $l = m + a + b$. If $a,b$ are both positive integers more than $0$, then $l$ must be greater than $m$ which proves that if $n > m$ and $l > n$, then $l > m$. Therefore, the transistivity property is true for an ordering $<$ of continuum $\Z$.
+
+With both Trichotomy and Transistivty satisfied, we can conclude that the continuum $\Z$ has an ordering $<$.
 
 *Axiom 3. A continuum $C$ has no first or last point*
 
+This is true, as $\Z$ has no first nor last point. This is because $\Z$ is an infinite set thus there is no $a_1 \in \Z$ and $a_i \in \Z$ where $a_i$ is any element of $\Z$ and $a_1 < a_i$ for all $i$ nor is there any element $a_n$ that represents the last element of $\Z$ because $\Z$ is an infinite set with no first nor last element.
+
+Therefore, $\Z$ with the ordering $<$, satisfies axioms 1-3.
+
+
 **b. Show that, for any $p = \{\frac a b\} \in \mathbb{Q}$, there is some $(a_1, b_1) \in p$ with $0 < b_1$.**
+
+As we have observed in *Exercise 2.6: $[\frac a b] = [\frac {a_1} {b_1}] = (a,b)$ ~ $(a_1, b_1)$*. Thus, we may find an equivalent fraction for any rational number $p$ such that $[\frac a b] = [\frac {a_1} {b_1}]$ by dividing both $a,b$ by their greatest common divisor (GCD). We know based on the equivalence relation established in *Exercise 2.2* that $[\frac a b] = (a,b)$ and conversely $[\frac {a_1} {b_1}]  = (a_1, b_1)$. Thus since $(a,b) \in p$ and $(a,b)$ ~ $(a_1, b_1)$, then $(a_1, b_1) \in p$. Note that by dividing $b$ by a GCD and because $p$ is a rational number and fractions cannot have $0$ in their denominator, $b$ must be a positive integer and thus $b > 0$. 
 
 **c. We define a relation $<_\mathbb{Q}$ on $\mathbb{Q}$ as follows. For $p, q \in \mathbb{Q}$, let $(a_1,b_1) \in p$ be such that $0 < b_1$, and let $(a_2, b_2) \in q$ be such that $0 < b_2$. Then we define $p <_\mathbb{Q} q$ if $a_1b_2 < a_2b_1$. Show that $<_\mathbb{Q}$ is a well-defined relation on $\mathbb{Q}$.** 
 
+
+
 **d. Show that $\mathbb{Q}$, with the ordering $<_\mathbb{Q}$, satisfies *Axioms 1-3*.**
-**
+
+Let us be reminded of *Axioms 1-3*.
+*Axiom 1. A continuum is a nonempty set $C$.* 
+First, let us identify $\mathbb{Q}$ as a continuum because it's a nonempty (infinite) set of rational numbers (fractions). For example, the set $\mathbb{Q}$ contains elements such as $\{(\frac 0 1), (\frac 1 1), (\frac {-1} 1), (\frac {1} 2)\}$ and so on. This means $\mathbb{Q}$ fulfills *axiom 1*.
+
+
+*Axiom 2. A continuum $C$ has an ordering $<$*
+We can identify $p$ and $q$ as distinct points in $\mathbb{Q}$ and define a point $x \in \mathbb{Q}$ and let $(a_3, b_3) \in x$ be such that $0 < b_3>$ and let's make $x$ so $q = p +_\mathbb{Q} x$. For *Axiom 2* to prove true, an ordering on the set represented by $\mathbb{Q} \times \mathbb{Q}$ with elements $p,q$ written as $p <_\mathbb{Q} q$ must satisfy these conditions according to *definition 3.1*: 
+
+**CONTINUE HERE**
+Trichotomy, where for all $p,q \in \mathbb{Q}$ one of the following holds: $p <_\mathbb{Q} q, p =_\mathbb{Q} q, \; \textnormal{or} \; p >_\mathbb{Q} q $. Because we defined $p <_\mathbb{Q} q$ if $a_1b_2 < a_2b_1$, then trichotomy is satisfied as one of the above held true. This is also because when $n=m+c$ and $c \in \N$ and $c = n-m$, $m \neq n$ because $c$ would have to equal $0$, and $m \ngeq n$ because $c$ would have to be negative, both of which are not within the set $\N$ thus, $m < n$ is the only case and trichotomy is true in the continuum $Z$.
+
+Transistivity: where for all $m,n,l \in \Z$, if $m < n$ and $n < l$ then $m < l$. Let's suppose $n = m + a$, $l = n + b$, and $l = m + c$ where $a,b,c \in \N$. From this, we can deduce $n > m$ because $a = m - n$. We can substitute $m+a$ for $n$ to get $l = m + a + b$. If $a,b$ are both positive integers more than $0$, then $l$ must be greater than $m$ which proves that if $n > m$ and $l > n$, then $l > m$. Therefore, the transistivity property is true for an ordering $<$ of continuum $\Z$.
+
+With both Trichotomy and Transistivty satisfied, we can conclude that the continuum $\Z$ has an ordering $<$.
+
+*Axiom 3. A continuum $C$ has no first or last point*
+
+This is true, as $\mathbb{Q}$ has no first nor last point. This is because $\mathbb{Q}$ is a dense infinite set thus there is no $a_1 \in \mathbb{Q}$ and $a_i \in \mathbb{Q}$ where $a_i$ is any element of $\mathbb{Q}$ and $a_1 < a_i$ for all $i$ nor is there any element $a_n$ that represents the last element of $\mathbb{Q}$ because $\mathbb{Q}$ is an infinite set where between any two distinct rational numbers, there is another rational number. Thus $\mathbb{Q}$ has no first nor last element.
+
+Therefore, $\Z$ with the ordering $<$, satisfies axioms 1-3.
 
 **Theorem 3.11: If $x$ is a point of a continuum $C$, then there exists a region $\underline{ab}$ such that $x \in \underline{ab}$ .**
+
+Let us remember *Definition 3.9: If $a, b ∈ C$ and $a < b$, then the set of points between $a$ and $b$ is called a region, denoted by $\underline{ab}$.*
+Let us mimic this region by creating a subset of $C$ called $A$ of points between $a$ and $b$ where $a$ is the first point and $b$ is the last point. This is possible through *Lemma 3.4* which defines the first and last points of subset $A$ and *Corollary 3.5* which indexes each point point in the subset in ascending order. Because $A$ can be arranged in ascending order $(a_1, a_2, a_3,...a_n)$ where $a_1 = a$ and $a_n = b$ where $n$ is the cardinality of $A$, there must be an $a_i = x$ where $i \in \N$ and is between $1$ and $n$. Therefore, $x$ must be a point existing within the region $\underline{ab}$.
 
 
 **Theorem 3.13: If $p$ is a limit point of $A$ and $A \sub B$, then $p$ is a limit point of $B$.**
 
 Let us be reminded of *Definition 3.12: a limit point is a point $p$ of continuum $C$ in subset $A$ if every region $R$ containing $p$ has nonempty intersection with $A\backslash \{p\}$ which means for every region $R$ with $p \in R$, we have $R \cap (A \backslash \{p\}) \neq \empty$*. 
 
-Since $p$ is a limit point of $A$, then for all regions $R$ containing $p$,  $R \cap (A \backslash \{p\}) \neq \empty$*. Let $q \in A$ be an intersection point and since $A \sub B$, then $q \in B$ so given an $R$ containing $p$, there is a $q \in R \cap B \backslash \{p\}$.  
+Since $p$ is a limit point of $A$, then for all regions $R$ containing $p$,  $R \cap (A \backslash \{p\}) \neq \empty$*. Let $q \in A$ be an intersection point with $R \cap (A \backslash \{p\}) \neq \empty$, and since $A \sub B$, then $q \in B$. Thus, given an $R$ containing $p$, there is a $q \in R \cap B \backslash \{p\}$.  
 
 
 **Lemma: 3.15: If $\underline{ab}$ is a region in a continuum $C$, then,  ext $\underline{ab} = \{x \in C | x < a \} \cup \{x \in C| b < x\}$**
