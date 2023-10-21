@@ -2,7 +2,7 @@
 **Lemma 3.4: If $A$ is a nonempty, finite subset of a continuum $C$, then $A$ has a first and last point.**
 We can prove that $A$ has a first and last point through induction.
 
-Suppose our base case $n=1$ , then $A = \{a_1\}$ where $A$ is a set with a single element thus that single element is both the first and last case (according to *definition 3.3*). Now for the inductive hypothesis, we can assume when $n = k$, where $k$ is a positive integer. $A$ has a first element $a_i$ and the last point is $a_k$ such that $a_1 < a_k$. Finally, our inductive step proves our assumption holds for when $A$ contains $n=k+1$ elements. There are three possible cases : 
+Suppose our base case $n=1$ , then $A = \{a_1\}$ where $A$ is a set with a single element thus that single element is both the first and last element (according to *definition 3.3*). Now for the inductive hypothesis, we can assume when $n = k$, where $k$ is a positive integer. $A$ has a first element $a_i$ and the last point is $a_k$ such that $a_1 < a_k$. Finally, our inductive step proves our assumption holds for when $A$ contains $n=k+1$ elements. There are three possible cases : 
 1. $a_{k+1} < a_1 < a_k $
 2. $a_1 < a_{k+1} < a_k$
 3. $a_1 < a_k < a_{k+1}$
@@ -86,15 +86,17 @@ Since $p$ is a limit point of $A$, then for all regions $R$ containing $p$,  $R 
 
 **Lemma: 3.15: If $\underline{ab}$ is a region in a continuum $C$, then,  ext $\underline{ab} = \{x \in C | x < a \} \cup \{x \in C| b < x\}$**
 
-Consider *Definition 3.14: If $\underline{ab}$ is a region of continuum $C$, then $C \backslash (\{a\} \cup ab \cup \{b\})$. is called the exterior of $\underline{ab}$ denoted by ext $\underline{ab}$.*
-
+**FIX**
+Consider *Definition 3.14: If $\underline{ab}$ is a region of continuum $C$, then $C \backslash (\{a\} \cup \underline{ab} \cup \{b\})$. is called the exterior of $\underline{ab}$ denoted by ext $\underline{ab}$.*
 
 We want to show ext $\underline{ab} = \{x \in C | x < a \} \cup \{x \in C| b < x\}$. We know that:
 
 if $x \nleq a$, then $x \geq a$
 if $x \ngeq b$, then $x \leq b$
 
-**MORE**
+We can formulate the equation: $C\backslash (\{a\} \cup \underline{ab} \cup \{b\}) = \{x \in C | x < a\} \cup \{x \in C | b< x\}$. We can simplify the LHS to $C\backslash( x\geq a \cap x \leq b)$ which equals to the RHS $\{x \in C| C\backslash(x \geq a) \cup C\backslash (x \leq b)\}$ . 
+
+
 
 
 **Lemma 3.16: No point in the exterior of a region is a limit point of that region. No point of a region is a limit point of the exterior of that region.**
@@ -121,3 +123,19 @@ Proof by induction: If a region $R$, $R_n$ $x$, then the intersection $R$
 Base case $(n=1)$, $R_1$ contains $x$ without intersection
 Inductive hypothesis, we assume $n = k$, so if $R_1... R_k$ all contains $x$, then $R_1 \cap R_k$ contains $x$.
 Inductive step, we can show it holds for $(n = k+1)$. Let $K = R_1 \cap R_n \cap R_n$ based on our hypothesis. We know that $K$ is a region containing $x$. Thus $R_1 \cap R_2 $, $R_k \cap R_{k+1} = K \cap R_{k+1}$. The intersection of 2 regions containing $x$. By *theorem 3.17 *, we have $K \cap R_{k+1}$ is a region containing $x$.
+
+**Theorem 3.19: Let $A$, $B$ be subsets of a continuum $C$. Then $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.**
+
+We can this by contradiction. Let us assume that there exists a $p$ which is a limit point of $A \cup B$ but not a limit point of either $A$ nor $B$. This means $p$ must satisfy 3 conditions:
+
+$p$ is a limit point of $A \cup B$:     
+
+**Corollary 3.20: Let $A_1, . . . , A_n$ be $n$ subsets of a continuum $C$. Then $p$ is a limit point of $A_1 ∪ · · · ∪ A_n$ if, and only if, $p$ is a limit point of at least one of the sets $A_k$.**
+
+**Theorem 3.21: If $p$ and $q$ are distinct points of a continuum $C$, then there exist disjoint regions $R$ and $S$ containing $p$ and $q$, respectively.**
+
+**Corollary 3.22. A subset of a continuum C consisting of one point has no limit points.**
+
+**Theorem 3.23: A finite subset $A$ of a continuum $C$ has no limit points.**
+
+**Corollary 3.24: If $A$ is a finite subset of a continuum $C$ and $x ∈ A$, then there exists a region $R$, containing $x$, such that $A ∩ R = \{x\}$.**
