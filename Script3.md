@@ -126,9 +126,11 @@ Inductive step, we can show it holds for $(n = k+1)$. Let $K = R_1 \cap R_n \cap
 
 **Theorem 3.19: Let $A$, $B$ be subsets of a continuum $C$. Then $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.**
 
-We can this by contradiction. Let us assume that there exists a $p$ which is a limit point of $A \cup B$ but not a limit point of either $A$ nor $B$. This means $p$ must satisfy 3 conditions:
+We can prove this this by contradiction. Let us assume that there exists a $p$ which is a limit point of $A \cup B$ but not a limit point of either $A$ nor $B$. This means $p$ must satisfy 3 conditions:
 
-$p$ is a limit point of $A \cup B$:     
+$p$ is a limit point of $A \cup B$: For $p$ to be a limit point, it 
+$p$ is not a limit point of $A$:  
+$p$ is not a limit pointoof $B$:
 
 **Corollary 3.20: Let $A_1, . . . , A_n$ be $n$ subsets of a continuum $C$. Then $p$ is a limit point of $A_1 ∪ · · · ∪ A_n$ if, and only if, $p$ is a limit point of at least one of the sets $A_k$.**
 
