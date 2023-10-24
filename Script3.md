@@ -144,7 +144,17 @@ Base case$(n=1)$: We can prove that $p$ is a limit point for a single set $A_1$ 
 
 Inductive hypothesis $(n=k)$: We assume that the statement is true when $n=k$ such that for any subsets $A_1, A_2, ...,  A_k$ of a continuum $C$, $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_k$ if and only if $p$ is a limit point of at least one of the sets $A_i$. 
 
-Inductive step $(n=k+1)$: To prove that our hypothesis holds for $(n = k+1)$, we must show that for subsets  $A_1, A_2, ...,  A_{k+1}$ of continuum $C$, $p$ is only a limit point of  $A_1 \cup A_2, ..., \cup A_{k+1}$ if and only if $p$ is a limit point of at least one of the sets $A_i$. Because we assume $p$ is a limit point of the set $A_k$, we can state by *theorem 3.19* that the limit point of a set will be a limit point of the union between that set and another. Thus if $p$ is a limit point of $A_k$, it is also a limit point of the union $A_1 \cup A_2 ...\cup A_k \cup A_{k+1}$. We do not need to prove the reverse statement because the iff property transfers from *theorem 3.19*.
+Inductive step $(n=k+1)$: 
+
+To prove that our hypothesis holds for $(n = k+1)$, we must show that for subsets $A_1, A_2, ..., A_{k+1}$ of continuum $C$, $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$ if and only if $p$ is a limit point of at least one of the sets $A_i$.
+
+Let's first consider the forward direction, where $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$. By the induction hypothesis, we know that if $p$ is a limit point of the union of the first $k$ sets $A_1, A_2, ..., A_k$, then it must be a limit point of at least one of them.
+
+Now, we check the reverse direction. If $p$ is a limit point of at least one of the sets $A_i$, we want to show that it is indeed a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$.
+
+Consider the case where $p$ is a limit point of $A_k+1$. By *Theorem 3.19*, we can state that the limit point of a set is also a limit point of the union between that set and another. Thus, if $p$ is a limit point of $A_{k+1}$, it is also a limit point of the union $A_1 \cup A_2, ..., \cup A_k \cup A_{k+1}$.
+
+We have now proven both directions of the statement, ensuring that $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$ if and only if $p$ is a limit point of at least one of the sets $A_i$. 
 
 
 **Theorem 3.21: If $p$ and $q$ are distinct points of a continuum $C$, then there exist disjoint regions $R$ and $S$ containing $p$ and $q$, respectively.**
@@ -171,7 +181,7 @@ Let us prove by contradiction:
 Assume that a subset $A$ of continuum $C$ consists of one point and has a limit point $p$, and because $A$ has only one point, we can assume the set $A = \{p\}$. For a region $R$ to contain a limit point $p$ of $A$, then $A$ must contain elements other than $p$ else  $R \cap (A \backslash \{p\}) \neq \empty$ would be false. Because $A$ contains no other elements than $p$, the intersection would be $\empty$ which indicates that $A$ does not have a limit point. Thus we have proved by contradiction that a subset of a continuum C consisting of one point has no limit points.
 
 **Theorem 3.23: A finite subset $A$ of a continuum $C$ has no limit points.**
-
+A finite subset will contain a region $R$ that is between two points surrounding any point such that the intersection between $R$ and $A$ will be the empty set.
 
 
 **Corollary 3.24: If $A$ is a finite subset of a continuum $C$ and $x ∈ A$, then there exists a region $R$, containing $x$, such that $A ∩ R = \{x\}$.**
