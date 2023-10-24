@@ -128,16 +128,50 @@ Inductive step, we can show it holds for $(n = k+1)$. Let $K = R_1 \cap R_n \cap
 
 We can prove this this by contradiction. Let us assume that there exists a $p$ which is a limit point of $A \cup B$ but not a limit point of either $A$ nor $B$. This means $p$ must satisfy 3 conditions:
 
-$p$ is a limit point of $A \cup B$: For $p$ to be a limit point, it 
-$p$ is not a limit point of $A$:  
-$p$ is not a limit pointoof $B$:
+$p$ is a limit point of $A \cup B$: For $p$ to be a limit point, then for every region $R$ containing $p$ with $p \in R$, $R \cap (A \cup B \backslash \{p\}) \neq \empty$. This means that there must be elements of either $A$ or $B$ for any region $R$ excluding $p$. This means that there must be an element $x \neq p \in A\cup B$ for regions $R$ containing $p$.
+
+$p$ is not a limit point of $A$: If $p$ is not a limit point of $A$, then for every region $R$ containing $p$ with $p \in R, R \cap (A \backslash \{p\}) = \empty$. This means that there is no element $x \neq p$ in $A$ for any region $R$ containing $p$. 
+
+$p$ is not a limit point of $B$:If $p$ is not a limit point of $B$, then for every region $R$ containing $p$ with $p \in R, R \cap ( B \backslash \{p\}) = \empty$. This means that there is no element $x \neq p$ in $B$ for any region $R$ containing $p$. 
+
+This is contradictory because if $x \notin A$ and $x \notin B$, then $x \notin A\cup B$ which contradicts our assumption that there is an element  $x \in A\cup B$ for regions $R$ containing $p$. Therefore, the limit point $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.
 
 **Corollary 3.20: Let $A_1, . . . , A_n$ be $n$ subsets of a continuum $C$. Then $p$ is a limit point of $A_1 ∪ · · · ∪ A_n$ if, and only if, $p$ is a limit point of at least one of the sets $A_k$.**
 
+Let us be reminded of *Theorem 3.19: Let $A$, $B$ be subsets of a continuum $C$. Then $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.* Now, let's solve this with mathematical induction: 
+
+Base case$(n=1)$: We can prove that $p$ is a limit point for a single set $A_1$ if and only if $p$ is a limit point of $A_1$ which is inherently true.
+
+Inductive hypothesis $(n=k)$: We assume that the statement is true when $n=k$ such that for any subsets $A_1, A_2, ...,  A_k$ of a continuum $C$, $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_k$ if and only if $p$ is a limit point of at least one of the sets $A_i$. 
+
+Inductive step $(n=k+1)$: To prove that our hypothesis holds for $(n = k+1)$, we must show that for subsets  $A_1, A_2, ...,  A_{k+1}$ of continuum $C$, $p$ is only a limit point of  $A_1 \cup A_2, ..., \cup A_{k+1}$ if and only if $p$ is a limit point of at least one of the sets $A_i$. Because we assume $p$ is a limit point of the set $A_k$, we can state by *theorem 3.19* that the limit point of a set will be a limit point of the union between that set and another. Thus if $p$ is a limit point of $A_k$, it is also a limit point of the union $A_1 \cup A_2 ...\cup A_k \cup A_{k+1}$. We do not need to prove the reverse statement because the iff property transfers from *theorem 3.19*.
+
+
 **Theorem 3.21: If $p$ and $q$ are distinct points of a continuum $C$, then there exist disjoint regions $R$ and $S$ containing $p$ and $q$, respectively.**
+
+Let's say that region $R$ is defined as $\underline {a_1b_1}$ and region $S$ is defined as $\underline {a_2b_2}$. Because the regions are disjoint, overlap would contradict the assumption. Let's examine multiple scenarios where overlap does not occur:
+
+case 1: $p > q$
+In this case, region $R$ must be such that $a_1 < p < b_1$ and region $S$ must be such that $a_2 < q < b_2$. For the regions to be disjoint, $b_2 < a_1$ must be true.
+
+case 2: $p < q$ 
+In this case, region $R$ must be such that $a_1 < p < b_1$ and region $S$ must be such that $a_2 < q < b_2$. For the regions to be disjoint, $b_1 < >_2$ must be true.
+
+case 3: $p = q$
+This case cannot be true because we are given that $p$ and $q$ are distinct points.
+
+In all possible cases, the regions $R$, $S$ are disjoint with no overlap and contain point $p$ and $q$ respectively. 
 
 **Corollary 3.22. A subset of a continuum C consisting of one point has no limit points.**
 
+Let us be reminded of the definition of a limit point: *Let $A$ be a subset of a continuum $C$. A point $p$ of $C$ is called a limit point of $A$ if every region $R$ containing $p$ has nonempty intersection with $A \backslash \{p\}$. This means for every region $R$ with $p \in R$, we have $R \cap (A \backslash \{p\}) \neq \empty$ .*
+
+Let us prove by contradiction: 
+
+Assume that a subset $A$ of continuum $C$ consists of one point and has a limit point $p$, and because $A$ has only one point, we can assume the set $A = \{p\}$. For a region $R$ to contain a limit point $p$ of $A$, then $A$ must contain elements other than $p$ else  $R \cap (A \backslash \{p\}) \neq \empty$ would be false. Because $A$ contains no other elements than $p$, the intersection would be $\empty$ which indicates that $A$ does not have a limit point. Thus we have proved by contradiction that a subset of a continuum C consisting of one point has no limit points.
+
 **Theorem 3.23: A finite subset $A$ of a continuum $C$ has no limit points.**
+
+
 
 **Corollary 3.24: If $A$ is a finite subset of a continuum $C$ and $x ∈ A$, then there exists a region $R$, containing $x$, such that $A ∩ R = \{x\}$.**
