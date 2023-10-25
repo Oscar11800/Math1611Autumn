@@ -126,15 +126,17 @@ Inductive step, we can show it holds for $(n = k+1)$. Let $K = R_1 \cap R_n \cap
 
 **Theorem 3.19: Let $A$, $B$ be subsets of a continuum $C$. Then $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.**
 
+**PROVE REVERSE, IFF, possible to use 1.7 and 3.13**
+
 We can prove this this by contradiction. Let us assume that there exists a $p$ which is a limit point of $A \cup B$ but not a limit point of either $A$ nor $B$. This means $p$ must satisfy 3 conditions:
 
 $p$ is a limit point of $A \cup B$: For $p$ to be a limit point, then for every region $R$ containing $p$ with $p \in R$, $R \cap (A \cup B \backslash \{p\}) \neq \empty$. This means that there must be elements of either $A$ or $B$ for any region $R$ excluding $p$. This means that there must be an element $x \neq p \in A\cup B$ for regions $R$ containing $p$.
 
 $p$ is not a limit point of $A$: If $p$ is not a limit point of $A$, then for every region $R$ containing $p$ with $p \in R, R \cap (A \backslash \{p\}) = \empty$. This means that there is no element $x \neq p$ in $A$ for any region $R$ containing $p$. 
 
-$p$ is not a limit point of $B$:If $p$ is not a limit point of $B$, then for every region $R$ containing $p$ with $p \in R, R \cap ( B \backslash \{p\}) = \empty$. This means that there is no element $x \neq p$ in $B$ for any region $R$ containing $p$. 
+$p$ is not a limit point of $B$:If $p$ is not a limit point of $B$, then for every region $S$ containing $p$ with $p \in S, S \cap ( B \backslash \{p\}) = \empty$. This means that there is no element $x \neq p$ in $B$ for any region $S$ containing $p$. 
 
-This is contradictory because if $x \notin A$ and $x \notin B$, then $x \notin A\cup B$ which contradicts our assumption that there is an element  $x \in A\cup B$ for regions $R$ containing $p$. Therefore, the limit point $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.
+This is contradictory because if $x \notin A$ and $x \notin B$, then $x \notin A\cup B$ which contradicts our assumption that there is an element  $x \in A\cup B$ for regions $R$ and $S$ containing $p$. Therefore, the limit point $p$ is a limit point of $A ∪ B$ if, and only if, $p$ is a limit point of at least one of $A$ or $B$.
 
 **Corollary 3.20: Let $A_1, . . . , A_n$ be $n$ subsets of a continuum $C$. Then $p$ is a limit point of $A_1 ∪ · · · ∪ A_n$ if, and only if, $p$ is a limit point of at least one of the sets $A_k$.**
 
@@ -148,11 +150,13 @@ Inductive step $(n=k+1)$:
 
 To prove that our hypothesis holds for $(n = k+1)$, we must show that for subsets $A_1, A_2, ..., A_{k+1}$ of continuum $C$, $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$ if and only if $p$ is a limit point of at least one of the sets $A_i$.
 
-Let's first consider the forward direction, where $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$. By the induction hypothesis, we know that if $p$ is a limit point of the union of the first $k$ sets $A_1, A_2, ..., A_k$, then it must be a limit point of at least one of them.
+Let's first consider the forward direction, where $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$. By the inductive hypothesis, we know that if $p$ is a limit point of the union of the first $k$ sets $A_1, A_2, ..., A_k$, then it must be a limit point of at least one of them.
 
 Now, we check the reverse direction. If $p$ is a limit point of at least one of the sets $A_i$, we want to show that it is indeed a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$.
 
 Consider the case where $p$ is a limit point of $A_k+1$. By *Theorem 3.19*, we can state that the limit point of a set is also a limit point of the union between that set and another. Thus, if $p$ is a limit point of $A_{k+1}$, it is also a limit point of the union $A_1 \cup A_2, ..., \cup A_k \cup A_{k+1}$.
+
+**SHOW IT FOR REERSE OF REVERSE**
 
 We have now proven both directions of the statement, ensuring that $p$ is a limit point of $A_1 \cup A_2, ..., \cup A_{k+1}$ if and only if $p$ is a limit point of at least one of the sets $A_i$. 
 
@@ -160,6 +164,7 @@ We have now proven both directions of the statement, ensuring that $p$ is a limi
 **Theorem 3.21: If $p$ and $q$ are distinct points of a continuum $C$, then there exist disjoint regions $R$ and $S$ containing $p$ and $q$, respectively.**
 
 Let's say that region $R$ is defined as $\underline {a_1b_1}$ and region $S$ is defined as $\underline {a_2b_2}$. Because the regions are disjoint, overlap would contradict the assumption. Let's examine multiple scenarios where overlap does not occur:
+**Find when there are points between, not less or more**
 
 case 1: $p > q$
 In this case, region $R$ must be such that $a_1 < p < b_1$ and region $S$ must be such that $a_2 < q < b_2$. For the regions to be disjoint, $b_2 < a_1$ must be true.
@@ -179,9 +184,12 @@ Let us be reminded of the definition of a limit point: *Let $A$ be a subset of a
 Let us prove by contradiction: 
 
 Assume that a subset $A$ of continuum $C$ consists of one point and has a limit point $p$, and because $A$ has only one point, we can assume the set $A = \{p\}$. For a region $R$ to contain a limit point $p$ of $A$, then $A$ must contain elements other than $p$ else  $R \cap (A \backslash \{p\}) \neq \empty$ would be false. Because $A$ contains no other elements than $p$, the intersection would be $\empty$ which indicates that $A$ does not have a limit point. Thus we have proved by contradiction that a subset of a continuum C consisting of one point has no limit points.
+**add if limit point isn't in A**
+
 
 **Theorem 3.23: A finite subset $A$ of a continuum $C$ has no limit points.**
-A finite subset will contain a region $R$ that is between two points surrounding any point such that the intersection between $R$ and $A$ will be the empty set.
-
+A finite subset will contain a region $R$ that is between two points surrounding any point such that the intersection between $R$ and $A$ will be the empty set. Let $A = A_1 \cup A_n$ where they are all subsets of $C$ consisting of one point. Based on *Corollary 3.20: for $p$ to be limit point of the union of sets, it must be a limit point of at least one of the sets*. From this, we can see that $p$ cannot be a limit point of any sets $A_1...A_n$ because they consist only of one element which means none of the sets can have a limit point by *Corollary 3.22*. 
 
 **Corollary 3.24: If $A$ is a finite subset of a continuum $C$ and $x ∈ A$, then there exists a region $R$, containing $x$, such that $A ∩ R = \{x\}$.**
+
+Order $A$ by theorem 3.5 and let $A = \{a_1...a_n\}$ where some $a_k = x$. Let $A' = \{a_1...a_{k-1}\}$ and let $A'' = \{a_{k+1}...a_n\}$. Because $a_{k-1} < x < a_{k+1}$, let the region $R = \underline{a_{k-1}a_{k+1}}$ which contains $x$ and no other points in $A$. If $x$ is $a_1$ then the region will be $R = \underline{(element of C < a_1) a_{2}}$ and if $x$ is the last element then the region will be $R = \underline{a_n (element of C > a_n)}$. Thus $A \cap R = \{x\}$.
