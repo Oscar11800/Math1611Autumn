@@ -192,4 +192,9 @@ A finite subset will contain a region $R$ that is between two points surrounding
 
 **Corollary 3.24: If $A$ is a finite subset of a continuum $C$ and $x ∈ A$, then there exists a region $R$, containing $x$, such that $A ∩ R = \{x\}$.**
 
-Order $A$ by theorem 3.5 and let $A = \{a_1...a_n\}$ where some $a_k = x$. Let $A' = \{a_1...a_{k-1}\}$ and let $A'' = \{a_{k+1}...a_n\}$. Because $a_{k-1} < x < a_{k+1}$, let the region $R = \underline{a_{k-1}a_{k+1}}$ which contains $x$ and no other points in $A$. If $x$ is $a_1$ then the region will be $R = \underline{(element of C < a_1) a_{2}}$ and if $x$ is the last element then the region will be $R = \underline{a_n (element of C > a_n)}$. Thus $A \cap R = \{x\}$.
+Order $A$ by theorem 3.5 and let $A = \{a_1...a_n\}$ where some $a_k = x$. Let $A' = \{a_1...a_{k-1}\}$ and let $A'' = \{a_{k+1}...a_n\}$. Because $a_{k-1} < x < a_{k+1}$, let the region $R = \underline{a_{k-1}a_{k+1}}$ which contains $x$ and no other points in $A$. If $x$ is $a_1$ then the region will be $R = \underline{(\textnormal{element of C} < a_1) a_{2}}$ and if $x$ is the last element then the region will be $R = \underline{a_n (\textnormal{element of C} > a_n)}$. Thus $A \cap R = \{x\}$.
+
+**Theorem 3.25: If $p$ is a limit point of $A$ and $R$ is a region containing $p$, then the set $R ∩ A$ is infinite.**
+
+**Exercise 3.26: Find realizations of a continuum $(C, <)$. That is, find concrete sets $C$ endowed with a relation $<$ satisfying all of the axioms (so far). Are they the same? What does “the same” mean here?**
+
