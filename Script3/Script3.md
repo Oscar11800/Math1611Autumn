@@ -196,5 +196,17 @@ Order $A$ by theorem 3.5 and let $A = \{a_1...a_n\}$ where some $a_k = x$. Let $
 
 **Theorem 3.25: If $p$ is a limit point of $A$ and $R$ is a region containing $p$, then the set $R ∩ A$ is infinite.**
 
+
+
 **Exercise 3.26: Find realizations of a continuum $(C, <)$. That is, find concrete sets $C$ endowed with a relation $<$ satisfying all of the axioms (so far). Are they the same? What does “the same” mean here?**
 
+For every $R$ where $p \in R$, $R \cap A$ is infinite.
+By Contradiction we can prove $A \cap R$ is finite.
+$S_0 = $A \cap R$ 
+$S_1 = \{x \in S_0, x < p\}, x_L$ is last point of $S_1$
+If $S_1 = \empty$, then the region $\underline{ax_L}$ that contains $p$ is $\underline{ax_L} \cap A\backslash \{p\} = \empty$ so $p$ is not a limit point.
+
+$S_2 = \{x \in S_0, x > p\} x_F$ is first point of $S_2$
+If $S_2 = \empty$ then the region $\underline{x_Lb}$ such that $\underline{x_Lb} \cap A \backslash\{p\} = empty$ so $p$ is not a limit point.
+
+Therefore the region $\underline{x_Lx_F}$ contains $p$, and $\underline{x_Lx_F} \cap A\backslash \{p\} = \empty$, so $p$ is not a limit point of $A$.
