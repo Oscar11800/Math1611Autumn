@@ -12,7 +12,7 @@ Finally, our inductive step proves our assumption holds for when $A$ contains $n
 2. $a_1 < a_{k+1} < a_k$
 3. $a_1 < a_k < a_{k+1}$
 
-All these hold true for the inductive step and maintain the existence of the first and last element, therefore any finite subset $A$ of a continuum $C$     has a first and last point.
+All these hold true for the inductive step and maintain the existence of the first and last element, therefore any finite subset $A$ of a continuum $C$ has a first and last point.
 
 
 **Theorem 3.5: Suppose that $A$ is a set of $n$ distinct points in a continuum $C$, or, in other words, $A \sub C$ has cardinality $n$. Then symbols $a_1,...a_n$ may be assigned to each point of $A$ so that $a_1, a_2, <... < a_n, \; ie. \; a_i < a_{i+1} \; for \; 1 \leq i \leq n-1$.**
