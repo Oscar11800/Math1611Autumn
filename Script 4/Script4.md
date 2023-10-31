@@ -37,45 +37,57 @@ We can surmise that $z \in R_1 \cap R_3$ such that $(R_1 \cap R_3) \cap (x \back
 
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
 
-Recall the definition of a open set: *a subset $G$ of $C$ is a open set if its complement $C\backslash G$ is clsoed.*
+Recall the definition of an open set: A subset $G$ of $C$ is an open set if its complement $C \setminus G$ is closed.
 
-Looking at $\empty$, we can determine if it is open by seeing it its complement is closed. The complement of the $\empty$ can be represented by $C \backslash \empty$ which is equal to $C$. 
+We want to show that the empty set $\emptyset$ is open by demonstrating that its complement is closed. The complement of $\emptyset$ can be represented as $C \setminus \emptyset$, which is equivalent to $C$.
 
-According to *theorem 4.2*, the set $C$ contains all elements of the continuum thus it contains all of its limit points and is a closed set. Thus, because its complement is a closed set, then the set $\empty$ is an open set. 
+By Theorem 4.2, we know that the set $C$ contains all elements of the continuum, including its limit points, and is therefore a closed set.
+Thus, because the complement of $\emptyset$ (which is $C$) is a closed set, $\emptyset$ is indeed an open set.
 
-As for the set $C$, we can determine if it is open by observing its complement. The complement of $C$ is the set $\empty$ which can be represented by the statement $C\backslash C = \empty$. 
+Similarly, we want to establish that the entire continuum $C$ is an open set by observing its complement. The complement of $C$ is the empty set, which can be represented by the statement $C \setminus C = \emptyset$.
 
-According to *theorem 4.2*, the empty set is closed because it contains no elements such that it trivially contains its limit points (of which it has none). Thus because its complement, the empty set, is a clsoed set, then the set $C$ is an open set. 
+Again, referring to Theorem 4.2, the empty set is closed because it contains no elements, and it trivially contains its limit points (of which it has none).Therefore, because the complement of $C$ (which is $\emptyset$) is a closed set, we can conclude that $C$ is an open set.
+
+Hence, both the empty set $\emptyset$ and the entire continuum $C$ are open sets.
+
 
 **Theorem 4.9: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.**
 
-**FIX**
-First, we can prove that if $G$ is open, then for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$. To do this, we prove by contradiction. Let's assume that $G$ is an open set, but for any arbitrary element $x$ in $G$ there is no region $R$ such that $x \in R \sub G$.
+Contrapositive:If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
 
-If $G$ is an open set, that means its complement, $C \backslash G$ is a closed set by definition of an open set. Let's assign this closed complement set as $F$. 
-**MORE**
+Therefore there is some $x$ that is the limit point of $C \backslash G$ for all $R$ containing some $x$, $R \cap (C \backslash G \backslash \{x\}) \neq 0$ where $x \not\in C \backslash G. Thus the complement of $G$ is not closed because it does not contain all of its limit points, thus we know that 
 
-Now, we want to prove that if there exists a region $R$ such that $x \in R \sub G$, then $G$ is open. We can also prove this by contradiction by assuming that for some element $x$m there is some region $R$ such that $x \in R \sub G$, but $G is not an open set. If $G$ is not an open set, then it must be a closed set as it is a binary distinction.
 
+If for all $x \in G$ there exists a region $R$, such that $x$ is an element of $R$ such that $R \sub G$, then $G$ is open
+
+Contrapositive: If $G$ is not open, then for some $x$ in $G$, for all regions $R$ containing $x$, $R \not\sub G$. If $G$ is not open, by theorem 4.2, then the complement of $G$ is not closed which means the complement does not contain all of its limit points. Let $x \in LP(C \backslash G)$ and $x \in G$. Therefore, there exists for all regions $R$ such that $x \in R$, $R$ contains elements of $C \backslash G$ because $R \cap G\backslash x \neq \empty$. Therefore $R$ is not subset of $G$ because it contains elements not in $G$.
 
 
 **Corollary 4.10: Every region $R$ is open. Every complement of a region $C\backslash R$, is closed.**
 
-**FIX**
+First, we want to prove that every region $R$ is open. For all elements $x$ of the region $R$, $R$ is itself a region such that $x \in R$ and $R \sub R$. By *theorem 4.9 *there exists a region $R$ such that $x \in R \sub G$ and $G \sub C$, $R$ is  open.
 
-We know that from *theorem 4.9*, there exists a region $R$ such that $x \in R \sub G$ and $G \sub C$
-
-To prove that every complement of a region $C\backslash R$ is closed, we can simply look at the definition of an open set: *a subset $G$ of continuum $C$ is open if its complement $C \backslash G* is closed. 
-
-Because we have proven every region $R$ is open, then we know by definition that every complement of the region $R$ is closed.
+Since all $R$ are open, then by definition of an open set, all $C \backslash R$ are closed. 
 
 
 **Corollary 4.11: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open.**
 
+We want to show that iff $G$ is open, then for all elements $x \in G$, there exists a subset $V$ such that $x \in V \sub G$ and $V$ is an open set. 
 
-**Corollary 4.12: Let $a\in C$. Then the sets $\{x \in C| x < a\}$ and $\{x \in C| a < x\} are open.**
+First, we assume that $G$ is open, then  by *theorem 4.9*, for all $x \in G$ there exists an $R$ such that $x \in R$ and $R \sub G$. Let's set $V = R$ so that $x \in V$ and consequently $V \sub G$. By theorem 4.10, because $R$ is a region and it is open, thus $V$ is also open. We have prove that $V \sub G$, $V$ contains $R$, and $V$ is also open
 
-**Theorem 4.13: Let $G$ be a nonempty set. Then $G$ is the union of a collection of regions**
+For all elements $x \in G$, there is a subset $V$ that is open and $x \in V \sub G$. We want to prove that $G$ is open. We know that for all $x$, there exists an $R$ such taht $x \in R \in V$ and because $R \sub V$ and $V \sub G$, then $R \sub G$, and it also stands that for all $x \in R$, that $x \in R \sub G$ and by theorem 4.9, $G$ is open. 
+
+
+**Corollary 4.12: Let $a\in C$. Then the sets $\{x \in C| x < a\}$ and $\{x \in C| a < x\}$ are open.**
+
+Let $a \in C$, so that the sets $\{x \in C| x < a\}$ and $\{x \in C | x >a\}$. Let's let some region $R = \underline{ka}$ wheere $k$ is an arbitary point on $C$ such that it is less than $x$. $k$ must exist because $C$ does not have a first point. For all $x \in \{x \in C| x < a\}$, the region $R$ both contains $a$ and $R \sub \{x \in C| x < a\}$ thus by theorem 4.9, $\{x \in C| x < a\}$ is open.
+
+For the other region $\{x \in C | x >a\}$, if we let $S= \underline{am}$ where $m$ is a point on $C$, which exists because $C$ doesn't have a last point. For all $\{x \in C | x >a\}$, $S$ contains $x$ and $S \sub \{x \in C | x >a\}$, thus by theorem 4.9, $\{x \in C | x >a\}$ is open. 
+
+**Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions**
+
+Each point $x$ in $G$ has a region $R_x$ such that $x \in R_x \sub G$ and the regions depends on its respective $x$ by theorem 4.9. $\bigcap_{x \in G}R_x \sub G$ and $G \sub \bigcap_{x \in G}R_x$ because any point $x$ in $G$ is in one of the regions $R_x$ such that $\bigcap_{x \in G}R_x = G.
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
@@ -84,10 +96,52 @@ Because we have proven every region $R$ is open, then we know by definition that
 
 **Additional Problem 1: Prove that if $S \sub C$ then $\overline{S} = \{x \in C| \textnormal{for all} \; R \; \textnormal{ containing} \; x, R \cap S \neq \empty\}$**
 
-Remember that the closure of $S$ is $\overline{S} = S \cup LP(S)$ which is the union of all elements in $X$ and the limit points of $x$. Let's prove this by contradiction. Assume that if $S \sub C$ then the closure of S is all elements $x \in C$ where for some $R$ containing $x$, $R\cap S = \empty$. 
+We want to prove that if \(S \sub C\), then \(\overline{S} = \{x \in C \,|\, \text{for all } R \text{ containing } x, R \cap S \neq \emptyset\}\).
+
+By Definition 3.12, a limit point in a continuum \(C\) for a subset \(A\) is a point \(p\) in \(A\) such that every region \(R\) containing \(p\) has a non-empty intersection with \(A \setminus \{p\}\). Thus, for every region \(R\) with \(p \in R\), we have \(R \cap (A \setminus \{p\}) \neq \emptyset\).
+
+Now, let's establish the relationship between limit points and the closure of a set \(S\) by considering the definition of closure: \(\overline{S}\) includes all limit points of \(S\) as well as elements of \(S\).
+
+Now, let's prove the desired equality:
+
+ 1: \(\overline{S} \sub \{x \in C \,|\, \text{for all } R \text{ containing } x, R \cap S \neq \emptyset\}\)
+
+Suppose \(x \in \overline{S}\). By the definition of closure, \(x\) is either in \(S\) or a limit point of \(S\).
+
+- If \(x\) is in \(S\), then for any region \(R\) containing \(x\), \(R \cap S \neq \emptyset\) because \(x\) is in \(S\).
+
+- If \(x\) is a limit point of \(S\), then for any region \(R\) containing \(x\), \(R \cap (S \setminus \{x\}) \neq \emptyset\) by Definition 3.12. However, \(R \cap (S \setminus \{x\})\) is the same as \(R \cap S\) because removing \(x\) from \(S\) doesn't affect the intersection. Therefore, \(R \cap S \neq \emptyset\).
+
+In both cases, we have shown that for any \(R\) containing \(x\), \(R \cap S \neq \emptyset\).
+
+2: \(\{x \in C \,|\, \text{for all } R \text{ containing } x, R \cap S \neq \emptyset\} \subseteq \overline{S}\)
+
+Now, suppose \(x\) satisfies the property: for all regions \(R\) containing \(x\), \(R \cap S \neq \emptyset\).
+
+We want to show that $x \in \overline{S}$. By the definition of closure, we need to demonstrate that $x$ is either in $S$ or a limit point of $S$.
+
+- If \(x\) is in \(S\), then it's trivially in \(\overline{S}\).
+
+- If \(x\) is not in \(S\), then it must be a limit point of \(S\) because for all regions \(R\) containing \(x\), \(R \cap S \neq \emptyset\). This satisfies the definition of a limit point.
+
+Therefore, we have shown both inclusions, and we can conclude that \(\overline{S} = \{x \in C \,|\, \text{for all } R \text{ containing } x, R \cap S \neq \emptyset\}\).
+
+
 
 **Additional Problem 2: Find an example of a continuum $C$ and a subset that is both open and closed, other than $\empty$ and $C$.**
 
-Here is an example: In the continuum of rationals, consider the subset of rationals from $[0,1]$ as the set $A$. We can prove that $A$ is a closed set if it contains all of its limit points. For there to be a limit point $p$ of $A$, then for every region  $R$ where $p \in R$ this must hold true: $R \cap ([0,1] \backslash \{p\}) \neq \empty$.
+Let \(C\) be the continuum of natural numbers, denoted as \(C = \mathbb{N}\), and consider the set of even natural numbers, \(A = \{x \in \mathbb{N} \,|\, x = 2n\}\).
 
-Here is an example: Let our continuum be the set of natural numbers $\N$, and our subset is set of even natural numbers $\{x\in \N|2n\}$. In this discrete set, the set is closed because as an infinite set, there will be even numbers surrounding
+   We want to show that \(A\) is both open and closed. First, let's address the limit points.
+
+   By Definition 3.12, a limit point in continuum \(C\) for a subset \(A\) is a point \(p\) in \(A\) such that every region \(R\) containing \(p\) has a non-empty intersection with \(A\setminus\{p\}\). Formally, for every region \(R\) with \(p \in R\), we have \(R \cap (A \setminus \{p\}) \neq \emptyset\).
+
+   - Consider a point \(p\) in \(A\). If \(p\) is an even number, it has odd neighbors in \(\mathbb{N}\) that are not in \(A\). These odd neighbors ensure that \(p\) is indeed a limit point of \(A\) because for any region \(R\) containing \(p\), \(R \cap (A \setminus \{p\}) \neq \emptyset\). This is because \(R\) will include both even and odd numbers.
+
+   To establish that \(A\) is both open and closed, we will show that its complement in \(C\), which is the set of odd numbers, is closed, and that \(A\) is open.
+
+   - Closed Set: The set of odd numbers in \(C\) is its complement, denoted as \(A^c = \{x \in \mathbb{N} \,|\, x = 2n + 1\}\). Just as we showed for \(A\), the set of odd numbers is also a closed set because each odd number has even neighbors, making it a limit point of itself. Therefore, \(A^c\) is closed.
+
+   - Open Set: To show that \(A\) is open, we can use the fact that an open set is defined as a set whose complement is closed. Since we have established that \(A^c\) is closed, \(A\) must be open.
+
+Therefore, we have proven that the set of even numbers, \(A\), in the continuum of natural numbers, \(\mathbb{N}\), is both open and closed.
