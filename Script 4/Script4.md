@@ -91,8 +91,13 @@ Each point $x$ in $G$ has a region $R_x$ such that $x \in R_x \sub G$ and the re
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
+Yes, there exists a subset $X \sub C$ that is neitehr open nor closed. Consider the set $X = \{1/x| x \in \N\}$ such that $1/1, 1/2, 1/3$ where $A \sub \mathbb{Q}$. $A$ is not open because there is no region $R$ such that $1/1$ is in $R$ and $R \sub A$. $A$ is not closed because $0$ iss a limit point of $A$, but $0$ is not contained in $A$. Thus $A$ is neither open nor closed. 
+
 
 **Theorem 4.15: Let $\{X_\lambda\}$ be an arbitrary collection of closed subsets of a continuum $C$. Then the intersection $\bigcap_\lambda X_\lambda$** is closed.
+
+
+
 
 **Additional Problem 1: Prove that if $S \sub C$ then $\overline{S} = \{x \in C| \textnormal{for all} \; R \; \textnormal{ containing} \; x, R \cap S \neq \empty\}$**
 
