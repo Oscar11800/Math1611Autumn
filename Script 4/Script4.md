@@ -79,4 +79,15 @@ Because we have proven every region $R$ is open, then we know by definition that
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
+
 **Theorem 4.15: Let $\{X_\lambda\}$ be an arbitrary collection of closed subsets of a continuum $C$. Then the intersection $\bigcap_\lambda X_\lambda$** is closed.
+
+**Additional Problem 1: Prove that if $S \sub C$ then $\overline{S} = \{x \in C| \textnormal{for all} \; R \; \textnormal{ containing} \; x, R \cap S \neq \empty\}$**
+
+Remember that the closure of $S$ is $\overline{S} = S \cup LP(S)$ which is the union of all elements in $X$ and the limit points of $x$. Let's prove this by contradiction. Assume that if $S \sub C$ then the closure of S is all elements $x \in C$ where for some $R$ containing $x$, $R\cap S = \empty$. 
+
+**Additional Problem 2: Find an example of a continuum $C$ and a subset that is both open and closed, other than $\empty$ and $C$.**
+
+Here is an example: In the continuum of rationals, consider the subset of rationals from $[0,1]$ as the set $A$. We can prove that $A$ is a closed set if it contains all of its limit points. For there to be a limit point $p$ of $A$, then for every region  $R$ where $p \in R$ this must hold true: $R \cap ([0,1] \backslash \{p\}) \neq \empty$.
+
+Here is an example: Let our continuum be the set of natural numbers $\N$, and our subset is set of even natural numbers $\{x\in \N|2n\}$. In this discrete set, the set is closed because as an infinite set, there will be even numbers surrounding
