@@ -135,18 +135,12 @@ Therefore, we have shown both inclusions, and we can conclude that \(\overline{S
 
 **Additional Problem 2: Find an example of a continuum $C$ and a subset that is both open and closed, other than $\empty$ and $C$.**
 
-Let \(C\) be the continuum of natural numbers, denoted as \(C = \mathbb{N}\), and consider the set of even natural numbers, \(A = \{x \in \mathbb{N} \,|\, x = 2n\}\).
+Let's consider the subset $\N$ within the continuum $\Z$. We will prove that it is both open and closed:
 
-   We want to show that \(A\) is both open and closed. First, let's address the limit points.
+First, we know that $\Z$ is a continuum with a well defined ordering based on theorem 3.8 a) where we proved defined a relation $<$ on $\Z$ by $m < n $ if $n = m + c$ for some $c \in \N$. Such that, $\Z$, with the ordering $<$, satisfies axion 1-3. Now, we use $\N$ as our example set to show that it is both open and closed.
 
-   By Definition 3.12, a limit point in continuum \(C\) for a subset \(A\) is a point \(p\) in \(A\) such that every region \(R\) containing \(p\) has a non-empty intersection with \(A\setminus\{p\}\). Formally, for every region \(R\) with \(p \in R\), we have \(R \cap (A \setminus \{p\}) \neq \emptyset\).
+Let's prove that $\N$ is closed:  Remember for there to be a limit point $p$ of $\empty$, then for every region  $R$ where $p \in R$ this must hold true: $R \cap (\N \backslash \{p\}) \neq \empty$. However, the set of natural numbers has no limit points because any region centered around a point in the set with a radius of 1 will result in an empty set when this definition is applied because there is no other elements of the est $\N$ between any two adjacent natural numbers. Thus, $\N$ contains no limit points, and similar to the empty set in theorem 4.2, a set with no limit points trivially contains all its limit points and therefore $\N$ is closed.
 
-   - Consider a point \(p\) in \(A\). If \(p\) is an even number, it has odd neighbors in \(\mathbb{N}\) that are not in \(A\). These odd neighbors ensure that \(p\) is indeed a limit point of \(A\) because for any region \(R\) containing \(p\), \(R \cap (A \setminus \{p\}) \neq \emptyset\). This is because \(R\) will include both even and odd numbers.
+Now let's prove that $\N$ is open: Recall that for a set to be open, its complement must be closed. The complement of the natural numbers in the continuum of integers represented by $\Z \backslash \N$ is equal to the negative integers and 0. This complement set also has no limit points based on the same definition of the limit point as described above and for the same reason that any region with a radius one centered around any point of the complement set will will result in the empty set when checked for limit points. Thus the complement contains no limit points, and like the set $\N$, trivially contains its limit points and is therefore closed. Then by definition of an open set, the set $\N$ is open because its complement is closed. 
 
-   To establish that \(A\) is both open and closed, we will show that its complement in \(C\), which is the set of odd numbers, is closed, and that \(A\) is open.
-
-   - Closed Set: The set of odd numbers in \(C\) is its complement, denoted as \(A^c = \{x \in \mathbb{N} \,|\, x = 2n + 1\}\). Just as we showed for \(A\), the set of odd numbers is also a closed set because each odd number has even neighbors, making it a limit point of itself. Therefore, \(A^c\) is closed.
-
-   - Open Set: To show that \(A\) is open, we can use the fact that an open set is defined as a set whose complement is closed. Since we have established that \(A^c\) is closed, \(A\) must be open.
-
-Therefore, we have proven that the set of even numbers, \(A\), in the continuum of natural numbers, \(\mathbb{N}\), is both open and closed.
+Therefore, we have prove that the set $\N$ in the continuum $\Z$ is both open and closed.
