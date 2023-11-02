@@ -128,7 +128,11 @@ By *theorem 1.15*, the complement of an intersection of a collection of sets is 
 
 **Corollary 4.20: Let $G \sub C$ be nonempty. Then $G$ is open if and only if $G$ is the union of a collection of regions.**
 
-**MORE**
+1. assume $G$ is opeen, then by *theorem 4.9*, for all $x \in G$ there exists a region containing $x$ that is entirely contained by $G$. The union of all such regions contains all $x \in G$ which means that $G \sub \bigcup_n R_n$ where $n \in \N$. So $\bigcup_n R_n \sub G$ which means that $\bigcup_ R_n = G_n$.
+
+2. We can assume that $G = \bigcup_n R_n$ and we want to show that $G$ is open. Since we know that all regions $R_n$ are open by *theorem 4.10*, then because $G$ is a union of open subsets, then it must be open.
+
+**MINE BELOW**
 
 We want to show that if $G$ is a nonempty, open set, then $G$ is the union of a collection of regions. We proved this in *theorem 4.13: $G$ be a nonempty open set. Then $G$ is the union of a collection of regions* because any point $x$ in $G$ is in one of the regions $R_x$ which corresponded to its respective $x$ such that $\bigcap_{x \in G}R_x = G$.
 
@@ -137,6 +141,13 @@ Now, let's show that if $G$ is the union of a collection of regions, then $G$ is
 
 **Corollary: 4.21: If $\underline{ab}$ is a region of $C$, then ext $\underline{ab}$ is open.**
 
+If $\underline{ab} is a region in continuum $C$, then the ext $\underline{ab} is open. By *theorem 3.14* $C \backslash (\{a\} \cup \underline{ab} \cup \{b\}) = ext \underline{ab}$. If ext $\underline{ab}$ is open, then by *theorem 4.7*, $C \backslash$ ext $\underline{ab} = \{a\} \cup \underline{ab} \cup \{b\}$ is closed.
+
+We want to show that there is no $x$ such that $x$ is a limit point of $\{a\} \cup \underline{ab} \cup \{b\}$ and $x \not\in \{a\} \cup \underline{ab}$.
+
+Suppose there exists some $d$ such that $d$ is a potential limit point of $\underline{ab}$ and $d < a$. Then by *axiom 3 of continuums* there exists a $z$ such that $z < d$. Now suppose there is at least one element $q$ such that $d < q < a$ which means there exists a region $\underline{za}$ such that $\underline{za} \cap (\{a\} \cup \underline{ab} \{b\} \backslash \{d\} = \empty$. Therefore $d$ is not a limit point of $\{a\} \cup \underline{ab} \cup \{b\}.
+
+**YOU CAN USE 4.12 instead**
 
 
 **Bonus question: For $C$ continuum of rationals $\mathbb{Q}$ find an infinite collection of sets $X_1,X_2,X_3, ... $each of which is infinite whose intersection is a single point.**
