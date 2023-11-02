@@ -55,7 +55,7 @@ Hence, both the empty set $\emptyset$ and the entire continuum $C$ are open sets
 
 Contrapositive:If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
 
-Therefore there is some $x$ that is the limit point of $C \backslash G$ for all $R$ containing some $x$, $R \cap (C \backslash G \backslash \{x\}) \neq 0$ where $x \not\in C \backslash G. Thus the complement of $G$ is not closed because it does not contain all of its limit points, thus we know that 
+Therefore there is some $x$ that is the limit point of $C \backslash G$ for all $R$ containing some $x$, $R \cap (C \backslash G \backslash \{x\}) \neq 0$ where $x \not\in C \backslash G$. Thus the complement of $G$ is not closed because it does not contain all of its limit points, thus we know that 
 
 
 If for all $x \in G$ there exists a region $R$, such that $x$ is an element of $R$ such that $R \sub G$, then $G$ is open
@@ -76,25 +76,63 @@ We want to show that iff $G$ is open, then for all elements $x \in G$, there exi
 
 First, we assume that $G$ is open, then  by *theorem 4.9*, for all $x \in G$ there exists an $R$ such that $x \in R$ and $R \sub G$. Let's set $V = R$ so that $x \in V$ and consequently $V \sub G$. By theorem 4.10, because $R$ is a region and it is open, thus $V$ is also open. We have prove that $V \sub G$, $V$ contains $R$, and $V$ is also open
 
-For all elements $x \in G$, there is a subset $V$ that is open and $x \in V \sub G$. We want to prove that $G$ is open. We know that for all $x$, there exists an $R$ such taht $x \in R \in V$ and because $R \sub V$ and $V \sub G$, then $R \sub G$, and it also stands that for all $x \in R$, that $x \in R \sub G$ and by theorem 4.9, $G$ is open. 
+For all elements $x \in G$, there is a subset $V$ that is open and $x \in V \sub G$. We want to prove that $G$ is open. We know that for all $x$, there exists an $R$ such that $x \in R \in V$ and because $R \sub V$ and $V \sub G$, then $R \sub G$, and it also stands that for all $x \in R$, that $x \in R \sub G$ and by theorem 4.9, $G$ is open. 
 
 
 **Corollary 4.12: Let $a\in C$. Then the sets $\{x \in C| x < a\}$ and $\{x \in C| a < x\}$ are open.**
 
-Let $a \in C$, so that the sets $\{x \in C| x < a\}$ and $\{x \in C | x >a\}$. Let's let some region $R = \underline{ka}$ wheere $k$ is an arbitary point on $C$ such that it is less than $x$. $k$ must exist because $C$ does not have a first point. For all $x \in \{x \in C| x < a\}$, the region $R$ both contains $a$ and $R \sub \{x \in C| x < a\}$ thus by theorem 4.9, $\{x \in C| x < a\}$ is open.
+Let $a \in C$, so that the sets $\{x \in C| x < a\}$ and $\{x \in C | x >a\}$. Let's let some region $R = \underline{ka}$ where $k$ is an arbitary point on $C$ such that it is less than $x$. $k$ must exist because $C$ does not have a first point. For all $x \in \{x \in C| x < a\}$, the region $R$ both contains $a$ and $R \sub \{x \in C| x < a\}$ thus by theorem 4.9, $\{x \in C| x < a\}$ is open.
 
 For the other region $\{x \in C | x >a\}$, if we let $S= \underline{am}$ where $m$ is a point on $C$, which exists because $C$ doesn't have a last point. For all $\{x \in C | x >a\}$, $S$ contains $x$ and $S \sub \{x \in C | x >a\}$, thus by theorem 4.9, $\{x \in C | x >a\}$ is open. 
 
-**Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions**
+**Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions.**
 
-Each point $x$ in $G$ has a region $R_x$ such that $x \in R_x \sub G$ and the regions depends on its respective $x$ by theorem 4.9. $\bigcap_{x \in G}R_x \sub G$ and $G \sub \bigcap_{x \in G}R_x$ because any point $x$ in $G$ is in one of the regions $R_x$ such that $\bigcap_{x \in G}R_x = G.
+Each point $x$ in $G$ has a region $R_x$ such that $x \in R_x \sub G$ and the regions depends on its respective $x$ by theorem 4.9. $\bigcap_{x \in G}R_x \sub G$ and $G \sub \bigcap_{x \in G}R_x$ because any point $x$ in $G$ is in one of the regions $R_x$ such that $\bigcap_{x \in G}R_x = G$.
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
-Yes, there exists a subset $X \sub C$ that is neitehr open nor closed. Consider the set $X = \{1/x| x \in \N\}$ such that $1/1, 1/2, 1/3$ where $A \sub \mathbb{Q}$. $A$ is not open because there is no region $R$ such that $1/1$ is in $R$ and $R \sub A$. $A$ is not closed because $0$ iss a limit point of $A$, but $0$ is not contained in $A$. Thus $A$ is neither open nor closed. 
+Yes, there exists a subset $X \sub C$ that is neither open nor closed. Consider the set $X = \{1/x| x \in \N\}$ such that $1/1, 1/2, 1/3$ where $A \sub \mathbb{Q}$. $A$ is not open because there is no region $R$ such that $1/1$ is in $R$ and $R \sub A$. $A$ is not closed because $0$ is a limit point of $A$, but $0$ is not contained in $A$. Thus $A$ is neither open nor closed. 
 
 
-**Theorem 4.15: Let $\{X_\lambda\}$ be an arbitrary collection of closed subsets of a continuum $C$. Then the intersection $\bigcap_\lambda X_\lambda$** is closed.
+**Theorem 4.15: Let $\{X_\lambda\}$ be an arbitrary collection of closed subsets of a continuum $C$. Then the intersection $\bigcap_\lambda X_\lambda$ is closed.**
 
 
 
+**Theorem 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
+
+Let us assign the union of open subsets $\bigcup_\lambda G_\lambda$ as set $G$. Here, we are trying to prove that the set $G$ is open if all open subsets $G_\lambda$ are open and such that for all $x \in G$, $x \in G_\lambda$. 
+
+Remember *theorem 4.11* which stated *that set $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open.* Because for all elements of $x in \bigcup_\lambda G_\lambda$ the subsets $G_\lambda$ include elements $x$ by definition 1.14 which defined $x$ to be elements of a subset $G_\lambda$ for all $\lambda \in I$ where $I$ is an nonempty set, and subsets $G_\lambda$ are given to be open, then by satisfying all conditions of *theorem 4.11*, the union $\bigcup_\lambda G_\lambda$ is open.
+
+
+**Theorem 4.17: Let $\{G_1...,G_n\}$ be a finite collection of open subsets of a continuum $C$. Then the intersection $G_1 \cap ... \cap G_n$ is open.**
+
+
+
+**Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
+
+By *theorem 1.15*, the complement of an intersection of a collection of sets is equal to the union of the complements of each set in the collection represented by $X\backslash (\bigcap_\lambda G_\lambda) = \bigcup_\lambda (X \backslash G_\lambda)$. Remember that the complement of an open set is, by definition, a closed set. Thus, we know that the complement of the finite collection of open subsets which form an open intersection of sets in *theorem 4.17* is the union of closed sets $X_1 \cup... \cup X_n$.
+
+**Exercise 4.19: Is it necessarily the case that the intersection of an infinite number of open sets is open? Is it possible to construct an infinite collection of open sets whose intersection is not open? Equivalently, is it possible to construct an infinite collection of closed sets whose union is not closed?**
+
+No, it is no necessarily the case the the intersection of an infinite number of open sets is open. For example, consider the intersection of these open sets $X_n$ of continuum $\mathbb{Q}$ where $n \in \N$ $\bigcap_n O_n (- \frac 1 n, \frac 1 n)$. Each set is
+
+**MORE**
+
+**Corollary 4.20: Let $G \sub C$ be nonempty. Then $G$ is open if and only if $G$ is the union of a collection of regions.**
+
+**MORE**
+
+We want to show that if $G$ is a nonempty, open set, then $G$ is the union of a collection of regions. We proved this in *theorem 4.13: $G$ be a nonempty open set. Then $G$ is the union of a collection of regions* because any point $x$ in $G$ is in one of the regions $R_x$ which corresponded to its respective $x$ such that $\bigcap_{x \in G}R_x = G$.
+
+Now, let's show that if $G$ is the union of a collection of regions, then $G$ is open. By *theorem 4.9: $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.* Because $G$ is open, then for every $x$ in $G$, there is a region $R_x$ such that $x \in R_x \sub G$. Thus, let's make each region $R_x$, which corresponds to its respective $x$, as a subset $V_x \sub G$ which contains only its respective $x$. By *corollary 4.11: $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open*, thus $G$ is open because for all $x$ in $G$, there is a $V_x$ such that $x \in V_x$ and $V$ is open.
+
+
+**Corollary: 4.21: If $\underline{ab}$ is a region of $C$, then ext $\underline{ab}$ is open.**
+
+
+
+**Bonus question: For $C$ continuum of rationals $\mathbb{Q}$ find an infinite collection of sets $X_1,X_2,X_3, ... $each of which is infinite whose intersection is a single point.**
+
+
+Consider the infinite collection of sets containing points 
