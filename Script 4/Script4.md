@@ -107,17 +107,24 @@ Remember *theorem 4.11* which stated *that set $G$ is open if and only if for al
 
 **Theorem 4.17: Let $\{G_1...,G_n\}$ be a finite collection of open subsets of a continuum $C$. Then the intersection $G_1 \cap ... \cap G_n$ is open.**
 
+We want to show that the intersection of the finite open sets is open. The intersection of the open subsets can be represented as $\bigcap_n G_n$ where $n \in \N$. For all $x$ in the intersection, $x \in$ each of the sets $G_n$. Then for all $n$, there exists an individual $R_n$ that contains $x$ such that $x \in R_n \sub G$ by *theorem 4.9*.
+
+*Theorem 3.18:If $n$ regions $R_1,..., R_n$ have a point $x$ in common, then their intersection $R_1 \cup ... \cap R_n$ is a region containing $x$*, therefore there exists a region in the intersection of finite open sets called $R_{inter} = \bigcap_nR_n$. Thus $R_{inter}$ for all $n$, $R_n \sub G_n$, $R_{inter} \sub R_n \sub G_n$. Which means $R_{inter} \sub \bigcap_n G_n$.
+
 
 
 **Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
+We know  that $C \backslash X$ is open for all $i$. By *theorem 4.17* we know that the intersection of $C\backslash X_i$ is open as well so that $\bigcap_n C \backslash X_i$. By *theorem 1.15*, we know that $C \backslash \bigcap_n C \backslash X_i = \bigcup_n C \backslash (C \backslash X_i) = \bigcup_n X_i$ this is because the complement of open is closed.
+
+**OR, bottom is mine**
 
 By *theorem 1.15*, the complement of an intersection of a collection of sets is equal to the union of the complements of each set in the collection represented by $X\backslash (\bigcap_\lambda G_\lambda) = \bigcup_\lambda (X \backslash G_\lambda)$. Remember that the complement of an open set is, by definition, a closed set. Thus, we know that the complement of the finite collection of open subsets which form an open intersection of sets in *theorem 4.17* is the union of closed sets $X_1 \cup... \cup X_n$.
 
 **Exercise 4.19: Is it necessarily the case that the intersection of an infinite number of open sets is open? Is it possible to construct an infinite collection of open sets whose intersection is not open? Equivalently, is it possible to construct an infinite collection of closed sets whose union is not closed?**
 
-No, it is no necessarily the case the the intersection of an infinite number of open sets is open. For example, consider the intersection of these open sets $X_n$ of continuum $\mathbb{Q}$ where $n \in \N$ $\bigcap_n O_n (- \frac 1 n, \frac 1 n)$. Each set is
+1. Yes, it is possible to construct an infinite collection of open sets whose intersection is not open. For example, construct a set $A = \bigcap_n \underline{(- \frac a n)(\frac 1 n)}$ in the continuum $\mathbb{Q}$ where $A \sub Q$ and $n \in N$. It follows that $A = \bigcap_n \underline{(- \frac a n)(\frac 1 n)} = \{0\}$ because $0$ is the only point contained in the intersection of all these regions as $n$ goes towards infinity. For each set $\underline{(- \frac a n)(\frac 1 n)}$ is a region and therefore open by *corollary 4.10* which states regions are open. However, because $A = \{0\}, there exists no region $R$ such that $0 \in R \sub A$. Therefore, $A$ is not open by *theorem 4.9*.
 
-**MORE**
+2. Yes, it is possible to construct an infinite collection of closed sets whose union is not closed. Consider set $B = \bigcup_n \{\frac 1 n\}$ where $n \in N$ in the continuum $\mathbb{Q} and $B \sub \mathbb{Q}$. For all $n \in \N$, each set $\{\frac 1 n\} is finite and therefore closed. However, $0$ is not in $B$, and $0$ is a limtit point of $B$. Thus $B$ is not closed due to *definition 4.1*. 
 
 **Corollary 4.20: Let $G \sub C$ be nonempty. Then $G$ is open if and only if $G$ is the union of a collection of regions.**
 
@@ -135,4 +142,4 @@ Now, let's show that if $G$ is the union of a collection of regions, then $G$ is
 **Bonus question: For $C$ continuum of rationals $\mathbb{Q}$ find an infinite collection of sets $X_1,X_2,X_3, ... $each of which is infinite whose intersection is a single point.**
 
 
-Consider the infinite collection of sets containing points 
+Consider the infinite set $X$ $(- \frac 1 n, \frac 1 n)$ of continuum $\mathbb{Q}$ that is formed by the union of the infinite collection of sets each with a range of $[0,(-1)^{n-1} \frac 1 n)$ where $n \in \N$. In this case, the only element the sets have in common is 0 which is an intersection on a single point.
