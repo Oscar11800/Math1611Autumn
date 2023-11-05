@@ -149,8 +149,4 @@ Suppose there exists some $d$ such that $d$ is a potential limit point of $\unde
 
 **YOU CAN USE 4.12 instead**
 
-
-**Bonus question: For $C$ continuum of rationals $\mathbb{Q}$ find an infinite collection of sets $X_1,X_2,X_3, ... $each of which is infinite whose intersection is a single point.**
-
-
-Consider the infinite set $X$ $(- \frac 1 n, \frac 1 n)$ of continuum $\mathbb{Q}$ that is formed by the union of the infinite collection of sets each with a range of $[0,(-1)^{n-1} \frac 1 n)$ where $n \in \N$. In this case, the only element the sets have in common is 0 which is an intersection on a single point.
+****
