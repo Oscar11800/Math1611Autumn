@@ -151,5 +151,14 @@ Suppose there exists some $d$ such that $d$ is a potential limit point of $\unde
 
 **Theorem 4.23: Let $C$ be a connected continuum. Let $x$, $y ∈ C$, with $x < y$. Then there exists $z ∈ C$ such that $x < z < y$.**
 
+Let's solve this by contradiction. Assume there does not exist an element $z \in C$ such that $x < z < y$. By *corollary 4.12*, which states that for any element $a \in C$ and $x \in G \sub C$, the sets $\{x\in C| x \leq a\}$ and $\{x \in C| a <x \}$ are open. Therefore, we can represent $C$ as the union of sets $A$ and $B$ where $a\in A \sub C$ and $A = \{a \in C| a \leq x\}$ and $b \in B \sub C$ and $B = \{b \in C | b \geq y\}$ (notice we don't use $z$ because it does not exist).
+
+Also, we know that $A$ and $B$ are nonempty because $x \in A$ and $y \in B$.
+
+Moreover, $A$ and $B$ are disjoint: $\overline{A} \cap B = A \cap \overline{B} = \empty$. This is because $x < y$ and every point in $A$ is less than or equal to $x$ and every point in $B$ is greater than or equal to $y$ which is true by *axiom 2* stating that continuums have an ordering $<$, and in this case there is no point in $C$ that is greater than or equal to $y$ and less than or equal to $x$ therefore the sets $A$ and $B$ are disjoint: $A \cap B = \empty$.
+
+The existence of disjoint, nonempty open sets $A$ and $B$ such that $C = A \cup B$ means that $C$ is disconnected by definition which is a contradiction which means our assumption is false. Thus, there must a point $z \in C$ such that $x < z < y$ for $C$ to b a connected continuum.
+
 
 **Exercise 4.24: Let $C$ be a connected continuum and $a ∈ C$. Prove that $C \backslash \{a\} $is a disconnected continuum.**
+
