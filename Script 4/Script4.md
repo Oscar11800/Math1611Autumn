@@ -149,4 +149,7 @@ Suppose there exists some $d$ such that $d$ is a potential limit point of $\unde
 
 **YOU CAN USE 4.12 instead**
 
-****
+**Theorem 4.23: Let $C$ be a connected continuum. Let $x$, $y ∈ C$, with $x < y$. Then there exists $z ∈ C$ such that $x < z < y$.**
+
+
+**Exercise 4.24: Let $C$ be a connected continuum and $a ∈ C$. Prove that $C \backslash \{a\} $is a disconnected continuum.**
