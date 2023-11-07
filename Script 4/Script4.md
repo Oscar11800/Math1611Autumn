@@ -1,7 +1,9 @@
 ***<h1 style="text-align: center;">Script 4</h1>***
 **Theorem 4.2: The sets $\empty$ and C are closed.**
 
-A closed set is a set that contains all of its limit points. Remember for there to be a limit point $p$ of $\empty$, then for every region  $R$ where $p \in R$ this must hold true: $R \cap (\empty \backslash \{p\}) \neq \empty$. However, $\empty$ does not contain any elements in its set, therefore $R \cap \empty$ will always be the empty set therefore there are no limit points, and since $\empty$ has no limit points, then the set trivially contains all of its limit points. 
+A closed set is a set that contains all of its limit points. Remember for there to be a limit point $p$ of $\empty$, then for every region  $R$ where $p \in R$ this must hold true: $R \cap (\empty \backslash \{p\}) \neq \empty$. 
+
+However, $\empty$ does not contain any elements in its set, therefore $R \cap \empty$ will always be the empty set therefore there are no limit points, and since $\empty$ has no limit points, then the set trivially contains all of its limit points. 
 
 For the set $C$ which contains all elements of the continuum $C$, recall that limit points $p$ must be in $C$, thus $C$ contains all its limit points based on the definition of a limit point. 
 
@@ -151,7 +153,7 @@ Suppose there exists some $d$ such that $d$ is a potential limit point of $\unde
 
 **Theorem 4.23: Let $C$ be a connected continuum. Let $x$, $y ∈ C$, with $x < y$. Then there exists $z ∈ C$ such that $x < z < y$.**
 
-Let's solve this by contradiction. Assume there does not exist an element $z \in C$ such that $x < z < y$. By *corollary 4.12*, which states that for any element $a \in C$ and $x \in G \sub C$, the sets $\{x\in C| x \leq a\}$ and $\{x \in C| a <x \}$ are open. Therefore, we can represent $C$ as the union of sets $A$ and $B$ where $a\in A \sub C$ and $A = \{a \in C| a \leq x\}$ and $b \in B \sub C$ and $B = \{b \in C | b \geq y\}$ (notice we don't use $z$ because it does not exist).
+Let's solve this by contradiction. Assume there does not exist an element $z \in C$ such that $x < z < y$. By *corollary 4.12*, which states that for any element $a \in C$ and $x \in G \sub C$, the sets $\{x\in C| x \leq a\}$ and $\{x \in C| a <x \}$ are open. Therefore, we can represent $C$ as the union of sets $A$ and $B$ where $a\in A \sub C$ and $A = \{a \in C| a <y\}$ and $b \in B \sub C$ and $B = \{b \in C | b > y\}$ (notice we don't use $z$ because it does not exist).
 
 Also, we know that $A$ and $B$ are nonempty because $x \in A$ and $y \in B$.
 
@@ -162,3 +164,9 @@ The existence of disjoint, nonempty open sets $A$ and $B$ such that $C = A \cup 
 
 **Exercise 4.24: Let $C$ be a connected continuum and $a ∈ C$. Prove that $C \backslash \{a\} $is a disconnected continuum.**
 
+We know that the continuum $C\backslash \{a\}$ is a continuum because it fulfills the axioms:
+1. it is nonempty
+2. it has a well defined ordering
+3. it has no first nor last point
+
+To prove that $C\backslash \{a\}$ is disconnected, we want to show that $C \
