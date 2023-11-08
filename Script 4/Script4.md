@@ -122,10 +122,12 @@ In conclusion, the subset \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \righ
 
 
 **Theorem 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
+    
+Consider the set \(G = \bigcup_{\lambda \in \Lambda} G_\lambda\), where each \(G_\lambda\) is an open subset of \(C\). To prove that \(G\) is open, we must show that for every point \(x \in G\), there exists a region \(R\) such that \(x \in R \subseteq G\) (*Theorem 4.9*).
 
-Let us assign the union of open subsets $\bigcup_\lambda G_\lambda$ as set $G$. Here, we are trying to prove that the set $G$ is open if all open subsets $G_\lambda$ are open and such that for all $x \in G$, $x \in G_\lambda$. 
+Let \(x\) be an arbitrary point in \(G\). By *Corollary 3.20*, there exists at least one index \(\lambda_0 \in \Lambda\) such that \(x \in G_{\lambda_0}\) if $x$ is in $G$. Since \(G_{\lambda_0}\) is open, by *Theorem 4.11*, there exists a subset \(V \sub G_{\lambda_0}\) such that \(x \in V\) and \(V\) is open.
 
-Remember *theorem 4.11* which stated *that set $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open.* Because for all elements of $x in \bigcup_\lambda G_\lambda$ the subsets $G_\lambda$ include elements $x$ by definition 1.14 which defined $x$ to be elements of a subset $G_\lambda$ for all $\lambda \in I$ where $I$ is an nonempty set, and subsets $G_\lambda$ are given to be open, then by satisfying all conditions of *theorem 4.11*, the union $\bigcup_\lambda G_\lambda$ is open.
+Now, since \(G_{\lambda_0} \sub G\) and \(V \sub G_{\lambda_0}\), it follows that \(V \sub G\). Hence, for our arbitrary point \(x\), we have found a region \(V\) such that \(x \in V \sub G\), satisfying the condition for \(G\) to be open. Additionally, because for all elements of $x \in \bigcup_\lambda G_\lambda$ the subsets $G_\lambda$ include elements $x$ by *definition 1.14* which defined $x$ to be elements of a subset $G_\lambda$ for all $\lambda \in I$ where $I$ is an nonempty set, and subsets $G_\lambda$ are given to be open, then by satisfying all conditions of *theorem 4.11*, the union $\bigcup_\lambda G_\lambda$ is open.
 
 
 **Theorem 4.17: Let $\{G_1...,G_n\}$ be a finite collection of open subsets of a continuum $C$. Then the intersection $G_1 \cap ... \cap G_n$ is open.**
