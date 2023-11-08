@@ -180,15 +180,15 @@ Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open se
 
 **Corollary 4.20: Let $G \sub C$ be nonempty. Then $G$ is open if and only if $G$ is the union of a collection of regions.**
 
-1. assume $G$ is opeen, then by *theorem 4.9*, for all $x \in G$ there exists a region containing $x$ that is entirely contained by $G$. The union of all such regions contains all $x \in G$ which means that $G \sub \bigcup_n R_n$ where $n \in \N$. So $\bigcup_n R_n \sub G$ which means that $\bigcup R_n = G_n$.
+1. If \( G \) is open, then \( G \) is the union of a collection of regions:
 
-2. We can assume that $G = \bigcup_n R_n$ and we want to show that $G$ is open. Since we know that all regions $R_n$ are open by *theorem 4.10*, then because $G$ is a union of open subsets, then it must be open.
+   Assume \( G \) is open. By *Theorem 4.9*, for every point \( x \in G \), there exists a region \( R_x \) such that \( x \in R_x \sub G \). The collection of all such regions \( \{R_x \mid x \in G\} \) is entirely contained by \( G \), since every point in \( G \) is contained within at least one region in the collection. Therefore, \( G \) can be expressed as the union of these regions:
+   \[ G = \bigcup_{x \in G} R_x \]
+   This demonstrates that if \( G \) is open, it is the union of a collection of regions.
 
-**MINE BELOW**
+2. If \( G \) is the union of a collection of regions, then \( G \) is open:
 
-We want to show that if $G$ is a nonempty, open set, then $G$ is the union of a collection of regions. We proved this in *theorem 4.13: $G$ be a nonempty open set. Then $G$ is the union of a collection of regions* because any point $x$ in $G$ is in one of the regions $R_x$ which corresponded to its respective $x$ such that $\bigcap_{x \in G}R_x = G$.
-
-Now, let's show that if $G$ is the union of a collection of regions, then $G$ is open. By *theorem 4.9: $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.* Because $G$ is open, then for every $x$ in $G$, there is a region $R_x$ such that $x \in R_x \sub G$. Thus, let's make each region $R_x$, which corresponds to its respective $x$, as a subset $V_x \sub G$ which contains only its respective $x$. By *corollary 4.11: $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open*, thus $G$ is open because for all $x$ in $G$, there is a $V_x$ such that $x \in V_x$ and $V$ is open.
+   Conversely, assume \( G \) is the union of a collection of regions, say \( G = \bigcup_{n \in \mathbb{N}} R_n \), where each \( R_n \) is a region. By *Theorem 4.10*, each region \( R_n \) is open. Since the union of open sets is open, the set \( G \), being a union of the open regions \( R_n \), is also open. Thus, if \( G \) is the union of a collection of regions, it must be open.
 
 
 **Corollary: 4.21: If $\underline{ab}$ is a region of $C$, then ext $\underline{ab}$ is open.**
