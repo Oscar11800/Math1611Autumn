@@ -96,7 +96,15 @@ Therefore, both \( \{x \in C \mid x < a\} \) and \( \{x \in C \mid a < x\} \) ar
 
 **Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions.**
 
-Each point $x$ in $G$ has a region $R_x$ such that $x \in R_x \sub G$ and the regions depends on its respective $x$ by theorem 4.9. $\bigcap_{x \in G}R_x \sub G$ and $G \sub \bigcap_{x \in G}R_x$ because any point $x$ in $G$ is in one of the regions $R_x$ such that $\bigcap_{x \in G}R_x = G$.
+Let \( G \) be a nonempty open set in the continuum \( C \). By Theorem 4.9, for each point \( x \) in \( G \), there exists a region \( R_x \) such that \( x \) is an element of \( R_x \) and \( R_x \) is a subset of \( G \). Consider the collection of all such regions, denoted by \( \{R_x \mid x \in G\} \). We assert that \( G \) is the union of this collection.
+
+To establish this claim, we must demonstrate two things: first, that every point in \( G \) is an element of the union of these regions; and second, that this union does not extend beyond \( G \).
+
+For the first part, take any point \( y \) in \( G \). By the definition of an open set, there is a region \( R_y \) containing \( y \), which is also within \( G \). This implies that \( y \) is an element of the union \( \bigcup_{x \in G} R_x \).
+
+For the second part, consider any point \( z \) in the union \( \bigcup_{x \in G} R_x \). By *Corollary 3.20*, \( z \) must be an element of at least one region \( R_x \), where \( x \) is a member of \( G \). Since \( R_x \) is a subset of \( G \), it follows that \( z \) must also be an element of \( G \).
+
+Therefore, we conclude that \( G \) is the union of the regions \( \bigcup_{x \in G} R_x \) which proves that any nonempty open set \( G \) is the union of a collection of regions within the continuum \( C \).
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
