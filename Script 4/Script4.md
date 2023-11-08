@@ -46,19 +46,6 @@ Since \( y \) is a limit point of \( \overline{X} \), for every region \( R_1 \)
 In either case, \( z \) is in \( \overline{X} \), and since \( z \) is distinct from \( y \), we have shown that every region containing \( y \) intersects \( \overline{X} \) at some point other than \( y \). Therefore, \( y \) must be in \( \overline{X} \), and since \( y \) was an arbitrary limit point of \( \overline{X} \), it follows that \( \overline{X} \) contains all of its limit points.
 
 
-To prove $\overline{X}$ is closed, we need to show $\overline{X}$ contains all of its limit points. 
-We want to show $y \in \overline{X}$, so let $y \in LP(\overline{X})$ so $y\in LP(X \cup LP(X))$ which means based on *theorem 3.19* : 
-$y \in LP(X)$ which means $y \in \overline{X}$ based on the definition of closure: $\overline{X} = X \cup LP(X)$.
-
-or 
-
-$y \in LP(LP(x))$ where we let $R_1$ is a region that contains $y$ where $y \in R$ and we want to show $R_1 \cap(X\backslash\{y\} \neq \empty)$. We know that $R_1 \cap(X\backslash\{y\} \neq \empty)$ for all regions $R$ that $y\in R$. Let $Z \in R_1 \cap (LP(X) \backslash \{y\})$ where $z \in LP(X)$which means tha $z \in R_1$ and $z \in LP(X) \backslash\{y\}$. We can then say that $R_1 \cap(X\backslash\{y\} \neq \empty)$. Now, let $a \in R_1 \cap(X\backslash\{y\})$.
-
-case 1: $a \neq y$ which means $R_1 \cap x \backslash \{y\} \neq \empty$. 
-
-case 2: $a = y$ which means $y \in R_1 \cap(x \backslash \{z\})$ and by *theorem 3.21*, $y\in R_2$, $z \in R_3$, and $R_2 \cap R_3 = \empty$.
-We can surmise that $z \in R_1 \cap R_3$ such that $(R_1 \cap R_3) \cap (x \backslash \{z\} \neq \empty)$. Let $b \in (R_1 \cap R_3) \cap (x \backslash \{z\}$ which means $b \in R_1 \cap R_3$ and $b\in X$ and $b \in R_1 \cap (x \backslash \{y\})$ such that $y \in LP(X)$ which means $y \in \overline{X}$ and because all $LP(\overline{X} \sub X)$ then $\overline{X}$ is closed.  
-
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
 
 Recall the definition of an open set: A subset $G$ of $C$ is an open set if its complement $C \setminus G$ is closed.
