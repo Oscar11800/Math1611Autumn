@@ -132,13 +132,9 @@ Now, since \(G_{\lambda_0} \sub G\) and \(V \sub G_{\lambda_0}\), it follows tha
 
 **Theorem 4.17: Let $\{G_1...,G_n\}$ be a finite collection of open subsets of a continuum $C$. Then the intersection $G_1 \cap ... \cap G_n$ is open.**
 
-To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must show that for any point \(x\) in the intersection, there exists a region \(R\) such that \(x \in R \sub \bigcap_{i=1}^{n} G_i\).
+To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must show that for any point \(x\) in the intersection, there exists a region \(R\) such that \(x \in R \sub \bigcap_{i=1}^{n} G_i\). Let \(x\) be an arbitrary point in \(\bigcap_{i=1}^{n} G_i\). Since \(x\) is in the intersection, it is contained in each \(G_i\), where \(1 \leq i \leq n\). Because each \(G_i\) is open, by *Theorem 4.9*, for each \(i\), there exists a region \(R_i\) such that \(x \in R_i \subseteq G_i\).
 
-Let \(x\) be an arbitrary point in \(\bigcap_{i=1}^{n} G_i\). Since \(x\) is in the intersection, it is contained in each \(G_i\), where \(1 \leq i \leq n\). Because each \(G_i\) is open, by *Theorem 4.9*, for each \(i\), there exists a region \(R_i\) such that \(x \in R_i \subseteq G_i\).
-
-Now, consider the intersection of these regions, \(R_{\text{inter}} = \bigcap_{i=1}^{n} R_i\). *By Theorem 3.18*, the intersection of a finite number of regions containing a common point \(x\) is itself a region containing \(x\). Therefore, \(R_{\text{inter}}\) is a region containing \(x\).
-
-Since \(R_i \sub G_i\) for all \(i\), it follows that \(R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\). Thus, for our point \(x\), we have found a region \(R_{\text{inter}}\) such that \(x \in R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\), which satisfies the definition of an open set by *Theorem 4.9*.
+Now, consider the intersection of these regions, \(R_{\text{inter}} = \bigcap_{i=1}^{n} R_i\). *By Theorem 3.18*, the intersection of a finite number of regions containing a common point \(x\) is itself a region containing \(x\). Therefore, \(R_{\text{inter}}\) is a region containing \(x\). Since \(R_i \sub G_i\) for all \(i\), it follows that \(R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\). Thus, for our point \(x\), we have found a region \(R_{\text{inter}}\) such that \(x \in R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\), which satisfies the definition of an open set by *Theorem 4.9*.
 
 Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open, completing the proof.
 
@@ -146,11 +142,7 @@ Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open, completing the pr
 
 **Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
 
-To prove that the union of a finite number of closed sets is closed, we will show that the complement of the union is open.
-
-By definition, a set is closed if its complement is open. For each closed set \( X_i \), its complement \( C \backslash X_i \) is open.
-
-Consider the intersection of these open complements: \( \bigcap_{i=1}^{n} (C \backslash X_i) \). By Theorem 4.17, the intersection of a finite number of open sets is open. Therefore, \( \bigcap_{i=1}^{n} (C \backslash X_i) \) is open.
+To prove that the union of a finite number of closed sets is closed, we will show that the complement of the union is open. By definition, a set is closed if its complement is open. For each closed set \( X_i \), its complement \( C \backslash X_i \) is open. Consider the intersection of these open complements: \( \bigcap_{i=1}^{n} (C \backslash X_i) \). By Theorem 4.17, the intersection of a finite number of open sets is open. Therefore, \( \bigcap_{i=1}^{n} (C \backslash X_i) \) is open.
 
 By *Theorem 1.15*, which states that the complement of a union is the intersection of the complements, we have:
 
@@ -163,13 +155,32 @@ Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open se
 
 **Exercise 4.19: Is it necessarily the case that the intersection of an infinite number of open sets is open? Is it possible to construct an infinite collection of open sets whose intersection is not open? Equivalently, is it possible to construct an infinite collection of closed sets whose union is not closed?**
 
-1. Yes, it is possible to construct an infinite collection of open sets whose intersection is not open. For example, construct a set $A = \bigcap_n \underline{(- \frac a n)(\frac 1 n)}$ in the continuum $\mathbb{Q}$ where $A \sub Q$ and $n \in N$. It follows that $A = \bigcap_n \underline{(- \frac a n)(\frac 1 n)} = \{0\}$ because $0$ is the only point contained in the intersection of all these regions as $n$ goes towards infinity. For each set $\underline{(- \frac a n)(\frac 1 n)}$ is a region and therefore open by *corollary 4.10* which states regions are open. However, because $A = \{0\}, there exists no region $R$ such that $0 \in R \sub A$. Therefore, $A$ is not open by *theorem 4.9*.
+1. Intersection of an Infinite Number of Open Sets:
 
-2. Yes, it is possible to construct an infinite collection of closed sets whose union is not closed. Consider set $B = \bigcup_n \{\frac 1 n\}$ where $n \in N$ in the continuum $\mathbb{Q} and $B \sub \mathbb{Q}$. For all $n \in \N$, each set $\{\frac 1 n\} is finite and therefore closed. However, $0$ is not in $B$, and $0$ is a limtit point of $B$. Thus $B$ is not closed due to *definition 4.1*. 
+   Yes, it is possible to construct an infinite collection of open sets whose interseciton is not open. Consider the infinite collection of sets \( A_n = \left\{ x \in \mathbb{Q} \mid -\frac{1}{n} < x < \frac{1}{n} \right\} \) where \( n \) is a natural number in \( \mathbb{N} \). Each set \( A_n \) is open in the continuum \( \mathbb{Q} \) because for each element \( x \) in \( A_n \), there exists a region within \( A_n \) that contains \( x \).
+
+   The intersection of all such sets is:
+   \[ A = \bigcap_{n \in \mathbb{N}} A_n \]
+
+   As \( n \) increases, the size of the sets \( A_n \) decreases. The only point that is common to all \( A_n \) is \( 0 \). Therefore, the intersection \( A \) is the singleton set containing only the point \( 0 \), which can be written as \( A = \{0\} \).
+
+   However, there exists no region \( R \) such that \( 0 \in R \subseteq A \), because any region containing \( 0 \) would necessarily contain other points not in \( A \). Because there is no region $R$ such that $0 \in R \sub A$, by *Theorem 4.9*, \( A \) is not open.
+
+2. Union of an Infinite Number of Closed Sets:
+
+   Yes, it is possible to construct an infinite collection of closed sets whose union is not closed. Consider the infinite collection of singletons \( B_n = \left\{ \frac{1}{n} \right\} \) where \( n \) is a natural number in \( \mathbb{N} \) and \( B_n \subseteq \mathbb{Q} \). Each singleton \( B_n \) is closed in \( \mathbb{Q} \) because it contains all its limit points because they are finite.
+
+   The union of all such singletons is:
+   \[ B = \bigcup_{n \in \mathbb{N}} B_n \]
+
+   The set \( B \) does not include \( 0 \), yet \( 0 \) is a limit point of \( B \) because for every positive integer \( m \), there exists an \( n \) such that \( \frac{1}{n} < \frac{1}{m} \), and thus \( \frac{1}{n} \) is in \( B \) and within \( \frac{1}{m} \) of \( 0 \).
+
+   Since \( B \) does not contain this limit point \( 0 \), it is not closed. This demonstrates that the union of an infinite number of closed sets is not necessarily closed.
+
 
 **Corollary 4.20: Let $G \sub C$ be nonempty. Then $G$ is open if and only if $G$ is the union of a collection of regions.**
 
-1. assume $G$ is opeen, then by *theorem 4.9*, for all $x \in G$ there exists a region containing $x$ that is entirely contained by $G$. The union of all such regions contains all $x \in G$ which means that $G \sub \bigcup_n R_n$ where $n \in \N$. So $\bigcup_n R_n \sub G$ which means that $\bigcup_ R_n = G_n$.
+1. assume $G$ is opeen, then by *theorem 4.9*, for all $x \in G$ there exists a region containing $x$ that is entirely contained by $G$. The union of all such regions contains all $x \in G$ which means that $G \sub \bigcup_n R_n$ where $n \in \N$. So $\bigcup_n R_n \sub G$ which means that $\bigcup R_n = G_n$.
 
 2. We can assume that $G = \bigcup_n R_n$ and we want to show that $G$ is open. Since we know that all regions $R_n$ are open by *theorem 4.10*, then because $G$ is a union of open subsets, then it must be open.
 
