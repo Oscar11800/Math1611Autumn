@@ -122,7 +122,7 @@ In conclusion, the subset \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \righ
 
 
 **Theorem 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
-    
+
 Consider the set \(G = \bigcup_{\lambda \in \Lambda} G_\lambda\), where each \(G_\lambda\) is an open subset of \(C\). To prove that \(G\) is open, we must show that for every point \(x \in G\), there exists a region \(R\) such that \(x \in R \subseteq G\) (*Theorem 4.9*).
 
 Let \(x\) be an arbitrary point in \(G\). By *Corollary 3.20*, there exists at least one index \(\lambda_0 \in \Lambda\) such that \(x \in G_{\lambda_0}\) if $x$ is in $G$. Since \(G_{\lambda_0}\) is open, by *Theorem 4.11*, there exists a subset \(V \sub G_{\lambda_0}\) such that \(x \in V\) and \(V\) is open.
@@ -132,9 +132,15 @@ Now, since \(G_{\lambda_0} \sub G\) and \(V \sub G_{\lambda_0}\), it follows tha
 
 **Theorem 4.17: Let $\{G_1...,G_n\}$ be a finite collection of open subsets of a continuum $C$. Then the intersection $G_1 \cap ... \cap G_n$ is open.**
 
-We want to show that the intersection of the finite open sets is open. The intersection of the open subsets can be represented as $\bigcap_n G_n$ where $n \in \N$. For all $x$ in the intersection, $x \in$ each of the sets $G_n$. Then for all $n$, there exists an individual $R_n$ that contains $x$ such that $x \in R_n \sub G$ by *theorem 4.9*.
+To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must show that for any point \(x\) in the intersection, there exists a region \(R\) such that \(x \in R \sub \bigcap_{i=1}^{n} G_i\).
 
-*Theorem 3.18:If $n$ regions $R_1,..., R_n$ have a point $x$ in common, then their intersection $R_1 \cup ... \cap R_n$ is a region containing $x$*, therefore there exists a region in the intersection of finite open sets called $R_{inter} = \bigcap_nR_n$. Thus $R_{inter}$ for all $n$, $R_n \sub G_n$, $R_{inter} \sub R_n \sub G_n$. Which means $R_{inter} \sub \bigcap_n G_n$.
+Let \(x\) be an arbitrary point in \(\bigcap_{i=1}^{n} G_i\). Since \(x\) is in the intersection, it is contained in each \(G_i\), where \(1 \leq i \leq n\). Because each \(G_i\) is open, by *Theorem 4.9*, for each \(i\), there exists a region \(R_i\) such that \(x \in R_i \subseteq G_i\).
+
+Now, consider the intersection of these regions, \(R_{\text{inter}} = \bigcap_{i=1}^{n} R_i\). *By Theorem 3.18*, the intersection of a finite number of regions containing a common point \(x\) is itself a region containing \(x\). Therefore, \(R_{\text{inter}}\) is a region containing \(x\).
+
+Since \(R_i \sub G_i\) for all \(i\), it follows that \(R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\). Thus, for our point \(x\), we have found a region \(R_{\text{inter}}\) such that \(x \in R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\), which satisfies the definition of an open set by *Theorem 4.9*.
+
+Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open, completing the proof.
 
 
 
