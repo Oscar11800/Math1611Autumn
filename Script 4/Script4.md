@@ -193,11 +193,11 @@ Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open se
 
 **Corollary: 4.21: If $\underline{ab}$ is a region of $C$, then ext $\underline{ab}$ is open.**
 
-If $\underline{ab} is a region in continuum $C$, then the ext $\underline{ab} is open. By *theorem 3.14* $C \backslash (\{a\} \cup \underline{ab} \cup \{b\}) = ext \underline{ab}$. If ext $\underline{ab}$ is open, then by *theorem 4.7*, $C \backslash$ ext $\underline{ab} = \{a\} \cup \underline{ab} \cup \{b\}$ is closed.
+If $\underline{ab}$ is a region in continuum $C$, then the ext $\underline{ab}$ is open. By *theorem 3.14* $C \backslash (\{a\} \cup \underline{ab} \cup \{b\}) = ext \underline{ab}$. If ext $\underline{ab}$ is open, then by *theorem 4.7*, $C \backslash$ ext $\underline{ab} = \{a\} \cup \underline{ab} \cup \{b\}$ is closed.
 
 We want to show that there is no $x$ such that $x$ is a limit point of $\{a\} \cup \underline{ab} \cup \{b\}$ and $x \not\in \{a\} \cup \underline{ab}$.
 
-Suppose there exists some $d$ such that $d$ is a potential limit point of $\underline{ab}$ and $d < a$. Then by *axiom 3 of continuums* there exists a $z$ such that $z < d$. Now suppose there is at least one element $q$ such that $d < q < a$ which means there exists a region $\underline{za}$ such that $\underline{za} \cap (\{a\} \cup \underline{ab} \{b\} \backslash \{d\} = \empty$. Therefore $d$ is not a limit point of $\{a\} \cup \underline{ab} \cup \{b\}.
+Suppose there exists some $d$ such that $d$ is a potential limit point of $\underline{ab}$ and $d < a$. Then by *axiom 3 of continuums* there exists a $z$ such that $z < d$. Now suppose there is at least one element $q$ such that $d < q < a$ which means there exists a region $\underline{za}$ such that $\underline{za} \cap (\{a\} \cup \underline{ab} \{b\} \backslash \{d\} = \empty$. Therefore $d$ is not a limit point of $\{a\} \cup \underline{ab} \cup \{b\}$.
 
 **YOU CAN USE 4.12 instead**
 
