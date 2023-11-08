@@ -87,17 +87,12 @@ Therefore, \( G \) is open if and only if for every \( x \in G \), there exists 
 
 **Corollary 4.12: Let $a\in C$. Then the sets $\{x \in C| x < a\}$ and $\{x \in C| a < x\}$ are open.**
 
-Let $a \in C$, so that the sets $\{x \in C| x < a\}$ and $\{x \in C | x >a\}$. Let's let some region $R = \underline{ka}$ where $k$ is an arbitary point on $C$ such that it is less than $x$. $k$ must exist because $C$ does not have a first point. For all $x \in \{x \in C| x < a\}$, the region $R$ both contains $a$ and $R \sub \{x \in C| x < a\}$ thus by theorem 4.9, $\{x \in C| x < a\}$ is open.
-
-For the other region $\{x \in C | x >a\}$, if we let $S= \underline{am}$ where $m$ is a point on $C$, which exists because $C$ doesn't have a last point. For all $\{x \in C | x >a\}$, $S$ contains $x$ and $S \sub \{x \in C | x >a\}$, thus by theorem 4.9, $\{x \in C | x >a\}$ is open.
-
-___
-
 Given the point $a \in C$, consider the set \( L = \{x \in C \mid x < a\} \). Take any point \( x \in L \). Since \( C \) is a continuum without a first point by *axiom 3*, there exists a point \( k \in C \) such that \( k < x \). Similarly, since \( x < a \), we can find a region \( R \) such that \( k < x \) and \( x < a \) are both in \( R \), and \( R \subseteq L \). By *Theorem 4.9*, which states that a set is open if for every point there exists a region contained within the set, \( L \) is open.
 
-Now consider the set \( U = \{x \in C \mid a < x\} \). For any point \( x \in U \), since \( C \) does not have a last point, there exists a point \( m \in C \) such that \( x < m \). We can then find a region \( S \) such that \( a < x \) and \( x < m \) are both in \( S \), and \( S \subseteq U \). Again, by Theorem 4.9, \( U \) is open.
+Now consider the set \( U = \{x \in C \mid a < x\} \). For any point \( x \in U \), since \( C \) does not have a last point by *axiom 3*, there exists a point \( m \in C \) such that \( x < m \). We can then find a region \( S \) such that \( a < x \) and \( x < m \) are both in \( S \), and \( S \sub U \). Again, by Theorem 4.9, \( U \) is open.
 
 Therefore, both \( \{x \in C \mid x < a\} \) and \( \{x \in C \mid a < x\} \) are open sets.
+
 
 **Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions.**
 
