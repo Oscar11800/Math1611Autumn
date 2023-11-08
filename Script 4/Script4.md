@@ -1,28 +1,50 @@
 ***<h1 style="text-align: center;">Script 4</h1>***
 **Theorem 4.2: The sets $\empty$ and C are closed.**
 
-A closed set is a set that contains all of its limit points. Remember for there to be a limit point $p$ of $\empty$, then for every region  $R$ where $p \in R$ this must hold true: $R \cap (\empty \backslash \{p\}) \neq \empty$. 
+To prove that a set is closed, we must show that it contains all of its limit points. By definition a limit point of set $S$ is a point $p$ if for every region $R$ of $C$ containing $p$ such that $p \in R$, the region $R$ intersects with $S$ at some point other than $p$, more formally $R \cap S \backslash \{p\} \neq \empty$.
 
-However, $\empty$ does not contain any elements in its set, therefore $R \cap \empty$ will always be the empty set therefore there are no limit points, and since $\empty$ has no limit points, then the set trivially contains all of its limit points. 
+First let us prove that $\empty$ is closed: 
+The set $\empty$ does not contain any elements in its set, therefore $R \cap \empty$ will always be the empty set therefore there are no limit points, and since $\empty$ has no limit points, then the set trivially contains all of its limit points. 
 
-For the set $C$ which contains all elements of the continuum $C$, recall that limit points $p$ must be in $C$, thus $C$ contains all its limit points based on the definition of a limit point. 
+Now let us prove that the set $C$ is closed:
+The set $C$ contains all points of the continuum $C$ which means it also includes all limit points $p$. Because all limit points $p$ must be in $C$ for it to be closed, then $C$ is closed by definition of a closed set.
 
 
-**Theorem 4.3: A subset $C$ containing a finite number of   points is closed.**
+**Theorem 4.3: A subset $C$ containing a finite number of points is closed.**
 
-According to *theorem 3.23: a finite subset $A$ of a continuum $C$ has no limit points*. Similar to the empty set, when a set contains no limit points, then trivially the set contains all its limit points and is closed.
+According to *Theorem 3.23*, a finite subset $A$ of a continuum $C$ has no limit points. We will use this fact to prove that $C$ is closed.
 
+Since $C$ is finite, let's consider any point $p\in R$. There are two possibilities:
+
+$p$ is an element of $C$: Since $C$ is finite, there exists a region $R$ containing $p$ that does not contain any other points of $C$ by *corollay 3.23*. Thus, $p$ is not a limit point of $C$ by definition of a limit point.
+
+$p$ is not an element of $C$: In this case, $p$ cannot be a limit point of $C$ because there exists a region $R$ containing $p$ that does not intersect $C$ at any point other than possibly $p$ itself (if $p$ was in $C$, which it is not).
+
+In both cases, $p$ is not a limit point of $C$. Since $C$ has no limit points, it trivially contains all of its limit points. Therefore, $C$ is closed.
 
 **Theorem 4.5: $X \sub C$ is closed if and only if $X = \overline{X}$.**
 
 The closure of $X$ is $\overline{X} = X \cup LP(X)$ which is the union of all elements in $X$ and the limit points of $x$. 
 
-First we prove that if $X \sub C$ is closed then $X = \overline{X}$. Suppose we have a set $A = LP(X)$. If $X$ is closed, then that means all limit points $LP(X) \in X$ such that $A \sub X$. Because $X$ contains all elements in $A$, we understand that $X \cup A = X$ because there are no elements in $A$ that are not in $X$. Now we have proved $\overline{X} = X \cup LP(X) = X$.
+**(⇒) If \( X \) is closed, then \( X = \overline{X} \):**
 
-Now we have to prove that if $X = \overline{X}$ then $X \sub C$ is closed. We know that  $\overline{X} = X \cup LP(X)$, so if $X = \overline{X}$, that means $X =X \cup LP(X)$. Because the set $X$ contains all its limit points, then the set $X$ must be closed.
+Assume \( X \subseteq C \) is closed. By definition, a closed set contains all its limit points. Let \( A = LP(X) \). Since \( X \) is closed, it follows that \( A \sub X \). Therefore, \( X \cup A = X \) because \( A \) does not contain any elements that are not already in \( X \). Hence, \( \overline{X} = X \cup LP(X) = X \), which shows that if \( X \) is closed, then \( X \) is equal to its closure.
+
+**(⇐) If \( X = \overline{X} \), then \( X \) is closed:**
+
+Assume \( X = \overline{X} \). By the definition of closure, \( \overline{X} \) includes \( X \) and all limit points of \( X \), that is, \( \overline{X} = X \cup LP(X) \). If \( X = \overline{X} \), then \( X \) must contain all its limit points because \( \overline{X} \) contains all limit points of \( X \) by definition. Therefore, \( X \) is closed because a set is closed if and only if it contains all its limit points.
+
+Thus, we have shown both directions of the equivalence: \( X \) is closed if and only if \( X = \overline{X} \). 
 
 
 **Theorem 4.6: Let $X \sub C$. Then $\overline{X}$ is closed. (equivalently, $\overline{X} = \overline{\overline{X}})$**
+
+To prove that \( \overline{X} \) is closed, we must show that it contains all of its limit points. Let \( y \) be a limit point of \( \overline{X} \), so \( y \in LP(\overline{X}) \). By the definition of closure, \( \overline{X} = X \cup LP(X) \). We need to show that \( y \in \overline{X} \).
+
+Since \( y \) is a limit point of \( \overline{X} \), for every region \( R_1 \) containing \( y \) such that $y \in R_1$, the intersection \( R_1 \cap (\overline{X} \setminus \{y\}) \) is non-empty. This means there exists some point \( z \in R_1 \cap (\overline{X} \setminus \{y\}) \). Since \( \overline{X} = X \cup LP(X) \), it follows that \( z \) is either in \( X \) or is a limit point of \( X \).
+
+In either case, \( z \) is in \( \overline{X} \), and since \( z \) is distinct from \( y \), we have shown that every region containing \( y \) intersects \( \overline{X} \) at some point other than \( y \). Therefore, \( y \) must be in \( \overline{X} \), and since \( y \) was an arbitrary limit point of \( \overline{X} \), it follows that \( \overline{X} \) contains all of its limit points.
+
 
 To prove $\overline{X}$ is closed, we need to show $\overline{X}$ contains all of its limit points. 
 We want to show $y \in \overline{X}$, so let $y \in LP(\overline{X})$ so $y\in LP(X \cup LP(X))$ which means based on *theorem 3.19* : 
