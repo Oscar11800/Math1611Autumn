@@ -58,38 +58,46 @@ Thus, we have shown that both \( \emptyset \) and \( C \) are open sets.
 
 
 **Theorem 4.9: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.**
+(class notes)
+$=>$ Contrapositive:If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
 
-Contrapositive:If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
+Therefore there is some $x$ that is the limit point of $C \backslash G$ for all $R$ containing some $x$, $R \cap (C \backslash G \backslash \{x\}) \neq 0$ where $x \not\in C \backslash G$. Thus the complement of $G$ is not closed because it does not contain all of its limit points. Based on the definition of an open set, we now know that $G$ is open because its complement is closed. We have thus proved if for all $x \in G$ there exists a region $R$, such that $x$ is an element of $R$ such that $R \sub G$, then $G$ is open
 
-Therefore there is some $x$ that is the limit point of $C \backslash G$ for all $R$ containing some $x$, $R \cap (C \backslash G \backslash \{x\}) \neq 0$ where $x \not\in C \backslash G$. Thus the complement of $G$ is not closed because it does not contain all of its limit points, thus we know that 
-
-
-If for all $x \in G$ there exists a region $R$, such that $x$ is an element of $R$ such that $R \sub G$, then $G$ is open
-
-Contrapositive: If $G$ is not open, then for some $x$ in $G$, for all regions $R$ containing $x$, $R \not\sub G$. If $G$ is not open, by theorem 4.2, then the complement of $G$ is not closed which means the complement does not contain all of its limit points. Let $x \in LP(C \backslash G)$ and $x \in G$. Therefore, there exists for all regions $R$ such that $x \in R$, $R$ contains elements of $C \backslash G$ because $R \cap G\backslash x \neq \empty$. Therefore $R$ is not subset of $G$ because it contains elements not in $G$.
+$<= $ Contrapositive: If $G$ is not open, then for some element $x$ in $G$, for all regions $R$ containing $x$, $R \not\sub G$. If $G$ is not open, by *theorem 4.2*, then the complement of $G$ is not closed which means the complement does not contain all of its limit points. Let $x \in LP(C \backslash G)$ and $x \in G$. Therefore, there exists for all regions $R$ such that $x \in R$, $R$ contains elements of $C \backslash G$ because $R \cap G\backslash x \neq \empty$. Therefore $R$ is not subset of $G$ because it contains elements not in $G$.
 
 
 **Corollary 4.10: Every region $R$ is open. Every complement of a region $C\backslash R$, is closed.**
 
-First, we want to prove that every region $R$ is open. For all elements $x$ of the region $R$, $R$ is itself a region such that $x \in R$ and $R \sub R$. By *theorem 4.9 *there exists a region $R$ such that $x \in R \sub G$ and $G \sub C$, $R$ is  open.
+Let \( R \) be a region in \( C \). By the definition of a region, for every point \( x \in R \), there exists an open interval \( (a, b) \) such that \( x \in (a, b) \subseteq R \). This open interval \( (a, b) \) serves as the region required by *Theorem 4.9* to conclude that \( R \) is open. Therefore, every region \( R \) is open.
 
-Since all $R$ are open, then by definition of an open set, all $C \backslash R$ are closed. 
+Now, consider the complement of a region \( C \setminus R \). Since \( R \) is open, its complement \( C \setminus R \) must be closed. This is because the definition of an open set \( R \) is such that its complement \( C \setminus R \) is closed.
+
+Hence, every region \( R \) is open, and every complement of a region \( C \setminus R \) is closed.
 
 
 **Corollary 4.11: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open.**
 
-We want to show that iff $G$ is open, then for all elements $x \in G$, there exists a subset $V$ such that $x \in V \sub G$ and $V$ is an open set. 
+**(⇒ Direct)** Assume \( G \) is open. By *theorem 4.9*, for every \( x \in G \), there exists a region \( R \) such that \( x \in R \sub G \). Since every region is open by Corollary 4.10, we can choose \( V = R \) such that $V sub G$ is also open and $x\in V$. Hence, for every \( x \in G \), there exists an open subset \( V \sub G \) containing \( x \).
 
-First, we assume that $G$ is open, then  by *theorem 4.9*, for all $x \in G$ there exists an $R$ such that $x \in R$ and $R \sub G$. Let's set $V = R$ so that $x \in V$ and consequently $V \sub G$. By theorem 4.10, because $R$ is a region and it is open, thus $V$ is also open. We have prove that $V \sub G$, $V$ contains $R$, and $V$ is also open
+**(⇐ Converse)** Assume that for every \( x \in G \), there exists an open subset \( V \sub G \) such that \( x \in V \). We want to prove that $G$ is open. We know that for all $x$, there exists an $R$ such that $x \in R \in V$ and because $R \sub V$ and $V \sub G$, then $R \sub G$, and it also stands that for all $x \in R$, that $x \in R \sub G$ and by *theorem 4.9*, thus $G$ is open. 
 
-For all elements $x \in G$, there is a subset $V$ that is open and $x \in V \sub G$. We want to prove that $G$ is open. We know that for all $x$, there exists an $R$ such that $x \in R \in V$ and because $R \sub V$ and $V \sub G$, then $R \sub G$, and it also stands that for all $x \in R$, that $x \in R \sub G$ and by theorem 4.9, $G$ is open. 
+
+Therefore, \( G \) is open if and only if for every \( x \in G \), there exists an open subset \( V \sub G \) containing \( x \).
 
 
 **Corollary 4.12: Let $a\in C$. Then the sets $\{x \in C| x < a\}$ and $\{x \in C| a < x\}$ are open.**
 
 Let $a \in C$, so that the sets $\{x \in C| x < a\}$ and $\{x \in C | x >a\}$. Let's let some region $R = \underline{ka}$ where $k$ is an arbitary point on $C$ such that it is less than $x$. $k$ must exist because $C$ does not have a first point. For all $x \in \{x \in C| x < a\}$, the region $R$ both contains $a$ and $R \sub \{x \in C| x < a\}$ thus by theorem 4.9, $\{x \in C| x < a\}$ is open.
 
-For the other region $\{x \in C | x >a\}$, if we let $S= \underline{am}$ where $m$ is a point on $C$, which exists because $C$ doesn't have a last point. For all $\{x \in C | x >a\}$, $S$ contains $x$ and $S \sub \{x \in C | x >a\}$, thus by theorem 4.9, $\{x \in C | x >a\}$ is open. 
+For the other region $\{x \in C | x >a\}$, if we let $S= \underline{am}$ where $m$ is a point on $C$, which exists because $C$ doesn't have a last point. For all $\{x \in C | x >a\}$, $S$ contains $x$ and $S \sub \{x \in C | x >a\}$, thus by theorem 4.9, $\{x \in C | x >a\}$ is open.
+
+___
+
+Given the point $a \in C$, consider the set \( L = \{x \in C \mid x < a\} \). Take any point \( x \in L \). Since \( C \) is a continuum without a first point by *axiom 3*, there exists a point \( k \in C \) such that \( k < x \). Similarly, since \( x < a \), we can find a region \( R \) such that \( k < x \) and \( x < a \) are both in \( R \), and \( R \subseteq L \). By *Theorem 4.9*, which states that a set is open if for every point there exists a region contained within the set, \( L \) is open.
+
+Now consider the set \( U = \{x \in C \mid a < x\} \). For any point \( x \in U \), since \( C \) does not have a last point, there exists a point \( m \in C \) such that \( x < m \). We can then find a region \( S \) such that \( a < x \) and \( x < m \) are both in \( S \), and \( S \subseteq U \). Again, by Theorem 4.9, \( U \) is open.
+
+Therefore, both \( \{x \in C \mid x < a\} \) and \( \{x \in C \mid a < x\} \) are open sets.
 
 **Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions.**
 
