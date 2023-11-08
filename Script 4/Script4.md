@@ -145,11 +145,21 @@ Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open, completing the pr
 
 
 **Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
-We know  that $C \backslash X$ is open for all $i$. By *theorem 4.17* we know that the intersection of $C\backslash X_i$ is open as well so that $\bigcap_n C \backslash X_i$. By *theorem 1.15*, we know that $C \backslash \bigcap_n C \backslash X_i = \bigcup_n C \backslash (C \backslash X_i) = \bigcup_n X_i$ this is because the complement of open is closed.
 
-**OR, bottom is mine**
+To prove that the union of a finite number of closed sets is closed, we will show that the complement of the union is open.
 
-By *theorem 1.15*, the complement of an intersection of a collection of sets is equal to the union of the complements of each set in the collection represented by $X\backslash (\bigcap_\lambda G_\lambda) = \bigcup_\lambda (X \backslash G_\lambda)$. Remember that the complement of an open set is, by definition, a closed set. Thus, we know that the complement of the finite collection of open subsets which form an open intersection of sets in *theorem 4.17* is the union of closed sets $X_1 \cup... \cup X_n$.
+By definition, a set is closed if its complement is open. For each closed set \( X_i \), its complement \( C \backslash X_i \) is open.
+
+Consider the intersection of these open complements: \( \bigcap_{i=1}^{n} (C \backslash X_i) \). By Theorem 4.17, the intersection of a finite number of open sets is open. Therefore, \( \bigcap_{i=1}^{n} (C \backslash X_i) \) is open.
+
+By *Theorem 1.15*, which states that the complement of a union is the intersection of the complements, we have:
+
+\[ C \backslash \left( \bigcup_{i=1}^{n} X_i \right) = \bigcap_{i=1}^{n} (C \backslash X_i) \]
+
+Since the right-hand side of the equation is open, the left-hand side, which is the complement of the union \( \bigcup_{i=1}^{n} X_i \), is also open.
+
+Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open set, which means it is closed.
+
 
 **Exercise 4.19: Is it necessarily the case that the intersection of an infinite number of open sets is open? Is it possible to construct an infinite collection of open sets whose intersection is not open? Equivalently, is it possible to construct an infinite collection of closed sets whose union is not closed?**
 
