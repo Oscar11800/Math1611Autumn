@@ -108,7 +108,13 @@ Therefore, we conclude that \( G \) is the union of the regions \( \bigcup_{x \i
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
-Yes, there exists a subset $X \sub C$ that is neither open nor closed. Consider the set $X = \{1/x| x \in \N\}$ such that $1/1, 1/2, 1/3$ where $A \sub \mathbb{Q}$. $A$ is not open because there is no region $R$ such that $1/1$ is in $R$ and $R \sub A$. $A$ is not closed because $0$ is a limit point of $A$, but $0$ is not contained in $A$. Thus $A$ is neither open nor closed. 
+Let \( C \) be a continuum, and consider the subset \( X \) defined as \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \right\} \), where \( \mathbb{N} \) denotes the set of natural numbers. We will show that \( X \) is neither open nor closed in \( C \).
+
+To show that \( X \) is not open, we must demonstrate that there exists at least one point in \( X \) that does not have a region entirely contained within \( X \). Take the point \( \frac{1}{1} \in X \). For any region \( R \) containing \( \frac{1}{1} \), there will be points in \( R \) that are not in \( X \) because between any two points in \( X \), there are infinitely many points in \( C \) that are not in \( X \). Hence, no region around \( \frac{1}{1} \) can be entirely contained within \( X \), and therefore \( X \) is not open.
+
+To show that \( X \) is not closed, we need to find a limit point of \( X \) that is not contained in \( X \). Consider the point \( 0 \). For any region \( R \) containing \( 0 \), there are elements of \( X \) within \( R \) because we can always find a natural number \( n \) large enough such that \( \frac{1}{n} \) is in \( R \). However, \( 0 \) itself is not an element of \( X \). Thus, \( 0 \) is a limit point of \( X \) that is not contained in \( X \), and therefore \( X \) is not closed.
+
+In conclusion, the subset \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \right\} \) is an example of a set that is neither open nor closed in the continuum \( C \).
 
 
 **Theorem 4.15: Let $\{X_\lambda\}$ be an arbitrary collection of closed subsets of a continuum $C$. Then the intersection $\bigcap_\lambda X_\lambda$ is closed.**
