@@ -193,13 +193,18 @@ Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open se
 
 **Corollary: 4.21: If $\underline{ab}$ is a region of $C$, then ext $\underline{ab}$ is open.**
 
-If $\underline{ab}$ is a region in continuum $C$, then the ext $\underline{ab}$ is open. By *theorem 3.14* $C \backslash (\{a\} \cup \underline{ab} \cup \{b\}) = ext \underline{ab}$. If ext $\underline{ab}$ is open, then by *theorem 4.7*, $C \backslash$ ext $\underline{ab} = \{a\} \cup \underline{ab} \cup \{b\}$ is closed.
+Given that \( \underline{ab} \) is a region in the continuum \( C \), we want to show that \( \text{ext} \underline{ab} \), the exterior of \( \underline{ab} \), is open. By *Theorem 3.14*, the complement of \( \underline{ab} \) along with its endpoints in \( C \) is given by:
+\[ C \setminus (\{a\} \cup \underline{ab} \cup \{b\}) = \text{ext} \underline{ab} \]
 
-We want to show that there is no $x$ such that $x$ is a limit point of $\{a\} \cup \underline{ab} \cup \{b\}$ and $x \not\in \{a\} \cup \underline{ab}$.
+To establish that \( \text{ext} \underline{ab} \) is open, we refer to *Theorem 4.7*, which implies that the complement of an open set is closed. Therefore, if \( \text{ext} \underline{ab} \) is open, its complement:
+\[ C \setminus \text{ext} \underline{ab} = \{a\} \cup \underline{ab} \cup \{b\} \]
+must be closed.
 
-Suppose there exists some $d$ such that $d$ is a potential limit point of $\underline{ab}$ and $d < a$. Then by *axiom 3 of continuums* there exists a $z$ such that $z < d$. Now suppose there is at least one element $q$ such that $d < q < a$ which means there exists a region $\underline{za}$ such that $\underline{za} \cap (\{a\} \cup \underline{ab} \{b\} \backslash \{d\} = \empty$. Therefore $d$ is not a limit point of $\{a\} \cup \underline{ab} \cup \{b\}$.
+We must show that there are no limit points of \( \{a\} \cup \underline{ab} \cup \{b\} \) that are not contained within the set itself. Assume for contradiction that there exists a point \( d \) that is a limit point of \( \underline{ab} \) and \( d < a \). By the properties of a continuum (specifically, *Axiom 3*), there must exist a point \( z \) such that \( z < d \). If there is a point \( q \) with \( d < q < a \), then there exists a region \( \underline{za} \) that does not intersect with \( \{a\} \cup \underline{ab} \cup \{b\} \) except possibly at \( d \):
+\[ \underline{za} \cap (\{a\} \cup \underline{ab} \cup \{b\} \setminus \{d\}) = \emptyset \]
+This implies that \( d \) cannot be a limit point of \( \{a\} \cup \underline{ab} \cup \{b\} \), contradicting our assumption.
 
-**YOU CAN USE 4.12 instead**
+Therefore, no such limit point \( d \) exists, and the set \( \{a\} \cup \underline{ab} \cup \{b\} \) contains all its limit points, confirming it is closed. Consequently, \( \text{ext} \underline{ab} \), being the complement of a closed set, is open.
 
 **Theorem 4.23: Let $C$ be a connected continuum. Let $x$, $y ∈ C$, with $x < y$. Then there exists $z ∈ C$ such that $x < z < y$.**
 
