@@ -48,18 +48,13 @@ In either case, \( z \) is in \( \overline{X} \), and since \( z \) is distinct 
 
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
 
-Recall the definition of an open set: A subset $G$ of $C$ is an open set if its complement $C \setminus G$ is closed.
+Recall the definition of an open set: A subset \( G \) of \( C \) is an open set if its complement \( C \setminus G \) is closed.
 
-We want to show that the empty set $\emptyset$ is open by demonstrating that its complement is closed. The complement of $\emptyset$ can be represented as $C \setminus \emptyset$, which is equivalent to $C$.
+First, consider the empty set \( \emptyset \). The complement of \( \emptyset \) in \( C \) is \( C \setminus \emptyset \), which is simply \( C \). By *Theorem 4.2*, \( C \) is closed because it contains all its limit points, as it is the entire space. Therefore, since the complement of \( \emptyset \) is closed, \( \emptyset \) itself is open.
 
-By Theorem 4.2, we know that the set $C$ contains all elements of the continuum, including its limit points, and is therefore a closed set.
-Thus, because the complement of $\emptyset$ (which is $C$) is a closed set, $\emptyset$ is indeed an open set.
+Next, consider the entire continuum \( C \). The complement of \( C \) within itself is \( C \setminus C \), which is \( \emptyset \). As established above by *Theorem 4.2*, \( \emptyset \) is closed. Hence, the complement of \( C \) is closed, which implies that \( C \) is open.
 
-Similarly, we want to establish that the entire continuum $C$ is an open set by observing its complement. The complement of $C$ is the empty set, which can be represented by the statement $C \setminus C = \emptyset$.
-
-Again, referring to Theorem 4.2, the empty set is closed because it contains no elements, and it trivially contains its limit points (of which it has none).Therefore, because the complement of $C$ (which is $\emptyset$) is a closed set, we can conclude that $C$ is an open set.
-
-Hence, both the empty set $\emptyset$ and the entire continuum $C$ are open sets.
+Thus, we have shown that both \( \emptyset \) and \( C \) are open sets.
 
 
 **Theorem 4.9: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.**
