@@ -49,14 +49,7 @@ Consider a region $R$ such that for all $R$ containing $x$, $R \cap LP(X)\backsl
 
    If $z = x$: because $x,y$, and $z$ are distinct pionts, then by *Theorem 3.19*, there exists disjoint regions $x,z \in R_{x,z}$ and $y \in R_y$. Since $y \in LP(X)$ and $y \in R \cap R_y$, then for all $R \cap R_y$, $(R\cap R_y) cap X \backslash \{y\} \neq \empty$. Therefore, there exists some $b \in (R \cap R_y)$, such that $b =y$ because $b \in R_y$, and $R_y\cap R_{x,y}$, then $b in R_{x,y}$. Thus we know $x \neq b$ and it follows that for all $R_{x,y}$ containing $x, R_{x,y} \cap X \backslash \{x\} \neq \empty$. Therefore $x \in LP(X) and $x \in \overline{X}$.
 
-Because for all $x \in \overline{\overline{X}}$, $x \in \overline{X}$, then $\overline{\overline{X}} \sub \overline{X}$, and by *Definition 4.4*, since $\overline{\overline{X}} = \overline{X} \cup LP(\overline{X})$ then $\overline{X} \sub \overline{\overline{X}}$ by *Theorem 1.7*. Therefore we have prove that $\overline{X} = \overline{\overline{X}}$.
-
-
-To prove that \( \overline{X} \) is closed, we must show that it contains all of its limit points. Let \( y \) be a limit point of \( \overline{X} \), so \( y \in LP(\overline{X}) \). By the definition of closure, \( \overline{X} = X \cup LP(X) \). We need to show that \( y \in \overline{X} \).
-
-Since \( y \) is a limit point of \( \overline{X} \), for every region \( R_1 \) containing \( y \) such that $y \in R_1$, the intersection \( R_1 \cap (\overline{X} \setminus \{y\}) \) is non-empty. This means there exists some point \( z \in R_1 \cap (\overline{X} \setminus \{y\}) \). Since \( \overline{X} = X \cup LP(X) \), it follows that \( z \) is either in \( X \) or is a limit point of \( X \).
-
-In either case, \( z \) is in \( \overline{X} \), and since \( z \) is distinct from \( y \), we have shown that every region containing \( y \) intersects \( \overline{X} \) at some point other than \( y \). Therefore, \( y \) must be in \( \overline{X} \), and since \( y \) was an arbitrary limit point of \( \overline{X} \), it follows that \( \overline{X} \) contains all of its limit points.
+Because for all $x \in \overline{\overline{X}}$, $x \in \overline{X}$, then $\overline{\overline{X}} \sub \overline{X}$, and by *Definition 4.4*, since $\overline{\overline{X}} = \overline{X} \cup LP(\overline{X})$ then $\overline{X} \sub \overline{\overline{X}}$ by *Theorem 1.7*. Therefore we have proven that $\overline{X} = \overline{\overline{X}}$.
 
 
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
