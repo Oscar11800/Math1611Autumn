@@ -38,7 +38,19 @@ Thus, we have shown both directions of the equivalence: \( X \) is closed if and
 
 **Theorem 4.6: Let $X \sub C$. Then $\overline{X}$ is closed. (equivalently, $\overline{X} = \overline{\overline{X}})$**
 
-**FIX**
+Let $x \in LP(\overline{X})$. By *Definition 4.4* $x \in LP(X \cup LP(X))$, and by *Theorem 3.19*, we know that either $x \in LP(X)$ or $x \in LP(LP(X))$
+
+Case 1: $x \in LP(X)$ which implies that $x \in \overline(X)$
+
+Case 2: $x \in LP(LP(X))$
+Consider a region $R$ such that for all $R$ containing $x$, $R \cap LP(X)\backslash \{x\} \neq \empty$. Thus, there must exist a $y \in R$, $LP(X)$ such that $y \neq x$. Because $y \in LP(X)$, then all for all $R$ containing $y$, $R\cap X \backslash\{y\} \neq \empty$. Similarly, there must exist $z \in R$, $X$ such that $z \neq y$. Therefore, either $z \neq x$ or $z = x$:
+
+   If $z \neq x$: then for all $R$ containing $x$, $x \in LP(X) $ and $x \in \overline{X}$ because $z \in R$ then $R\cap X \backslash \{x\} \neq \empty$.
+
+   If $z = x$: because $x,y$, and $z$ are distinct pionts, then by *Theorem 3.19*, there exists disjoint regions $x,z \in R_{x,z}$ and $y \in R_y$. Since $y \in LP(X)$ and $y \in R \cap R_y$, then for all $R \cap R_y$, $(R\cap R_y) cap X \backslash \{y\} \neq \empty$. Therefore, there exists some $b \in (R \cap R_y)$, such that $b =y$ because $b \in R_y$, and $R_y\cap R_{x,y}$, then $b in R_{x,y}$. Thus we know $x \neq b$ and it follows that for all $R_{x,y}$ containing $x, R_{x,y} \cap X \backslash \{x\} \neq \empty$. Therefore $x \in LP(X) and $x \in \overline{X}$.
+
+Because for all $x \in \overline{\overline{X}}$, $x \in \overline{X}$, then $\overline{\overline{X}} \sub \overline{X}$, and by *Definition 4.4*, since $\overline{\overline{X}} = \overline{X} \cup LP(\overline{X})$ then $\overline{X} \sub \overline{\overline{X}}$ by *Theorem 1.7*. Therefore we have prove that $\overline{X} = \overline{\overline{X}}$.
+
 
 To prove that \( \overline{X} \) is closed, we must show that it contains all of its limit points. Let \( y \) be a limit point of \( \overline{X} \), so \( y \in LP(\overline{X}) \). By the definition of closure, \( \overline{X} = X \cup LP(X) \). We need to show that \( y \in \overline{X} \).
 

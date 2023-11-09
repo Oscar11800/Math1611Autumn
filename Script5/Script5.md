@@ -27,7 +27,7 @@ We can prove this by contradiction by assuming that $x$, where $x$ is a limit po
 
 Assume that sup $X$ exists and suppose for the sake of contradiction there are at least two distinct least upper bounds, call them $u$ and $u'$ where $u \neq u'$. 
 
-By *definition 5.6*, a supremum $u$ must be an upper bound of $X$ and for any upper bound $u'$ of $X$, $u \leq u'$. This is the same for $u'$ to be a supremum as well, it must be less than or equal to $u$.Thus they both must be upper bounds, more importantly, $u' \leq u$ and $u \leq u$ which means $u = u'$. However, this contradicts our assumption that there are two distinct, equal least upper bounds. Therefore, if sup $X$ exists, then it must be unique.
+By *definition 5.6*, a supremum $u$ must be an upper bound of $X$ and for any upper bound $u'$ of $X$, $u \leq u'$. This is the same for $u'$ to be a supremum as well, it must be less than or equal to $u$. Thus they both must be upper bounds, more importantly, $u' \leq u$ and $u \leq u$ which means $u = u'$. However, this contradicts our assumption that there are two distinct, equal least upper bounds. Therefore, if sup $X$ exists, then it must be unique.
 
 This same logic can equally be applied to inf $X$ with reverse comparative signage.
 
@@ -61,18 +61,19 @@ Sup $X$ can be proved by *definition 3.3* for the last point in a similar manner
 
 **Lemma 5.10: Suppose that $X$ is a nonempty subset of $C$ and $s =$ sup $X$ exists. If $p < s$, then there exists an $x ∈ X$ such that $p < x ≤ s$.**
 
-Assume that \( X \) is a nonempty subset of \( C \) and that \( s = \sup X \) exists. Let \( p \) be any number such that \( p < s \).For the sake of contradiction, suppose that there does not exist an \( x \in X \) such that \( p < x \). This means that for all \( x \in X \), \( x \leq p \) or \( x > s \). However, \( x > s \) is impossible because \( s \) is the least upper bound of \( X \).
+Assume that \( X \) is a nonempty subset of \( C \) and that \( s = \sup X \) exists. Let \( p \) be any element in $X$ such that \( p < s \). For the sake of contradiction, suppose that there does not exist an \( x \in X \) such that \( p < x \). This means that for all \( x \in X \), \( x \leq p \) or \( x > s \). However, \( x > s \) is impossible because \( s \) is the least upper bound of \( X \).
 
-If \( x \leq p \) for all \( x \in X \), then \( p \) would be an upper bound for \( X \), which contradicts the fact that \( s \) is the least upper bound of \( X \) and \( p < s \). This contradiction implies that our assumption is false. Therefore, there must exist an \( x \in X \) such that \( p < x \leq s \).
+If \( x \leq p \) for all \( x \in X \), then \( p \) would be an upper bound for \( X \) by *Definition 5.5*, which contradicts the fact that \( s \) is the least upper bound of \( X \) and \( p < s \) by *Definition 5.6*. This contradiction implies that our assumption is false. Therefore, there must exist an \( x \in X \) such that \( p < x \leq s \).
+
 
 **Theorem 5.11: Let $a < b$. The least upper bound and greatest lower bound of the region $\underline{ab}$ are: sup $\underline{ab}$ = $b$ and inf $\underline{ab}$ = $a$.**
 
 Consider the region \( \underline{ab} \), which is the set of all points \( x \) such that \( a < x < b \). We aim to prove that \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \).
 
-First, we establish that \( b \) is an upper bound for \( \underline{ab} \). For every \( x \in \underline{ab} \), it holds that \( x < b \), indicating that \( b \) is greater than all elements of \( \underline{ab} \). To prove that \( b \) is the *least* upper bound, assume for contradiction that there exists a smaller upper bound \( s < b \). By *Lemma 5.10*, if \( s \) is an upper bound of \( X \) and \( p < s \), then there must be an \( x \in X \) such that \( p < x \leq s \). If we apply this to our region \( \underline{ab} \), there would have to be an \( x \in \underline{ab} \) with \( s < x < b \), which contradicts the assumption of \( s \) being an upper bound because $x$ would be greater than $s$ and thus it would be the upper bound. Therefore, \( b \) is the least upper bound, i.e., \( \sup \underline{ab} = b \).
-
-Similarly, we show that \( a \) is a lower bound for \( \underline{ab} \). Since for all \( x \in \underline{ab} \), \( a < x \), \( a \) is less than every element in \( \underline{ab} \). To demonstrate that \( a \) is the *greatest* lower bound, suppose there exists some \( l > a \) that is also a lower bound. Such an \( l \) would contradict the definition of \( \underline{ab} \), which contains all points between \( a \) and \( b \), because there must exist points in \( \underline{ab} \) that are greater than \( a \) and less than any \( l > a \). Consequently, no such \( l \) can exist, and \( a \) must be the greatest lower bound, i.e., \( \inf \underline{ab} = a \).
+We show that \( a \) is a lower bound for \( \underline{ab} \). Since for all \( x \in \underline{ab} \), \( a < x \), \( a \) is less than every element in \( \underline{ab} \) by *Definition 5.5*. To demonstrate that \( a \) is the *greatest* lower bound, suppose there exists some element $l$ such that \( l > a \) that is also a lower bound. Let there be a point $c$ in the region $\underline{al}$ which exists because of *Theorem 4.23* since the continuum is connected, between any two points there exists another point $c$ such that $a < c < l$. Thus $l$ cannot be a lower bound which contradicts our previous asusmption that $q < a$ thus inf$\underline{ab} = $a$. 
 
 Hence, we have proven that \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \)
 
 **Theorem 5.12: Let $X$ be a nonempty subset of $C$. Suppose that sup $X$ exists and sup $X /not \in X$. Then sup $X$ is a limit point of $X$. The same holds for inf $X$.**
+
+Let $s =$ sup $X$. Because $S$ is not empty, there exists an element $p$ that is any point in the continuum such that $p < s$. By *Theorem 5.6*, there exists an element $c$ where $c>s$ which exists by *axiom 3* because there is no last point. Therefore, we can create a region where $s \in \underline{pc'}$. There exists an $x$ for any $p$ and $x \neq s$ because $s$ is not in $X$, but $x$ is in $X$ such that $p < x \leq s$ by *Lemma 5.10*. For any region $\underline{pc}$ containing $x$, $\underline{pc} \cup x \backslash\{s\} \neq \empty$ which means that sup $X$ is a limit point of $X$. The same holds for inf $X$. 
