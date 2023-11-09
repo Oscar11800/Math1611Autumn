@@ -38,6 +38,8 @@ Thus, we have shown both directions of the equivalence: \( X \) is closed if and
 
 **Theorem 4.6: Let $X \sub C$. Then $\overline{X}$ is closed. (equivalently, $\overline{X} = \overline{\overline{X}})$**
 
+**FIX**
+
 To prove that \( \overline{X} \) is closed, we must show that it contains all of its limit points. Let \( y \) be a limit point of \( \overline{X} \), so \( y \in LP(\overline{X}) \). By the definition of closure, \( \overline{X} = X \cup LP(X) \). We need to show that \( y \in \overline{X} \).
 
 Since \( y \) is a limit point of \( \overline{X} \), for every region \( R_1 \) containing \( y \) such that $y \in R_1$, the intersection \( R_1 \cap (\overline{X} \setminus \{y\}) \) is non-empty. This means there exists some point \( z \in R_1 \cap (\overline{X} \setminus \{y\}) \). Since \( \overline{X} = X \cup LP(X) \), it follows that \( z \) is either in \( X \) or is a limit point of \( X \).
