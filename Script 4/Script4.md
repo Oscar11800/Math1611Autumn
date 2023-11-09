@@ -47,9 +47,21 @@ Consider a region $R$ such that for all $R$ containing $x$, $R \cap LP(X)\backsl
 
    If $z \neq x$: then for all $R$ containing $x$, $x \in LP(X) $ and $x \in \overline{X}$ because $z \in R$ then $R\cap X \backslash \{x\} \neq \empty$.
 
-   If $z = x$: because $x,y$, and $z$ are distinct pionts, then by *Theorem 3.19*, there exists disjoint regions $x,z \in R_{x,z}$ and $y \in R_y$. Since $y \in LP(X)$ and $y \in R \cap R_y$, then for all $R \cap R_y$, $(R\cap R_y) cap X \backslash \{y\} \neq \empty$. Therefore, there exists some $b \in (R \cap R_y)$, such that $b =y$ because $b \in R_y$, and $R_y\cap R_{x,y}$, then $b in R_{x,y}$. Thus we know $x \neq b$ and it follows that for all $R_{x,y}$ containing $x, R_{x,y} \cap X \backslash \{x\} \neq \empty$. Therefore $x \in LP(X) and $x \in \overline{X}$.
+   If $z = x$: because $x,y$, and $z$ are distinct pionts, then by *Theorem 3.19*, there exists disjoint regions $x,z \in R_{x,z}$ and $y \in R_y$. Since $y \in LP(X)$ and $y \in R \cap R_y$, then for all $R \cap R_y$, $(R\cap R_y) cap X \backslash \{y\} \neq \empty$. Therefore, there exists some $b \in (R \cap R_y)$, such that $b =y$ because $b \in R_y$, and $R_y \cap R_{x,y}$, then $b \in R_{x,y}$. Thus we know $x \neq b$ and it follows that for all $R_{x,y}$ containing $x, R_{x,y} \cap X \backslash \{x\} \neq \empty$. Therefore $x \in LP(X)$ and $x \in \overline{X}$.
 
 Because for all $x \in \overline{\overline{X}}$, $x \in \overline{X}$, then $\overline{\overline{X}} \sub \overline{X}$, and by *Definition 4.4*, since $\overline{\overline{X}} = \overline{X} \cup LP(\overline{X})$ then $\overline{X} \sub \overline{\overline{X}}$ by *Theorem 1.7*. Therefore we have proven that $\overline{X} = \overline{\overline{X}}$.
+
+Take any \( x \in LP(\overline{X}) \). By *Definition 4.4*, \( x \in LP(X \cup LP(X)) \), and *Theorem 3.19* implies \( x \) is either in \( LP(X) \) or \( LP(LP(X)) \).
+
+- **Case 1**: If \( x \in LP(X) \), then by definition, \( x \in \overline{X} \).
+
+- **Case 2**: If \( x \in LP(LP(X)) \), consider any region \( R \) containing \( x \). There exists \( y \in R \cap LP(X) \) with \( y \neq x \). Since \( y \in LP(X) \), for any region containing \( y \), there exists \( z \in R \) such that \( z \in X \) and \( z \neq y \). This gives us two subcases:
+
+  - If \( z \neq x \), then \( R \cap X \backslash \{x\} \neq \emptyset \), which means \( x \in LP(X) \), and thus \( x \in \overline{X} \).
+
+  - If \( z = x \), distinct regions \( R_{x,z} \) and \( R_y \) exist containing \( x \) and \( y \) respectively, due to *Theorem 3.19*. There must be some \( b \in (R \cap R_y) \) such that \( b = y \), and since \( R_y \cap R_{x,z} \), we have \( b \in R_{x,z} \). Hence, \( x \neq b \), implying \( R_{x,z} \cap X \backslash \{x\} \neq \emptyset \), and \( x \in LP(X) \), resulting in \( x \in \overline{X} \).
+
+Given that every \( x \in \overline{\overline{X}} \) is in \( \overline{X} \), we have \( \overline{\overline{X}} \subseteq \overline{X} \). Furthermore, \( \overline{X} \subseteq \overline{\overline{X}} \) by *Theorem 1.7*. Thus, we conclude \( \overline{X} = \overline{\overline{X}} \), as required.
 
 
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
