@@ -12,15 +12,14 @@ The set $C$ contains all points of the continuum $C$ which means it also include
 
 **Theorem 4.3: A subset $C$ containing a finite number of points is closed.**
 
-According to *Theorem 3.23*, a finite subset $A$ of a continuum $C$ has no limit points. We will use this fact to prove that $C$ is closed.
-
-Since $C$ is finite, let's consider any point $p\in R$. There are two possibilities:
+According to *Theorem 3.23*, a finite subset $A$ of a continuum $C$ has no limit points. We will use this fact to prove that $C$ is closed. Since $C$ is finite, let's consider any point $p\in R$. There are two possibilities:
 
 $p$ is an element of $C$: Since $C$ is finite, there exists a region $R$ containing $p$ that does not contain any other points of $C$ by *corollay 3.23*. Thus, $p$ is not a limit point of $C$ by definition of a limit point.
 
 $p$ is not an element of $C$: In this case, $p$ cannot be a limit point of $C$ because there exists a region $R$ containing $p$ that does not intersect $C$ at any point other than possibly $p$ itself (if $p$ was in $C$, which it is not).
 
 In both cases, $p$ is not a limit point of $C$. Since $C$ has no limit points, it trivially contains all of its limit points. Therefore, $C$ is closed.
+
 
 **Theorem 4.5: $X \sub C$ is closed if and only if $X = \overline{X}$.**
 
@@ -58,6 +57,7 @@ Thus, we have shown that both \( \emptyset \) and \( C \) are open sets.
 
 
 **Theorem 4.9: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.**
+
 (class notes)
 $=>$ Contrapositive:If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
 
@@ -70,9 +70,7 @@ $<= $ Contrapositive: If $G$ is not open, then for some element $x$ in $G$, for 
 
 Let \( R \) be a region in \( C \). By the definition of a region, for every point \( x \in R \), there exists an open interval \( (a, b) \) such that \( x \in (a, b) \subseteq R \). This open interval \( (a, b) \) serves as the region required by *Theorem 4.9* to conclude that \( R \) is open. Therefore, every region \( R \) is open.
 
-Now, consider the complement of a region \( C \setminus R \). Since \( R \) is open, its complement \( C \setminus R \) must be closed. This is because the definition of an open set \( R \) is such that its complement \( C \setminus R \) is closed.
-
-Hence, every region \( R \) is open, and every complement of a region \( C \setminus R \) is closed.
+Now, consider the complement of a region \( C \setminus R \). Since \( R \) is open, its complement \( C \setminus R \) must be closed. This is because the definition of an open set \( R \) is such that its complement \( C \setminus R \) is closed.Hence, every region \( R \) is open, and every complement of a region \( C \setminus R \) is closed.
 
 
 **Corollary 4.11: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open.**
@@ -96,9 +94,7 @@ Therefore, both \( \{x \in C \mid x < a\} \) and \( \{x \in C \mid a < x\} \) ar
 
 **Theorem 4.13: Let $G$ be a nonempty open set. Then $G$ is the union of a collection of regions.**
 
-Let \( G \) be a nonempty open set in the continuum \( C \). By Theorem 4.9, for each point \( x \) in \( G \), there exists a region \( R_x \) such that \( x \) is an element of \( R_x \) and \( R_x \) is a subset of \( G \). Consider the collection of all such regions, denoted by \( \{R_x \mid x \in G\} \). We assert that \( G \) is the union of this collection.
-
-To establish this claim, we must demonstrate two things: first, that every point in \( G \) is an element of the union of these regions; and second, that this union does not extend beyond \( G \).
+Let \( G \) be a nonempty open set in the continuum \( C \). By Theorem 4.9, for each point \( x \) in \( G \), there exists a region \( R_x \) such that \( x \) is an element of \( R_x \) and \( R_x \) is a subset of \( G \). Consider the collection of all such regions, denoted by \( \{R_x \mid x \in G\} \). We assert that \( G \) is the union of this collection. To establish this claim, we must demonstrate two things: first, that every point in \( G \) is an element of the union of these regions; and second, that this union does not extend beyond \( G \).
 
 For the first part, take any point \( y \) in \( G \). By the definition of an open set, there is a region \( R_y \) containing \( y \), which is also within \( G \). This implies that \( y \) is an element of the union \( \bigcup_{x \in G} R_x \).
 
@@ -121,15 +117,11 @@ In conclusion, the subset \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \righ
 
 By definition, a set is closed if its complement is open. For each \( \lambda \in \Lambda \), the set \( X_\lambda \) is closed in \( C \), so its complement \( C \backslash X_\lambda \) is open in \( C \).
 
-Consider the union of open sets \( \{C \backslash X_\lambda\}_{\lambda \in \Lambda} \). The union of open sets is open, so \( \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \) is open in \( C \).
-
-By *Theorem 1.15*, we have:
+Consider the union of open sets \( \{C \backslash X_\lambda\}_{\lambda \in \Lambda} \). The union of open sets is open, so \( \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \) is open in \( C \). By *Theorem 1.15*, we have:
 
 \[ C \backslash \left(\bigcap_{\lambda \in \Lambda} X_\lambda\right) = \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \]
 
-Since \( \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \) is open, its complement, \( \bigcap_{\lambda \in \Lambda} X_\lambda \), is closed.
-
-Therefore, the intersection of an arbitrary collection of closed sets \( \{X_\lambda\}_{\lambda \in \Lambda} \) is closed in \( C \).
+Since \( \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \) is open, its complement, \( \bigcap_{\lambda \in \Lambda} X_\lambda \), is closed. Therefore, the intersection of an arbitrary collection of closed sets \( \{X_\lambda\}_{\lambda \in \Lambda} \) is closed in \( C \).
 
 
 **Theorem 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
@@ -148,7 +140,6 @@ To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must 
 Now, consider the intersection of these regions, \(R_{\text{inter}} = \bigcap_{i=1}^{n} R_i\). *By Theorem 3.18*, the intersection of a finite number of regions containing a common point \(x\) is itself a region containing \(x\). Therefore, \(R_{\text{inter}}\) is a region containing \(x\). Since \(R_i \sub G_i\) for all \(i\), it follows that \(R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\). Thus, for our point \(x\), we have found a region \(R_{\text{inter}}\) such that \(x \in R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\), which satisfies the definition of an open set by *Theorem 4.9*.
 
 Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open, completing the proof.
-
 
 
 **Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
@@ -217,6 +208,7 @@ This implies that \( d \) cannot be a limit point of \( \{a\} \cup \underline{ab
 
 Therefore, no such limit point \( d \) exists, and the set \( \{a\} \cup \underline{ab} \cup \{b\} \) contains all its limit points, confirming it is closed. Consequently, \( \text{ext} \underline{ab} \), being the complement of a closed set, is open.
 
+
 **Theorem 4.23: Let $C$ be a connected continuum. Let $x$, $y ∈ C$, with $x < y$. Then there exists $z ∈ C$ such that $x < z < y$.**
 
 Assume for the sake of contradiction that there does not exist an element \( z \in C \) such that \( x < z < y \). By Corollary 4.12, for any element \( a \in C \) and \( x \in G \subseteq C \), the sets \( \{x \in C \mid x \leq a\} \) and \( \{x \in C \mid a < x\} \) are open in the subspace topology of \( C \).
@@ -230,9 +222,17 @@ Therefore, there must exist a point \( z \in C \) such that \( x < z < y \).
 
 **Exercise 4.24: Let $C$ be a connected continuum and $a ∈ C$. Prove that $C \backslash \{a\} $is a disconnected continuum.**
 
-We know that the continuum $C\backslash \{a\}$ is a continuum because it fulfills the axioms:
-1. it is nonempty
-2. it has a well defined ordering
-3. it has no first nor last point
+We begin by confirming that \( C \backslash \{a\} \) is a continuum by the axioms:
+1. It is nonempty, as removing a single point from a continuum leaves other points.
+2. It retains the well-defined ordering of \( C \).
+3. It has no first or last point, since \( C \) is a continuum and the removal of \( a \) does not create extremal points.
 
-To prove that $C\backslash \{a\}$ is disconnected, we want to show that $C \
+To demonstrate that \( C \backslash \{a\} \) is disconnected, consider two subsets:
+- \( S_1 = \{x \in C \backslash \{a\} \mid x > a\} \)
+- \( S_2 = \{x \in C \backslash \{a\} \mid x < a\} \)
+
+
+
+By *Theorem 4.23*, for any \( x \in S_1 \), there exists a \( z \) such that \( a < z < x \), ensuring that \( z \in S_1 \) and that \( S_1 \) is indeed nonempty and open. A similar argument applies to \( S_2 \), establishing its openness and non-emptiness. Thus, \( S_1 \) and \( S_2 \) are open in \( C \backslash \{a\} \), disjoint, and nonempty, satisfying the conditions of *definition 4.22* for a disconnected space.
+
+Therefore, \( C \backslash \{a\} \) can be expressed as the union of \( S_1 \) and \( S_2 \), which are nonempty, disjoint, open sets proving that \( C \backslash \{a\} \) is disconnected.
