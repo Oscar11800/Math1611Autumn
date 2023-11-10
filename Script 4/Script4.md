@@ -55,7 +55,7 @@ Take any \( x \in LP(\overline{X}) \). By *Definition 4.4*, \( x \in LP(X \cup L
 
   - If \( z = x \), distinct regions \( R_{x,z} \) and \( R_y \) exist containing \( x \) and \( y \) respectively, due to *Theorem 3.19*. There must be some \( b \in (R \cap R_y) \) such that \( b = y \), and since \( R_y \cap R_{x,z} \), we have \( b \in R_{x,z} \). Hence, \( x \neq b \), implying \( R_{x,z} \cap X \backslash \{x\} \neq \emptyset \), and \( x \in LP(X) \), resulting in \( x \in \overline{X} \).
 
-Given that every \( x \in \overline{\overline{X}} \) is in \( \overline{X} \), we have \( \overline{\overline{X}} \subseteq \overline{X} \). Furthermore, \( \overline{X} \subseteq \overline{\overline{X}} \) by *Theorem 1.7*. Thus, we conclude \( \overline{X} = \overline{\overline{X}} \).
+Given that every \( x \in \overline{\overline{X}} \) is in \( \overline{X} \), we have \( \overline{\overline{X}} \sub \overline{X} \). Furthermore, \( \overline{X} \sub \overline{\overline{X}} \) by *Theorem 1.7*. Thus, we conclude \( \overline{X} = \overline{\overline{X}} \).
 
 
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
@@ -136,7 +136,7 @@ Consequently, for each \( X_\lambda \), the intersection \( R \cap (X_\lambda \s
 Therefore, \( x \) is an element of \( \bigcap_{\lambda \in \Lambda} X_\lambda \), proving \( \bigcap_{\lambda \in \Lambda} X_\lambda \), being a set that contains all its limit points, is closed.
 
 
-**Theorem 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
+**Corollary 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
 
 Consider the set \(G = \bigcup_{\lambda \in \Lambda} G_\lambda\), where each \(G_\lambda\) is an open subset of \(C\). To prove that \(G\) is open, we must show that for every point \(x \in G\), there exists a region \(R\) such that \(x \in R \sub G\) (*Theorem 4.9*).
 
@@ -147,7 +147,7 @@ Now, since \(G_{\lambda_0} \sub G\) and \(V \sub G_{\lambda_0}\), it follows tha
 
 **Theorem 4.17: Let $\{G_1...,G_n\}$ be a finite collection of open subsets of a continuum $C$. Then the intersection $G_1 \cap ... \cap G_n$ is open.**
 
-To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must show that for any point \(x\) in the intersection, there exists a region \(R\) such that \(x \in R \sub \bigcap_{i=1}^{n} G_i\). Let \(x\) be an arbitrary point in \(\bigcap_{i=1}^{n} G_i\). Since \(x\) is in the intersection, it is contained in each \(G_i\), where \(1 \leq i \leq n\). Because each \(G_i\) is open, by *Theorem 4.9*, for each \(i\), there exists a region \(R_i\) such that \(x \in R_i \subseteq G_i\).
+To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must show that for any point \(x\) in the intersection, there exists a region \(R\) such that \(x \in R \sub \bigcap_{i=1}^{n} G_i\). Let \(x\) be an arbitrary point in \(\bigcap_{i=1}^{n} G_i\). Since \(x\) is in the intersection, it is contained in each \(G_i\), where \(1 \leq i \leq n\). Because each \(G_i\) is open, by *Theorem 4.9*, for each \(i\), there exists a region \(R_i\) such that \(x \in R_i \sub G_i\).
 
 Now, consider the intersection of these regions, \(R_{\text{inter}} = \bigcap_{i=1}^{n} R_i\). *By Theorem 3.18*, the intersection of a finite number of regions containing a common point \(x\) is itself a region containing \(x\). Therefore, \(R_{\text{inter}}\) is a region containing \(x\). Since \(R_i \sub G_i\) for all \(i\), it follows that \(R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\). Thus, for our point \(x\), we have found a region \(R_{\text{inter}}\) such that \(x \in R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\), which satisfies the definition of an open set by *Theorem 4.9*.
 
@@ -156,7 +156,7 @@ Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open.
 
 **Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
 
-To prove that the union of a finite number of closed sets is closed, we will show that the complement of the union is open. By definition, a set is closed if its complement is open. For each closed set \( X_i \), its complement \( C \backslash X_i \) is open. Consider the intersection of these open complements: \( \bigcap_{i=1}^{n} (C \backslash X_i) \). By Theorem 4.17, the intersection of a finite number of open sets is open. Therefore, \( \bigcap_{i=1}^{n} (C \backslash X_i) \) is open.
+To prove that the union of a finite number of closed sets is closed, we will show that the complement of the union is open. By definition, a set is closed if its complement is open. For each closed set \( X_i \), its complement \( C \backslash X_i \) is open. Consider the intersection of these open complements: \( \bigcap_{i=1}^{n} (C \backslash X_i) \). By *Theorem 4.17*, the intersection of a finite number of open sets is open. Therefore, \( \bigcap_{i=1}^{n} (C \backslash X_i) \) is open.
 
 By *Theorem 1.15*, which states that the complement of a union is the intersection of the complements, we have:
 
@@ -178,11 +178,11 @@ Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open se
 
    As \( n \) increases, the size of the sets \( A_n \) decreases. The only point that is common to all \( A_n \) is \( 0 \). Therefore, the intersection \( A \) is the singleton set containing only the point \( 0 \), which can be written as \( A = \{0\} \).
 
-   However, there exists no region \( R \) such that \( 0 \in R \subseteq A \), because any region containing \( 0 \) would necessarily contain other points not in \( A \). Because there is no region $R$ such that $0 \in R \sub A$, by *Theorem 4.9*, \( A \) is not open.
+   However, there exists no region \( R \) such that \( 0 \in R \sub A \), because any region containing \( 0 \) would necessarily contain other points not in \( A \). Because there is no region $R$ such that $0 \in R \sub A$, by *Theorem 4.9*, \( A \) is not open.
 
 2. Union of an Infinite Number of Closed Sets:
 
-   Yes, it is possible to construct an infinite collection of closed sets whose union is not closed. Consider the infinite collection of singletons \( B_n = \left\{ \frac{1}{n} \right\} \) where \( n \) is a natural number in \( \mathbb{N} \) and \( B_n \subseteq \mathbb{Q} \). Each singleton \( B_n \) is closed in \( \mathbb{Q} \) because it contains all its limit points because they are finite.
+   Yes, it is possible to construct an infinite collection of closed sets whose union is not closed. Consider the infinite collection of singletons \( B_n = \left\{ \frac{1}{n} \right\} \) where \( n \) is a natural number in \( \mathbb{N} \) and \( B_n \sub \mathbb{Q} \). Each singleton \( B_n \) is closed in \( \mathbb{Q} \) because it contains all its limit points because they are finite.
 
    The union of all such singletons is:
    \[ B = \bigcup_{n \in \mathbb{N}} B_n \]
@@ -207,10 +207,10 @@ Therefore, the union \( \bigcup_{i=1}^{n} X_i \) is the complement of an open se
 
 **Corollary: 4.21: If $\underline{ab}$ is a region of $C$, then ext $\underline{ab}$ is open.**
 
-Given that \( \underline{ab} \) is a region in the continuum \( C \), we want to show that \( \text{ext} \underline{ab} \), the exterior of \( \underline{ab} \), is open. By *Theorem 3.14*, the complement of \( \underline{ab} \) along with its endpoints in \( C \) is given by:
+Given that \( \underline{ab} \) is a region in the continuum \( C \), we want to show that \( \text{ext} \underline{ab} \), the exterior of \( \underline{ab} \), is open. By *Lemma 3.15*, the complement of \( \underline{ab} \) along with its endpoints in \( C \) is given by:
 \[ C \setminus (\{a\} \cup \underline{ab} \cup \{b\}) = \text{ext} \underline{ab} \]
 
-To establish that \( \text{ext} \underline{ab} \) is open, we refer to *Theorem 4.7*, which implies that the complement of an open set is closed. Therefore, if \( \text{ext} \underline{ab} \) is open, its complement:
+To establish that \( \text{ext} \underline{ab} \) is open, we refer to *Definition 4.6*, which implies that the complement of an open set is closed. Therefore, if \( \text{ext} \underline{ab} \) is open, its complement:
 \[ C \setminus \text{ext} \underline{ab} = \{a\} \cup \underline{ab} \cup \{b\} \]
 must be closed.
 
@@ -223,9 +223,9 @@ Therefore, no such limit point \( d \) exists, and the set \( \{a\} \cup \underl
 
 **Theorem 4.23: Let $C$ be a connected continuum. Let $x$, $y ∈ C$, with $x < y$. Then there exists $z ∈ C$ such that $x < z < y$.**
 
-Assume for the sake of contradiction that there does not exist an element \( z \in C \) such that \( x < z < y \). By Corollary 4.12, for any element \( a \in C \) and \( x \in G \subseteq C \), the sets \( \{x \in C \mid x \leq a\} \) and \( \{x \in C \mid a < x\} \) are open in the subspace topology of \( C \).
+Assume for the sake of contradiction that there does not exist an element \( z \in C \) such that \( x < z < y \). By *Corollary 4.12*, for any element \( a \in C \) and \( x \in G \sub C \), the sets \( \{x \in C \mid x \leq a\} \) and \( \{x \in C \mid a < x\} \) are open in the subspace topology of \( C \).
 
-Therefore, under our assumption, \( C \) can be expressed as the union of two sets \( A \) and \( B \), where \( A \subseteq C \) with \( A = \{a \in C \mid a < y\} \) and \( B \subseteq C \) with \( B = \{b \in C \mid b > x\} \). We do not include the case where \( a = y \) or \( b = x \) since our assumption negates the existence of such points \( z \) that would satisfy \( x < z < y \). Furthermore, \( A \) and \( B \) are nonempty because \( x \in A \) and \( y \in B \), as given by the conditions of the theorem.
+Therefore, under our assumption, \( C \) can be expressed as the union of two sets \( A \) and \( B \), where \( A \sub C \) with \( A = \{a \in C \mid a < y\} \) and \( B \sub C \) with \( B = \{b \in C \mid b > x\} \). We do not include the case where \( a = y \) or \( b = x \) since our assumption negates the existence of such points \( z \) that would satisfy \( x < z < y \). Furthermore, \( A \) and \( B \) are nonempty because \( x \in A \) and \( y \in B \), as given by the conditions of the theorem.
 
 Additionally, \( A \) and \( B \) are disjoint. This follows because, according to the ordering of the continuum (Axiom 2), there can be no element in \( C \) that is both less than \( x \) and greater than \( y\). Consequently, \( \overline{A} \cap B = \emptyset \) and \( A \cap \overline{B} = \emptyset \), which means \( A \cap B = \emptyset \). The existence of these disjoint, nonempty open sets \( A \) and \( B \), such that \( C = A \cup B \), contradicts the premise that \( C \) is connected. This contradiction implies that our initial assumption must be false.
 
