@@ -12,22 +12,16 @@ The set $C$ contains all points of the continuum $C$ which means it also include
 
 **Theorem 4.3: A subset $C$ containing a finite number of points is closed.**
 
-According to *Theorem 3.23*, a finite subset $A$ of a continuum $C$ has no limit points. We will use this fact to prove that $C$ is closed. Since $C$ is finite, let's consider any point $p\in R$. There are two possibilities:
-
-$p$ is an element of $C$: Since $C$ is finite, there exists a region $R$ containing $p$ that does not contain any other points of $C$ by *corollay 3.23*. Thus, $p$ is not a limit point of $C$ by definition of a limit point.
-
-$p$ is not an element of $C$: In this case, $p$ cannot be a limit point of $C$ because there exists a region $R$ containing $p$ that does not intersect $C$ at any point other than possibly $p$ itself (if $p$ was in $C$, which it is not).
-
-In both cases, $p$ is not a limit point of $C$. Since $C$ has no limit points, it trivially contains all of its limit points. Therefore, $C$ is closed.
+According to *Theorem 3.23*, a finite subset $A$ of a continuum $C$ has no limit points. Since $C$ has no limit points, it trivially contains all of its limit points. Therefore, $C$ is closed.
 
 
 **Theorem 4.5: $X \sub C$ is closed if and only if $X = \overline{X}$.**
 
-The closure of $X$ is $\overline{X} = X \cup LP(X)$ which is the union of all elements in $X$ and the limit points of $x$. 
+The closure of $X$ is $\overline{X} = X \cup LP(X)$ which is the union of all elements in $X$ and the limit points of $x$.
 
 **(⇒) If \( X \) is closed, then \( X = \overline{X} \):**
 
-Assume \( X \subseteq C \) is closed. By definition, a closed set contains all its limit points. Let \( A = LP(X) \). Since \( X \) is closed, it follows that \( A \sub X \). Therefore, \( X \cup A = X \) because \( A \) does not contain any elements that are not already in \( X \). Hence, \( \overline{X} = X \cup LP(X) = X \), which shows that if \( X \) is closed, then \( X \) is equal to its closure.
+Assume \( X \sub C \) is closed. By definition, a closed set contains all its limit points. Let \( A = LP(X) \). Since \( X \) is closed, it follows that \( A \sub X \). Therefore, \( X \cup A = X \) because \( A \) does not contain any elements that are not already in \( X \). Hence, \( \overline{X} = X \cup LP(X) = X \), which shows that if \( X \) is closed, then \( X \) is equal to its closure.
 
 **(⇐) If \( X = \overline{X} \), then \( X \) is closed:**
 
@@ -68,7 +62,7 @@ Given that every \( x \in \overline{\overline{X}} \) is in \( \overline{X} \), w
 
 Recall the definition of an open set: A subset \( G \) of \( C \) is an open set if its complement \( C \setminus G \) is closed.
 
-First, consider the empty set \( \emptyset \). The complement of \( \emptyset \) in \( C \) is \( C \setminus \emptyset \), which is simply \( C \). By *Theorem 4.2*, \( C \) is closed because it contains all its limit points, as it is the entire space. Therefore, since the complement of \( \emptyset \) is closed, \( \emptyset \) itself is open.
+First, consider the empty set \( \emptyset \). The complement of \( \emptyset \) in \( C \) is \( C \setminus \emptyset \), which is simply \( C \). By *Theorem 4.2*, \( C \) is closed because it contains all its limit points, as it is the entire space. Since the complement of \( \emptyset \) is closed, \( \emptyset \) itself is open.
 
 Next, consider the entire continuum \( C \). The complement of \( C \) within itself is \( C \setminus C \), which is \( \emptyset \). As established above by *Theorem 4.2*, \( \emptyset \) is closed. Hence, the complement of \( C \) is closed, which implies that \( C \) is open.
 
@@ -78,7 +72,7 @@ Thus, we have shown that both \( \emptyset \) and \( C \) are open sets.
 **Theorem 4.9: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a region $R$ such that $x \in R \sub G$.**
 
 (class notes)
-$=>$ Contrapositive:If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
+$=>$ Contrapositive: If for some $x \in G$, all regions $R$ containing $x$ are not subsets of $G$, then $G$ is not open. We know that $R \not\sub G$ which means there some elements of $R$ are in $C\backslash G$. 
 
 Therefore there is some $x$ that is the limit point of $C \backslash G$ for all $R$ containing some $x$, $R \cap (C \backslash G \backslash \{x\}) \neq 0$ where $x \not\in C \backslash G$. Thus the complement of $G$ is not closed because it does not contain all of its limit points. Based on the definition of an open set, we now know that $G$ is open because its complement is closed. We have thus proved if for all $x \in G$ there exists a region $R$, such that $x$ is an element of $R$ such that $R \sub G$, then $G$ is open
 
@@ -87,14 +81,14 @@ $<= $ Contrapositive: If $G$ is not open, then for some element $x$ in $G$, for 
 
 **Corollary 4.10: Every region $R$ is open. Every complement of a region $C\backslash R$, is closed.**
 
-Let \( R \) be a region in \( C \). By the definition of a region, for every point \( x \in R \), there exists an open interval \( (a, b) \) such that \( x \in (a, b) \subseteq R \). This open interval \( (a, b) \) serves as the region required by *Theorem 4.9* to conclude that \( R \) is open. Therefore, every region \( R \) is open.
+Let \( R \) be a region in \( C \). By the definition of a region, for every point \( x \in R \), there exists an open interval \( (a, b) \) such that \( x \in (a, b) \sub R \). This open interval \( (a, b) \) serves as the region required by *Theorem 4.9* to conclude that \( R \) is open. Therefore, every region \( R \) is open.
 
-Now, consider the complement of a region \( C \setminus R \). Since \( R \) is open, its complement \( C \setminus R \) must be closed. This is because the definition of an open set \( R \) is such that its complement \( C \setminus R \) is closed.Hence, every region \( R \) is open, and every complement of a region \( C \setminus R \) is closed.
+Now, consider the complement of a region \( C \setminus R \). Since \( R \) is open, its complement \( C \setminus R \) must be closed. This is because the definition of an open set \( R \) is such that its complement \( C \setminus R \) is closed. Hence, every region \( R \) is open, and every complement of a region \( C \setminus R \) is closed.
 
 
 **Corollary 4.11: Let $G \sub C$. Then $G$ is open if and only if for all $x \in G$, there exists a subset $V \sub G$ such that $x \in V$ and $V$ is open.**
 
-**(⇒ Direct)** Assume \( G \) is open. By *theorem 4.9*, for every \( x \in G \), there exists a region \( R \) such that \( x \in R \sub G \). Since every region is open by Corollary 4.10, we can choose \( V = R \) such that $V sub G$ is also open and $x\in V$. Hence, for every \( x \in G \), there exists an open subset \( V \sub G \) containing \( x \).
+**(⇒ Direct)** Assume \( G \) is open. By *theorem 4.9*, for every \( x \in G \), there exists a region \( R \) such that \( x \in R \sub G \). Since every region is open by Corollary 4.10, we can choose \( V = R \) such that $V \sub G$ is also open and $x\in V$. Hence, for every \( x \in G \), there exists an open subset \( V \sub G \) containing \( x \).
 
 **(⇐ Converse)** Assume that for every \( x \in G \), there exists an open subset \( V \sub G \) such that \( x \in V \). We want to prove that $G$ is open. We know that for all $x$, there exists an $R$ such that $x \in R \in V$ and because $R \sub V$ and $V \sub G$, then $R \sub G$, and it also stands that for all $x \in R$, that $x \in R \sub G$ and by *theorem 4.9*, thus $G$ is open. 
 
@@ -104,7 +98,7 @@ Therefore, \( G \) is open if and only if for every \( x \in G \), there exists 
 
 **Corollary 4.12: Let $a\in C$. Then the sets $\{x \in C| x < a\}$ and $\{x \in C| a < x\}$ are open.**
 
-Given the point $a \in C$, consider the set \( L = \{x \in C \mid x < a\} \). Take any point \( x \in L \). Since \( C \) is a continuum without a first point by *axiom 3*, there exists a point \( k \in C \) such that \( k < x \). Similarly, since \( x < a \), we can find a region \( R \) such that \( k < x \) and \( x < a \) are both in \( R \), and \( R \subseteq L \). By *Theorem 4.9*, which states that a set is open if for every point there exists a region contained within the set, \( L \) is open.
+Given the point $a \in C$, consider the set \( L = \{x \in C \mid x < a\} \). Take any point \( x \in L \). Since \( C \) is a continuum without a first point by *axiom 3*, there exists a point \( k \in C \) such that \( k < x \). Similarly, since \( x < a \), we can find a region \( R \) such that \( k < x \) and \( x < a \) are both in \( R \), and \( R \sub  L \). By *Theorem 4.9*, which states that a set is open if for every point there exists a region contained within the set, \( L \) is open.
 
 Now consider the set \( U = \{x \in C \mid a < x\} \). For any point \( x \in U \), since \( C \) does not have a last point by *axiom 3*, there exists a point \( m \in C \) such that \( x < m \). We can then find a region \( S \) such that \( a < x \) and \( x < m \) are both in \( S \), and \( S \sub U \). Again, by Theorem 4.9, \( U \) is open.
 
