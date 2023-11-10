@@ -55,7 +55,7 @@ Take any \( x \in LP(\overline{X}) \). By *Definition 4.4*, \( x \in LP(X \cup L
 
   - If \( z = x \), distinct regions \( R_{x,z} \) and \( R_y \) exist containing \( x \) and \( y \) respectively, due to *Theorem 3.19*. There must be some \( b \in (R \cap R_y) \) such that \( b = y \), and since \( R_y \cap R_{x,z} \), we have \( b \in R_{x,z} \). Hence, \( x \neq b \), implying \( R_{x,z} \cap X \backslash \{x\} \neq \emptyset \), and \( x \in LP(X) \), resulting in \( x \in \overline{X} \).
 
-Given that every \( x \in \overline{\overline{X}} \) is in \( \overline{X} \), we have \( \overline{\overline{X}} \subseteq \overline{X} \). Furthermore, \( \overline{X} \subseteq \overline{\overline{X}} \) by *Theorem 1.7*. Thus, we conclude \( \overline{X} = \overline{\overline{X}} \), as required.
+Given that every \( x \in \overline{\overline{X}} \) is in \( \overline{X} \), we have \( \overline{\overline{X}} \subseteq \overline{X} \). Furthermore, \( \overline{X} \subseteq \overline{\overline{X}} \) by *Theorem 1.7*. Thus, we conclude \( \overline{X} = \overline{\overline{X}} \).
 
 
 **Theorem 4.8: The sets $\empty$ and $C$ are open.**
@@ -117,7 +117,7 @@ Therefore, we conclude that \( G \) is the union of the regions \( \bigcup_{x \i
 
 **Exercise 4.14: Do there exists subsets $X \sub C$ that are neither open nor closed?**
 
-Let \( C \) be a continuum, and consider the subset \( X \) defined as \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \right\} \), where \( \mathbb{N} \) denotes the set of natural numbers. We will show that \( X \) is neither open nor closed in \( C \).
+Let \( C \) be a continuum of the rationals     , and consider the subset \( X \) defined as \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \right\} \), where \( \mathbb{N} \) denotes the set of natural numbers. We will show that \( X \) is neither open nor closed in \( C \).
 
 To show that \( X \) is not open, we must demonstrate that there exists at least one point in \( X \) that does not have a region entirely contained within \( X \). Take the point \( \frac{1}{1} \in X \). For any region \( R \) containing \( \frac{1}{1} \), there will be points in \( R \) that are not in \( X \) because between any two points in \( X \), there are infinitely many points in \( C \) that are not in \( X \). Hence, no region around \( \frac{1}{1} \) can be entirely contained within \( X \), and therefore \( X \) is not open.
 
@@ -128,18 +128,17 @@ In conclusion, the subset \( X = \left\{ \frac{1}{n} \mid n \in \mathbb{N} \righ
 
 **Theorem 4.15: Let $\{X_\lambda\}$ be an arbitrary collection of closed subsets of a continuum $C$. Then the intersection $\bigcap_\lambda X_\lambda$ is closed.**
 
-By definition, a set is closed if its complement is open. For each \( \lambda \in \Lambda \), the set \( X_\lambda \) is closed in \( C \), so its complement \( C \backslash X_\lambda \) is open in \( C \).
 
-Consider the union of open sets \( \{C \backslash X_\lambda\}_{\lambda \in \Lambda} \). The union of open sets is open, so \( \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \) is open in \( C \). By *Theorem 1.15*, we have:
+Assume \( x \) is a limit point of \( \bigcap_{\lambda \in \Lambda} X_\lambda \). By definition, for every region \( R \) containing \( x \), the intersection \( R \cap \left( \bigcap_{\lambda \in \Lambda} X_\lambda \right) \) is nonempty. This implies that there exists some \( y \) in \( \bigcap_{\lambda \in \Lambda} X_\lambda \) such that \( y \) is also in \( R \). Given that \( y \) is in the intersection, \( y \) must be in each \( X_\lambda \) for all \( \lambda \).
 
-\[ C \backslash \left(\bigcap_{\lambda \in \Lambda} X_\lambda\right) = \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \]
+Consequently, for each \( X_\lambda \), the intersection \( R \cap (X_\lambda \setminus \{x\}) \) is nonempty. This means that \( x \) is a limit point of every \( X_\lambda \). Since each \( X_\lambda \) is closed, and closed sets contain all their limit points, \( x \) must be an element of every \( X_\lambda \) for all \( \lambda \).
 
-Since \( \bigcup_{\lambda \in \Lambda} (C \backslash X_\lambda) \) is open, its complement, \( \bigcap_{\lambda \in \Lambda} X_\lambda \), is closed. Therefore, the intersection of an arbitrary collection of closed sets \( \{X_\lambda\}_{\lambda \in \Lambda} \) is closed in \( C \).
+Therefore, \( x \) is an element of \( \bigcap_{\lambda \in \Lambda} X_\lambda \), proving \( \bigcap_{\lambda \in \Lambda} X_\lambda \), being a set that contains all its limit points, is closed.
 
 
 **Theorem 4.16: Let $\{G_\lambda\}$ be an arbitrary collection of open subsets of a continuum $C$. Then the union $\bigcup_\lambda G_\lambda$ is open.**
 
-Consider the set \(G = \bigcup_{\lambda \in \Lambda} G_\lambda\), where each \(G_\lambda\) is an open subset of \(C\). To prove that \(G\) is open, we must show that for every point \(x \in G\), there exists a region \(R\) such that \(x \in R \subseteq G\) (*Theorem 4.9*).
+Consider the set \(G = \bigcup_{\lambda \in \Lambda} G_\lambda\), where each \(G_\lambda\) is an open subset of \(C\). To prove that \(G\) is open, we must show that for every point \(x \in G\), there exists a region \(R\) such that \(x \in R \sub G\) (*Theorem 4.9*).
 
 Let \(x\) be an arbitrary point in \(G\). By *Corollary 3.20*, there exists at least one index \(\lambda_0 \in \Lambda\) such that \(x \in G_{\lambda_0}\) if $x$ is in $G$. Since \(G_{\lambda_0}\) is open, by *Theorem 4.11*, there exists a subset \(V \sub G_{\lambda_0}\) such that \(x \in V\) and \(V\) is open.
 
@@ -152,7 +151,7 @@ To demonstrate that the intersection \(\bigcap_{i=1}^{n} G_i\) is open, we must 
 
 Now, consider the intersection of these regions, \(R_{\text{inter}} = \bigcap_{i=1}^{n} R_i\). *By Theorem 3.18*, the intersection of a finite number of regions containing a common point \(x\) is itself a region containing \(x\). Therefore, \(R_{\text{inter}}\) is a region containing \(x\). Since \(R_i \sub G_i\) for all \(i\), it follows that \(R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\). Thus, for our point \(x\), we have found a region \(R_{\text{inter}}\) such that \(x \in R_{\text{inter}} \sub \bigcap_{i=1}^{n} G_i\), which satisfies the definition of an open set by *Theorem 4.9*.
 
-Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open, completing the proof.
+Therefore, the intersection \(\bigcap_{i=1}^{n} G_i\) is open.
 
 
 **Corollary 4.18: Let $X_1,..., X_n$ be a finite collection of closed subsets of a continuum $C$. Then the union $X_1\cup ... \cup X_n$ is closed.**
