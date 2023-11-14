@@ -90,7 +90,11 @@ The set $[a,b]$ is defined as the closure $\overline{\underline{ab}}$ as proven 
 
 **Lemma 5.15: Let $X ⊂ C$ and define: $Ψ(X) = \{x ∈ C | x \; \textnormal{is not an upper bound of} \; X\}.$ Then $Ψ(X)$ is open. Define: $Ω(X) = \{x ∈ C | x \;  \textnormal{is not a lower bound of} \; X\}$.Then $Ω(X)$ is open.**
 
-   Let's first prove $\Psi (X)$ is open. As defined, $\Psi (X)$ includes all points in $C$ that are not the upper bound of $X$. This means for each 
+We want to prove that the complement is closed. We can do this by contradiction by letting $x \in LP(C\backslash \Psi (X)$ such that it is a limit point of the set of upper bounds. Suppose $x \not \in C \backslash \Psi (X)$. x is not upperbound, so then there exists a $y \in X$ such that $x < y$. There exists $z$ such that $z < x$ which exists because we are in a continuum that does not have a last point nor first point. Thus $x \in \underline{zy}$, but $\underline{zx} \cap (C \backslash \Psi (X) \backslash \{x\}) = \empty$. This is because no points in the complement of $\Psi (X)$ is smaller than $y$ because all the elements in that set are upper bounds and must be larger than $y$ by definition. Thus, $x$ is in the complement of $\Psi (X)$, thus the complement of $\Psi (X)$ is closed, and by definition of an open set, $\Psi (X)$ is open.
+
+**Alternative**
+
+Take a point $x \in \Psi (X)$ and there exists a point $b \in X$ such that $x < b$ that exists because ... For all $x$ inside of $X$, there exists a region $\underline{ab} \sub \Psi (X)$ this is because $b \in X$ and any element less than $b$ cannot be an upper bound by definition of an upper bound.
 
 
 **Theorem 5.16: Suppose that $X$ is nonempty and bounded above. Then sup $X$ exists. Similarly, if $X$ is nonempty and bounded below, then inf $X$ exists.**
