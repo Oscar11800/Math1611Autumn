@@ -80,12 +80,12 @@ Let $s =$ sup $X$. Because $S$ is not empty, there exists an element $p$ that is
 
 **Corollary 5.13: Both $a$ and $b$ are limit points of the region $\underline{ab}$. Let $[a, b]$ denote the closure $\overline{\underline{ab}}$ of the region $\underline{ab}$.**
 
-By applying *Theorem 5.12* to the region $\underline{ab}$, we know that $a$ is the inf $\underline{ab}$ and $b$ is the sup $\underline{ab}$, and since $a$ and $b$ are not elements of the elements of the region (by definition of a region which only contains points within the points $a$ and $b$ exclusive) then by *Theorem 5.12*, both $a$ and $b$ are limit points of the region $\underline{ab}$. $a$ and $b$ are limit points because for any region $R$ containing either $a$ or $b$ where $a, b \in R$, there exists elements in the intersection of regions $R$ and $\underline{ab}$ that are not either $a$ not $b$ which makes them limit points. Since $a$ and $b$ are the limit points of $\underline{ab}$ and closed sets contain their limit points by definition, the closure of $\underline{ab}$ must include $a, b$ such that $[a,b] = \overline{ab}$​ includes both $a$ and $b$ as limit points.
+We know that $a =$ inf $\underline{ab}$ and $b=$ sup $\underline{ab}$ by *Theorem 5.11*, and since $a \not \in \underline{ab}$ and $b \not \in \underline{ab}$, then by *Theorem 5.12*, $a, b \in LP$(\underline{ab})$.
 
 
 **Corollary 5.14: $[a, b] = {x ∈ C | a ≤ x ≤ b}$.**
 
-The set $[a,b]$ is defined as the closure $\overline{\underline{ab}}$ as proven by *Corollary 5.13*. Thus by definition of a closure in *Definition 4.4*, $[a,b]$ must include both the elements of the region $\underline{ab}$ such that any element $x$ of closure $[a,b]$ must be between $a$ and $b$ by *Definition 3.9* and its limit points which are $a$ and $b$ such that $x$ can also equal $a$ or $b$, once again as described by *Corollary 5.13*. This means $[a,b]$ is exactly the set of all points $x$ in $C$ such that $a≤x≤b$.
+The set $[a,b]$ is defined as the closure $\overline{\underline{ab}}$ as proven by *Corollary 5.13*. Thus by definition of a closure in *Definition 4.4* which says a closure is the union of the set and its limit points, $[a,b]$ must include both the elements of the region $\underline{ab}$ such that any element $x$ of closure $[a,b]$ must be between $a$ and $b$ where $a < x < b$ by *Definition 3.9* and its limit points which are $a$ and $b$ such that $x$ can also equal $a$ or $b$, once again as described by *Corollary 5.13*. This means $[a,b]$ is exactly the set of all points $x$ in $C$ such that $a≤x≤b$.
 
 
 **Lemma 5.15: Let $X ⊂ C$ and define: $Ψ(X) = \{x ∈ C | x \; \textnormal{is not an upper bound of} \; X\}.$ Then $Ψ(X)$ is open. Define: $Ω(X) = \{x ∈ C | x \;  \textnormal{is not a lower bound of} \; X\}$.Then $Ω(X)$ is open.**
