@@ -99,6 +99,12 @@ Take a point $x \in \Psi (X)$ and there exists a point $b \in X$ such that $x < 
 
 **Theorem 5.16: Suppose that $X$ is nonempty and bounded above. Then sup $X$ exists. Similarly, if $X$ is nonempty and bounded below, then inf $X$ exists.**
 
+We will prove this by contradiction. Assume for the sake of contradiction that $X$ is nonempty and bounded above and that the sup$X$ does not exist. We define $A = C \backslash \Psi (X)$ is the set of upper bounds of $X$. Because $X$ is bounded above, then $A \neq \empty$, and since we know that sup$(X)$ does not exist, then for all $y \in A$, we can say that $y$ is not the least upper bound of $X$. Then, we can say there is some $z \in A$ where $z < y$. Because $z \in A$, then $z > x$ for all $x \in X$. then, for any point $a \in C$ where $a > z$, then $a > x$ for all $x \in X$.
+   1. For any point $a$ in the continuum where $a > z$, then $a \in A$ because it must be in the upper bounds of $X$ by *Definition 5.5* because it is larger than all $x \in X$. Because the continuum has no last point by *Axiom 3*, then we know that there exists a point $u$ such that $ u > y$. We define the region $\underline{zu}$ such that $z < y < u$ thus $y \in \underline[zu]$. For all points $n \in \underline{zu}$, we know that $n > z$. By line 1, we know that for all $n \in \underline{zu}$ thus $n \in A$. Then $y \in \underline{zu}$ is a subset of $A$. Therfore, $A$ is open by *Theorem 4.9*.
+   2. $A$ is nonempty and open. We can say that $\Psi (X)$ is open by *Lemma 5.15*. Because $X$ is nonempty, then we can find some $w \in X$ then there exists some $d < w$ by *Axiom 3* stating that a continuum has no first point. Therefore, $d$ is not an upper bound of $X$. Now, we can state that $\Psi (X)$ is nonempty. 
+   3. Since we know that $\Psi (X)$ is nonempty and open, $A = C \backslash \Psi (X)$ then $A \cap \Psi (X) = \empty$, then $A$ and $\Psi (X)$ are disjoint. Because $A$ and $\Psi (X)$ are empty, open, and disjoint, then $C = A \cap \Psi (X)$ and $C$ is the union of nonempty, open, and disjoint sets thus $C$ is disconnected by *Definition 4.22* and this is a contradiction.
+
+
 For the sake of contradiction assume that the set $X$ is nonempty and bounded above but sup $X$ does not exist. 
 
 **Corollary 5.17: Every nonempty closed and bounded set has a first point and a last point.**
