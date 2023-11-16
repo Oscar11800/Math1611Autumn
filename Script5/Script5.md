@@ -97,7 +97,7 @@ We want to prove that the complement is closed. We can do this by contradiction 
 Take a point $x \in \Psi (X)$ and there exists a point $b \in X$ such that $x < b$ that exists because ... For all $x$ inside of $X$, there exists a region $\underline{ab} \sub \Psi (X)$ this is because $b \in X$ and any element less than $b$ cannot be an upper bound by definition of an upper bound.
 
 
-**Theorem 5.16: Suppose that $X$ is nonempty and bounded above. Then sup $X$ exists. Similarly, if $X$ is nonempty and bounded below, then inf $X$ exists.**
+**Theorem 5.16 (Least Upper Bound Property): Suppose that $X$ is nonempty and bounded above. Then sup $X$ exists. Similarly, if $X$ is nonempty and bounded below, then inf $X$ exists.**
 
 We will prove this by contradiction. Assume for the sake of contradiction that $X$ is nonempty and bounded above and that the sup$X$ does not exist. We define $A = C \backslash \Psi (X)$ is the set of upper bounds of $X$. Because $X$ is bounded above, then $A \neq \empty$, and since we know that sup$(X)$ does not exist, then for all $y \in A$, we can say that $y$ is not the least upper bound of $X$. Then, we can say there is some $z \in A$ where $z < y$. Because $z \in A$, then $z > x$ for all $x \in X$. then, for any point $a \in C$ where $a > z$, then $a > x$ for all $x \in X$.
    1. For any point $a$ in the continuum where $a > z$, then $a \in A$ because it must be in the upper bounds of $X$ by *Definition 5.5* because it is larger than all $x \in X$. Because the continuum has no last point by *Axiom 3*, then we know that there exists a point $u$ such that $ u > y$. We define the region $\underline{zu}$ such that $z < y < u$ thus $y \in \underline[zu]$. For all points $n \in \underline{zu}$, we know that $n > z$. By line 1, we know that for all $n \in \underline{zu}$ thus $n \in A$. Then $y \in \underline{zu}$ is a subset of $A$. Therfore, $A$ is open by *Theorem 4.9*.
@@ -109,5 +109,32 @@ For the sake of contradiction assume that the set $X$ is nonempty and bounded ab
 
 **Corollary 5.17: Every nonempty closed and bounded set has a first point and a last point.**
 
+We can prove this by contradiction. Suppose there exists a set $X$ such that $X$ is nonempty, closed, and bounded. Then assume for the sake of contradiction $X$ has no first nor last point. Since $X$ is bounded, then there exists supX and infX by *Theorem 5.16*. The last point is somoe $x \in X$ such that $x /geq a$ where $a \in X$. We know that the sup$x \not \in X$, so if supx $\in X$, then supx $\geq x$ for all $x \in X$. If supx $\not \in X$, then supx $\in$ LP(X) by *Theorem 5.12*. However, this x does not contain all of its limit points, thus $x$ is not closed, causing a contradiction.
+
+**alternative**
+Because the set is bounded, the infx exists such that there are 2 cases where the infx is in X or not in X. If it is in x, then infx is the first point, but if its not in X then it is a limit point of X because in 5.12. Applicable to supX as well.
 
 **Exercise 5.18: Is this (Corollary 5.17) true for $\mathbb{Q}$?**
+
+Suppose $\mathbb{Q}$ is the continuum $C$, and suppose the subset $S = \{x \in \mathbb{Q} | x^2 < 2\}$. Consider for every element $x$, there exists an element $y = \frac {(2x+2)} {(x+2)}$ and we want to show that  $y > x$ and $y \in S$ such that $x$ cannot be the last point. Using algebra we have $x^2 + 2x < 2x +2$ such that $x^2 < 2$ which shows that $y > x$. $y^2 = \frac{((2x+2)(2x_2))} {((x+2)(x+2))}$ which simplifies into $\frac (4x^2+8x+4) (x^2+4x+4) < 2$ which is equal to $4x^2 + 8x + 4 < 2x^ + 8x + 8$ which proves that there exists a $y > x$ and $y^2 < 2$ so *Corollary 5.17* is true for $\mathbb{Q}$.
+
+
+
+**Extra Problem 4: Assume that $C$ satisfies Axioms 1,2 and 3. Do not assume that $C$ satisfies Axiom 4. Suppose also that 
+(a) every nonempty subset $X$ of $C$ that is bounded above has a supremum 
+(b) for any $a, b ∈ C$, there is some $z ∈ C$ with $a < z < b$. Show that $C$ is connected.**
+
+*Axiom 1: A continuum is a nonempty.*
+*Axiom 2: A continuum has an ordering $<$.*
+*Axiom 3: A continuum has no first or last point.*
+*Axiom 4: A continuum is connected*
+
+
+To show that \( C \) is connected, assume for contradiction that it is not. This means there exist nonempty subsets \( A \) and \( B \) such that \( C = A \cup B \), \( A \cap B = \emptyset \), and both \( A \) and \( B \) are open in \( C \). Next, let \( a \in A \) and \( b \in B \) with \( a < b \) by *Axiom 2*. Consider \( S = \{ x \in C | x < b \} \). Since \( B \) is open, there exists \( c > 0 \) such that \( \underline{cb} \subset B \). Thus, \( S \) is bounded above by \( b \) and has a supremum in \( C \), denoted as \( s \). We know for any \( d > 0 \), the interval \( \underline{ds} \) intersects \( S \). 
+
+   - Case 1: If \( s \in A \), then there exists \( d > 0 \) such that \( \underline{ds} \subset A \). This contradicts the disjoint nature of \( A \) and \( B \).
+   - Case 2: If \( s \in B \), elements arbitrarily close to \( s \) and less than $s$ as defined by *Axiom 2)* are in \( S \) (and hence in \( A \)), contradicting the openness of \( B \).
+
+In both cases, we reach a contradiction, which implies our assumption that \( C \) is not connected is false. Therefore, \( C \) must be connected.
+
+
