@@ -116,7 +116,7 @@ Because the set is bounded, the infx exists such that there are 2 cases where th
 
 **Exercise 5.18: Is this (Corollary 5.17) true for $\mathbb{Q}$?**
 
-Suppose $\mathbb{Q}$ is the continuum $C$, and suppose the subset $S = \{x \in \mathbb{Q} | x^2 < 2\}$. Consider for every element $x$, there exists an element $y = \frac {(2x+2)} {(x+2)}$ and we want to show that  $y > x$ and $y \in S$ such that $x$ cannot be the last point. Using algebra we have $x^2 + 2x < 2x +2$ such that $x^2 < 2$ which shows that $y > x$. $y^2 = \frac{((2x+2)(2x_2))} {((x+2)(x+2))}$ which simplifies into $\frac (4x^2+8x+4) (x^2+4x+4) < 2$ which is equal to $4x^2 + 8x + 4 < 2x^ + 8x + 8$ which proves that there exists a $y > x$ and $y^2 < 2$ so *Corollary 5.17* is true for $\mathbb{Q}$.
+Suppose $\mathbb{Q}$ is the continuum $C$, and suppose the subset $S = \{x \in \mathbb{Q} | x^2 < 2\}$. Consider for every element $x$, there exists an element $y = \frac {(2x+2)} {(x+2)}$ and we want to show that  $y > x$ and $y \in S$ such that $x$ cannot be the last point. Using algebra we have $x^2 + 2x < 2x +2$ such that $x^2 < 2$ which shows that $y > x$. $y^2 = \frac{((2x+2)(2x_2))} {((x+2)(x+2))}$ which simplifies into $\frac {(4x^2+8x+4)} {(x^2+4x+4)} < 2$ which is equal to $4x^2 + 8x + 4 < 2x^ + 8x + 8$ which proves that there exists a $y > x$ and $y^2 < 2$ so *Corollary 5.17* is true for $\mathbb{Q}$.
 
 
 
