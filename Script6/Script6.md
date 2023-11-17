@@ -12,10 +12,10 @@ Next we will prove that if $x \not \in A$, then $x$ is an upper bound of $A$ whe
  (c) Prove that ${x ∈ \mathbb{Q} | x < 0} ∪ {x ∈ \mathbb{Q} | x^2 < 2}$ is a Dedekind cut.**
 
 (a)
-$A = \{x \in \mathbb{Q} | x < q\} then $A$ is nonempty. If $r$ is in the set $A$ and $s < r$ then $s \in A$ this is because $s < r < q$ which implies $s < q$ by transitivity thus $s \in A$. There is no last point because $r < \frac {r+q} 2 < q$ and $r$ canoot be the last point because there exists an $x \in A$ that is greater.    
+$A = \{x \in \mathbb{Q} | x < q\}$ then $A$ is nonempty. If $r$ is in the set $A$ and $s < r$ then $s \in A$ this is because $s < r < q$ which implies $s < q$ by transitivity thus $s \in A$. There is no last point because $r < \frac {r+q} 2 < q$ and $r$ canoot be the last point because there exists an $x \in A$ that is greater.    
 
 (b)
-$\{x \in \mathbb{Q} | x \leq 0\} has a last point because zero is the last point. 
+$\{x \in \mathbb{Q} | x \leq 0\}$ has a last point because zero is the last point. 
 
 (c)
 Use *Theorem 5.18* which means there is no last point. 
