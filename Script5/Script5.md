@@ -81,11 +81,21 @@ If \( x \leq p \) for all \( x \in X \), then \( p \) would be an upper bound fo
 
 **Theorem 5.11: Let $a < b$. The least upper bound and greatest lower bound of the region $\underline{ab}$ are: sup $\underline{ab}$ = $b$ and inf $\underline{ab}$ = $a$.**
 
-Consider the region \( \underline{ab} \), which is the set of all points \( x \) such that \( a < x < b \). We aim to prove that \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \).
+Let \( a < b \). The theorem states that the least upper bound and greatest lower bound of the region \( \underline{ab} \) are \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \).
 
-We show that \( a \) is a lower bound for \( \underline{ab} \). Since for all \( x \in \underline{ab} \), \( a < x \), \( a \) is less than every element in \( \underline{ab} \) by *Definition 5.5*. To demonstrate that \( a \) is the *greatest* lower bound, suppose there exists some element $l$ such that \( l > a \) that is also a lower bound. Let there be a point $c$ in the region $\underline{al}$ which exists because of *Theorem 4.23* since the continuum is connected, between any two points there exists another point $c$ such that $a < c < l$. Thus $l$ cannot be a lower bound which contradicts our previous asusmption that $q < a$ thus inf$\underline{ab} = $a$. 
+First we want to prove that \( \inf \underline{ab} = a \).
 
-Hence, we have proven that \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \)
+To do this, we first show that $a$ is a lower bound. By *Definition 5.5*, a lower bound for a set is an element that is less than every element in the set. Since \( \underline{ab} \) consists of points \( x \) such that \( a < x < b \), it follows that for all \( x \in \underline{ab} \), \( a < x \). Therefore, \( a \) is a lower bound of \( \underline{ab} \).
+
+Next, we need to show that \( a \) is the Greatest Lower Bound which we can demonstrate by contradiction. Suppose there exists some element \( l > a \) that is also a lower bound of \( \underline{ab} \) (such that $a$ is not the greatest lower bound). By *Theorem 4.23*, the continuum is connected, meaning for any two points, there exists another point between them. Therefore, there exists a point \( c \) in the region \( \underline{al} \) such that \( a < c < l \). Since \( c \) is an element of \( \underline{ab} \) and \( c > a \), this contradicts the assumption that \( l \) is a lower bound of \( \underline{ab} \). Hence, \( a \) is the greatest lower bound, or \( a= \inf \underline{ab} \).
+
+Now we want to prove that \( \sup \underline{ab} = b \).
+
+Similar for inf, we want show \( b \) is an Upper Bound. By definition, an upper bound for a set is an element that is greater than every element in the set. Since \( \underline{ab} \) consists of points \( x \) such that \( a < x < b \), it follows that for all \( x \in \underline{ab} \), \( x < b \). Therefore, \( b \) is an upper bound of \( \underline{ab} \).
+
+Next, we need to show \( b \) is the Least Upper Bound which we can demonstrate by contradiction. Suppose there exists some element \( u < b \) that is also an upper bound of \( \underline{ab} \). By the same connectedness argument of *Theorem 4.23*, there would exist a point \( c \) in the region \( \underline{ub} \) such that \( u < c < b \). Since \( c \) is an element of \( \underline{ab} \) and \( c < b \), this contradicts the assumption that \( u \) is an upper bound of \( \underline{ab} \). Hence, \( b \) is the least upper bound, or \( \sup \underline{ab} \).
+
+Thus, we have proven that \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \).\
 
 **Theorem 5.12: Let $X$ be a nonempty subset of $C$. Suppose that sup $X$ exists and sup $X \not \in X$. Then sup $X$ is a limit point of $X$. The same holds for inf $X$.**
 
