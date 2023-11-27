@@ -3,25 +3,35 @@
 
 Let's prove this by contradiction. Assume there exists a non-empty subset $A \sub C$ such that $A$ is both open and closed and $A \neq C$.
 
-Because $A$ is open and closed and nonempty, its complement $C\backslash A$ is open and nonempty by definition of an open sets. We also know that because they are complements, $A \cap (C \backslash A) = \empty$ which means they are disjoint. This means we have two nonempty, open sets which contradicts the definition of connected set because $C$ can now be represented as the union of two non-empty disjoint open sets, thus making $C$ disconnected which contradicts the fact that $C$ is connected thus our assumption is false and therefore the only subsets of continuum $C$ that are open and closed are $\empty$ and $C$ and our assumption is false. 
+
+Because $A$ is open and closed and nonempty, its complement $C\backslash A$ is open and nonempty by *Definition 4.7* which states that a set is open if its complement is closed. We also know that because they are complements, $A \cap (C \backslash A) = \empty$ which means they are disjoint as they contain no similar elements. This means we have two nonempty, open sets which contradicts the definition of connected set because $C$ can now be represented as the union of two non-empty disjoint open sets, thus making $C$ disconnected which contradicts the fact that $C$ is connected thus our assumption is false and therefore through proof by contradiction the only subsets of continuum $C$ that are open and closed are $\empty$ and $C$.
 
 
 **Corollary 5.2: Every region is infinite.**
 
-**MORE**
+Assume, for the sake of contradiction, that there exists a finite region \( R \) denoted as \( \underline{ab} \), where \( a, b \in C \) and \( a < b \). According to this assumption, the elements in the region can be arranged in a finite sequence, due to *Theorem 3.5*. This sequence is of the form \( a < x_1 < x_2 < \ldots < x_n < b \), with \( n \) elements in total where $n\in \N$.
 
-Let's prove this by contradiction. Assume the region $R = \underline{ab}$ is finite where $a,b \in C$ and $a < b$ then we can list elements where there are $n$ elements in the region in order by *theorem 3.5* in this format: $a < x_1<x_2<...x_n<b$. Because there are no elements between $x_1$ and $x_2$, then this contradicts our assumption that every region is finite. Thus every region is infinite.
-
+However, this assumption leads to a contradiction. According to this sequence, there are no elements between \( x_1 \) and \( x_2 \). This directly contradicts *Theorem 4.23*, which states that in a connected continuum (which a continuum must be by *Axiom 4*), for any two elements \( x_1, x_2 \in C \) with \( x_1 < x_2 \), there must exist another element \( z \in C \) that lies between \( x_1 \) and \( x_2 \) such that there are an infinite number of points between any two points which is in direct contrast with the cardinality $n$ specified by *Theorem 3.5* for a finite region. Thus our assumption that $R$ is a  finite region is false, and every region must be infinite.
 
 
 **Corollary 5.3: Every point of $C$ is a limit point of $C$.**
 
-Let's prove this by contradiction. Let us assume there there that for all regions $R$ containing $x\in C$ where $x \in R \sub C$, this will be true: $R \cap C \{x\} = \empty$. But by *corollary 5.2* where we proved all regions are infinite, we know that the previously stated intersection cannot only contain $x$ thus $R \cap C \{x\} \neq \empty$ which contradicts our assumption and proves that every point of the region $\underline{ab}$ is a limit point of $\underline{ab}$.
+Assume, for contradiction, that there exists a point \( x \in C \) which is not a limit point of \( C \). This assumption implies that there is a region \( R \) containing \( x \), where \( x \in R \subseteq C \), and \( R \) satisfies the condition: \( R \cap C \setminus \{x\} = \emptyset \). In simpler terms, besides \( x \), the region \( R \) does not contain any other points of \( C \).
+
+However, this assumption leads to a contradiction when we consider *Corollary 5.2*, which we previously proved. *Corollary 5.2* states that every region in \( C \) is infinite. Therefore, it's impossible for the region \( R \) to contain only the point \( x \) if it's a part of \( C \); \( R \) must contain infinitely many points.
+
+Thus, our original assumption, that \( R \) contains only \( x \) and no other points from \( C \), contradicts the fact established in *Corollary 5.2*. Therefore, \( R \cap C \setminus \{x\} \) cannot be empty, implying that \( x \) must be a limit point of \( C \). Consequently, our initial assumption is false, and it follows that every point in \( C \) is indeed a limit point of \( C \).
+
 
 
 **Corollary 5.4: Every point of the region $\underline{ab}$ is a limit point of $\underline{ab}$.**
 
-We can prove this by contradiction by assuming that $x$, where $x$ is a limit point of the region $\underline{ab}$, is actually not a limit point of the region $\underline{ab}$. For all $R$ such that $R$ contains $x$ and $x \in R \sub C$ such that $R \cap \underline{ab} \backslash\{x\} = \empty$. We know that $R$ \cap \underline{ab} is also a region and by *corollary 5.2*, we know that all regions are infinite so we know that this the region $R \cap \underline{ab}$ is infinite which means that $R \cap \underline{ab} \backslash \{x\} \neq \empty$ such that $x$ cannot exist which contradicts our assumption which proves that Every point of the region $\underline{ab}$ is a limit point of $\underline{ab}$.
+Suppose, for the sake of contradiction, that there exists a point \( x \) in the region \( \underline{ab} \) which is not a limit point of \( \underline{ab} \). This means that we can find a region \( R \) containing \( x \), where \( x \in R \subseteq C \), and this region \( R \) satisfies the condition: \( R \cap \underline{ab} \setminus \{x\} = \emptyset \). In other words, \( R \) does not contain any points from \( \underline{ab} \) other than \( x \).
+
+However, this assumption leads to a contradiction. Note that \( R \cap \underline{ab} \) is itself a region within \( C \). According to *Corollary 5.2*, every region within \( C \) is infinite. This implies that the region \( R \cap \underline{ab} \) must contain infinitely many points.
+
+Thus, if \( R \cap \underline{ab} \) is infinite, then \( R \cap \underline{ab} \setminus \{x\} \) cannot be empty. There must be other points in \( R \cap \underline{ab} \) besides \( x \). This contradicts our initial assumption that \( R \cap \underline{ab} \) contains only \( x \). Therefore, our assumption that \( x \) is not a limit point of \( \underline{ab} \) is false. It follows that every point in the region \( \underline{ab} \) must be a limit point of \( \underline{ab} \).
+   c 
 
 **Exercise 5.7: If sup $X$ exists, then it is unique, and similarly for inf $X$.**
 
@@ -34,11 +44,14 @@ This same logic can equally be applied to inf $X$ with reverse comparative signa
 
 **Exercise 5.8: If $X$ has a first point $L$, then inf $X$ exists and equals $L$. Similarly, if $X$ has a last point $U$, then sup $X$ exists and equals $U$.**
 
+
 Assume that $X$ has a first point $L$ such that $L < x$ where $x$ for all $x \in X$ which means $L$ is a lower bound of $X$ by *definition 5.5*. To show that $L$ is a greatest least bound of $X$, we must show that:
    1. $L$ is a lower bound of $X$ and
-   2. If $L'$ is any lower bound of $X$, then $L' \leq L$.
+   2. If $L'$ is any lower bound of $X$, then $L' \leq L$. 
 
-The first condition is met by $L$ being the first point. As for the second point, suppose there is a point $L'$ that any lower bound for $X$. Since, $L$ is the first point of $X$ then by *definition 3.3* for every point $x$ in $X$, $L \leq x$. The definition of the first point satisfies the second condition for inf $X$, thus $L$ is the greatest least bound of $X'$.
+The first condition is met by $L$ being the first point by *Definition 3.3* as  a first point $L$ of a set X means $L ≤ x$ for all x in X. This satisfies the requirement for L to be a lower bound of X, as it is less than or equal to every element in X. 
+
+As for the second condition, Suppose there exists another lower bound $L'$ of $X$. By the definition of a lower bound, $L' ≤ x$ for all $x \in X$. Since $L$ is the first point of $X$, it is the smallest element in $X$. Therefore, for any lower bound $L'$, it must hold that $L' ≤ L$. This is because $L'$ cannot be greater than the smallest element of $X$ and still be a lower bound. This satisfies the condition that $L$ is greater than or equal to every other lower bound of $X$. Therefore, by satisfying these two conditions, L is the greatest least bound, or the infimum, of X.
 
 Sup $X$ can be proved by *definition 3.3* for the last point in a similar manner.
 
