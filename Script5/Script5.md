@@ -87,7 +87,7 @@ We show that \( a \) is a lower bound for \( \underline{ab} \). Since for all \(
 
 Hence, we have proven that \( \sup \underline{ab} = b \) and \( \inf \underline{ab} = a \)
 
-**Theorem 5.12: Let $X$ be a nonempty subset of $C$. Suppose that sup $X$ exists and sup $X /not \in X$. Then sup $X$ is a limit point of $X$. The same holds for inf $X$.**
+**Theorem 5.12: Let $X$ be a nonempty subset of $C$. Suppose that sup $X$ exists and sup $X \not \in X$. Then sup $X$ is a limit point of $X$. The same holds for inf $X$.**
 
 Let $s =$ sup $X$. Because $S$ is not empty, there exists an element $p$ that is any point in the continuum such that $p < s$. By *Theorem 5.6*, there exists an element $c$ where $c>s$ which exists by *axiom 3* because there is no last point. Therefore, we can create a region where $s \in \underline{pc'}$. There exists an $x$ for any $p$ and $x \neq s$ because $s$ is not in $X$, but $x$ is in $X$ such that $p < x \leq s$ by *Lemma 5.10*. For any region $\underline{pc}$ containing $x$, $\underline{pc} \cup x \backslash\{s\} \neq \empty$ which means that sup $X$ is a limit point of $X$. The same holds for inf $X$. 
 
@@ -98,7 +98,7 @@ We know that $a =$ inf $\underline{ab}$ and $b=$ sup $\underline{ab}$ by *Theore
 
 **Corollary 5.14: $[a, b] = {x ∈ C | a ≤ x ≤ b}$.**
 
-The set $[a,b]$ is defined as the closure $\overline{\underline{ab}}$ as proven by *Corollary 5.13*. Thus by definition of a closure in *Definition 4.4* which says a closure is the union of the set and its limit points, $[a,b]$ must include both the elements of the region $\underline{ab}$ such that any element $x$ of closure $[a,b]$ must be between $a$ and $b$ where $a < x < b$ by *Definition 3.9* and its limit points which are $a$ and $b$ such that $x$ can also equal $a$ or $b$, once again as described by *Corollary 5.13*. Additionally, we know that there are no other limit poitns outside of the reigon $\underline{ab}$ by *Lemma 3.16* wich states that there is no point of the exterior of a region that can be a limit point of that region; thus, there are no other limit points outside of the closure. This means $[a,b]$ is exactly the set of all points $x$ in $C$ such that $a≤x≤b$.
+The set $[a,b]$ is defined as the closure $\overline{\underline{ab}}$ as proven by *Corollary 5.13*. Thus by definition of a closure in *Definition 4.4* which says a closure is the union of the set and its limit points, $[a,b]$ must include both the elements of the region $\underline{ab}$ such that any element $x$ of closure $[a,b]$ must be between $a$ and $b$ where $a < x < b$ by *Definition 3.9* and its limit points which are $a$ and $b$ such that $x$ can also equal $a$ or $b$, once again as described by *Corollary 5.13*. Additionally, we know that there are no other limit points outside of the region $\underline{ab}$ by *Lemma 3.16* which states that there is no point of the exterior of a region that can be a limit point of that region; thus, there are no other limit points outside of the closure. This means $[a,b]$ is exactly the set of all points $x$ in $C$ such that $a≤x≤b$.
 
 
 **Lemma 5.15: Let $X ⊂ C$ and define: $Ψ(X) = \{x ∈ C | x \; \textnormal{is not an upper bound of} \; X\}.$ Then $Ψ(X)$ is open. Define: $Ω(X) = \{x ∈ C | x \;  \textnormal{is not a lower bound of} \; X\}$.Then $Ω(X)$ is open.**
