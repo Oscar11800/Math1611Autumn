@@ -61,22 +61,22 @@ Sup $X$ can be proved by *definition 3.3* for the last point in a similar manner
    1. sup $X$ does not exist because the set of natural numbers has no upper bound as it goes on indefinitely. 
    2. inf $X = 1$ since 1 is the first point of the set of natural numbers, thus it is inf $X$ by *exercise 5.8*.
 2. $X = \mathbb{Q}$
-   1. neither sup nor inf exist for $X$ because the set of rational numbers extend infinitely in both positive and negative directions such that there is no upper nor lower bound
+   1. neither sup nor inf exist for $X$ because the set of rational numbers extend infinitely in both positive and negative directions such that there are no upper nor lower bounds.
 3. $X = \{\frac 1 n | n ∈ N\}$ 
    1. sup $X$ = 1 because 1 is the upper bound such that there will never be a number in the set $X$ that is greater than 1
    2. inf $X$ is 0, though $0$ is not in the set, it fulfills the requirements because it is a lower bound which the elements of $X$ get close to 0 as $n$ increases.
 4. $X = \{x ∈ \R | 0 < x < 1\} $
    1. sup X = $1$, even though 1 is not in the set, no element in the set $X$ is greater than 1 such that $1$ is an upper bound 
-   2. inf $X$ = 0, 0 is the greatest lower bound for $X$, even though it's not part of the set since all elements are greater than 0.
+   2. inf $X = 0, 0$ is the greatest lower bound for $X$, even though it's not part of the set since all elements are greater than 0.
 5. $X = \{3\} ∪ \{x ∈ \R | −7 ≤ x ≤ −5\}$
-   1. sup $X=3$, since 3 is the largest number in the union of the two sets.
+   1. sup $X=3$, since $3$ is the largest number in the union of the two sets.
    2. inf $⁡X= −7$, because it's the smallest number in the combined set and is included in the set $X$.
 
 **Lemma 5.10: Suppose that $X$ is a nonempty subset of $C$ and $s =$ sup $X$ exists. If $p < s$, then there exists an $x ∈ X$ such that $p < x ≤ s$.**
 
-Assume that \( X \) is a nonempty subset of \( C \) and that \( s = \sup X \) exists. Let \( p \) be any element in $X$ such that \( p < s \). For the sake of contradiction, suppose that there does not exist an \( x \in X \) such that \( p < x \). This means that for all \( x \in X \), \( x \leq p \) or \( x > s \). However, \( x > s \) is impossible because \( s \) is the least upper bound of \( X \).
+Assume that \( X \) is a nonempty subset of \( C \) and that \( s = \sup X \) exists. Let \( p \) be any element in $C$ such that \( p < s \). For the sake of contradiction, suppose that there does not exist an \( x \in X \) such that \( p < x \leq s\). This means that for all \( x \in X \), \( x \leq p \) or \( x > s \). However, \( x > s \) is impossible by *Definition 5.5* because \( s \) is the least upper bound of \( X \).
 
-If \( x \leq p \) for all \( x \in X \), then \( p \) would be an upper bound for \( X \) by *Definition 5.5*, which contradicts the fact that \( s \) is the least upper bound of \( X \) and \( p < s \) by *Definition 5.6*. This contradiction implies that our assumption is false. Therefore, there must exist an \( x \in X \) such that \( p < x \leq s \).
+If \( x \leq p \) for all \( x \in X \), then \( p \) would be an upper bound for \( X \) by *Definition 5.5*, which contradicts the fact that \( s \) is the least upper bound of \( X \) and \( p < s \) by *Definition 5.6*. This contradiction implies that our assumption is false. Therefore, there must exist an \( x \in X \) such that \( p < x \leq s \) if $p < s$
 
 
 **Theorem 5.11: Let $a < b$. The least upper bound and greatest lower bound of the region $\underline{ab}$ are: sup $\underline{ab}$ = $b$ and inf $\underline{ab}$ = $a$.**
@@ -130,24 +130,3 @@ Because the set is bounded, the infx exists such that there are 2 cases where th
 **Exercise 5.18: Is this (Corollary 5.17) true for $\mathbb{Q}$?**
 
 Suppose $\mathbb{Q}$ is the continuum $C$, and suppose the subset $S = \{x \in \mathbb{Q} | x^2 < 2\}$. Consider for every element $x$, there exists an element $y = \frac {(2x+2)} {(x+2)}$ and we want to show that  $y > x$ and $y \in S$ such that $x$ cannot be the last point. Using algebra we have $x^2 + 2x < 2x +2$ such that $x^2 < 2$ which shows that $y > x$. $y^2 = \frac{((2x+2)(2x_2))} {((x+2)(x+2))}$ which simplifies into $\frac {(4x^2+8x+4)} {(x^2+4x+4)} < 2$ which is equal to $4x^2 + 8x + 4 < 2x^ + 8x + 8$ which proves that there exists a $y > x$ and $y^2 < 2$ so *Corollary 5.17* is true for $\mathbb{Q}$.
-
-
-
-**Extra Problem 4: Assume that $C$ satisfies Axioms 1,2 and 3. Do not assume that $C$ satisfies Axiom 4. Suppose also that 
-(a) every nonempty subset $X$ of $C$ that is bounded above has a supremum 
-(b) for any $a, b ∈ C$, there is some $z ∈ C$ with $a < z < b$. Show that $C$ is connected.**
-
-*Axiom 1: A continuum is a nonempty.*
-*Axiom 2: A continuum has an ordering $<$.*
-*Axiom 3: A continuum has no first or last point.*
-*Axiom 4: A continuum is connected*
-
-
-To show that \( C \) is connected, assume for contradiction that it is not. This means there exist nonempty subsets \( A \) and \( B \) such that \( C = A \cup B \), \( A \cap B = \emptyset \), and both \( A \) and \( B \) are open in \( C \). Next, let \( a \in A \) and \( b \in B \) with \( a < b \) by *Axiom 2*. Consider \( S = \{ x \in C | x < b \} \). Since \( B \) is open, there exists \( c > 0 \) such that \( \underline{cb} \subset B \). Thus, \( S \) is bounded above by \( b \) and has a supremum in \( C \), denoted as \( s \). We know for any \( d > 0 \), the interval \( \underline{ds} \) intersects \( S \). 
-
-   - Case 1: If \( s \in A \), then there exists \( d > 0 \) such that \( \underline{ds} \subset A \). This contradicts the disjoint nature of \( A \) and \( B \).
-   - Case 2: If \( s \in B \), elements arbitrarily close to \( s \) and less than $s$ as defined by *Axiom 2)* are in \( S \) (and hence in \( A \)), contradicting the openness of \( B \).
-
-In both cases, we reach a contradiction, which implies our assumption that \( C \) is not connected is false. Therefore, \( C \) must be connected.
-
-
