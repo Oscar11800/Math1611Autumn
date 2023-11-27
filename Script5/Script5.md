@@ -113,14 +113,18 @@ The set $[a,b]$ is defined as the closure $\overline{\underline{ab}}$ as proven 
 
 **Lemma 5.15: Let $X ⊂ C$ and define: $Ψ(X) = \{x ∈ C | x \; \textnormal{is not an upper bound of} \; X\}.$ Then $Ψ(X)$ is open. Define: $Ω(X) = \{x ∈ C | x \;  \textnormal{is not a lower bound of} \; X\}$.Then $Ω(X)$ is open.**
 
-We want to prove that the complement is closed. We can do this by contradiction by letting $x \in LP(C\backslash \Psi (X)$ such that it is a limit point of the set of upper bounds. Suppose $x \not \in C \backslash \Psi (X)$. x is not upperbound, so then there exists a $y \in X$ such that $x < y$. There exists $z$ such that $z < x$ which exists because we are in a continuum that does not have a last point nor first point. Thus $x \in \underline{zy}$, but $\underline{zx} \cap (C \backslash \Psi (X) \backslash \{x\}) = \empty$. This is because no points in the complement of $\Psi (X)$ is smaller than $y$ because all the elements in that set are upper bounds and must be larger than $y$ by definition. Thus, $x$ is in the complement of $\Psi (X)$, thus the complement of $\Psi (X)$ is closed, and by definition of an open set, $\Psi (X)$ is open.
+Let \( X \subset C \) and define \( \Psi(X) = \{x \in C | x \; \textnormal{is not an upper bound of} \; X\} \). We want to prove that \( \Psi(X) \) is open which we can accomplish by showing that the complement of \( \Psi(X) \), which consists of all upper bounds of \( X \), is closed.
 
-**Alternative**
+First, consider a point \( x \) in the set of limit points of the complement of \( \Psi(X) \), denoted as \( x \in LP(C\backslash \Psi(X)) \). This indicates that \( x \) is a limit point of the set of upper bounds of \( X \). Now, for the sake of contradiction, suppose \( x \not\in C \backslash \Psi(X) \). This implies that \( x \) is not an upper bound of \( X \). Consequently, there must exist some \( y \in X \) such that \( x < y \), which exists because \( x \) cannot be greater than or equal to every element in \( X \) since it is not an upper bound and because the continuum is connected and has no last point.
 
-Take a point $x \in \Psi (X)$ and there exists a point $b \in X$ such that $x < b$ that exists because ... For all $x$ inside of $X$, there exists a region $\underline{ab} \sub \Psi (X)$ this is because $b \in X$ and any element less than $b$ cannot be an upper bound by definition of an upper bound.
+Given that the continuum \( C \) is connected and there is no first point, there exists a point \( z \in X \) such that \( z < x \). This allows us to consider the region \( \underline{zy} \), which includes \( x \). However, the region \( \underline{zx} \), when intersecting \( C \backslash \Psi(X) \) and excluding \( x \) itself, must be empty. This emptiness arises because all points in \( C \backslash \Psi(X) \) are upper bounds of \( X \). By *Definition 5.5*, these points must be greater than \( y \), and hence, no point in \( \underline{zx} \) (other than \( x \)) can be an upper bound of \( X \).
 
+Therefore, \( x \) must be in the complement of \( \Psi(X) \) such that $x$ is in the set of upper bounds of $X$ which contradicts our original assumption. Because the complement of $\Psi (X)$ contains its limit points, then the complement of \( \Psi(X) \) is closed. Following the definition of an open set, this implies that \( \Psi(X) \) is open.
+
+The same reasoning can be applied to \( \Omega(X) = \{x \in C | x \;  \textnormal{is not a lower bound of} \; X\} \) to show that it is open as well.
 
 **Theorem 5.16 (Least Upper Bound Property): Suppose that $X$ is nonempty and bounded above. Then sup $X$ exists. Similarly, if $X$ is nonempty and bounded below, then inf $X$ exists.**
+Class notes
 
 We will prove this by contradiction. Assume for the sake of contradiction that $X$ is nonempty and bounded above and that the sup$X$ does not exist. We define $A = C \backslash \Psi (X)$ is the set of upper bounds of $X$. Because $X$ is bounded above, then $A \neq \empty$, and since we know that sup$(X)$ does not exist, then for all $y \in A$, we can say that $y$ is not the least upper bound of $X$. Then, we can say there is some $z \in A$ where $z < y$. Because $z \in A$, then $z > x$ for all $x \in X$. then, for any point $a \in C$ where $a > z$, then $a > x$ for all $x \in X$.
    1. For any point $a$ in the continuum where $a > z$, then $a \in A$ because it must be in the upper bounds of $X$ by *Definition 5.5* because it is larger than all $x \in X$. Because the continuum has no last point by *Axiom 3*, then we know that there exists a point $u$ such that $ u > y$. We define the region $\underline{zu}$ such that $z < y < u$ thus $y \in \underline[zu]$. For all points $n \in \underline{zu}$, we know that $n > z$. By line 1, we know that for all $n \in \underline{zu}$ thus $n \in A$. Then $y \in \underline{zu}$ is a subset of $A$. Therfore, $A$ is open by *Theorem 4.9*.
@@ -128,14 +132,11 @@ We will prove this by contradiction. Assume for the sake of contradiction that $
    3. Since we know that $\Psi (X)$ is nonempty and open, $A = C \backslash \Psi (X)$ then $A \cap \Psi (X) = \empty$, then $A$ and $\Psi (X)$ are disjoint. Because $A$ and $\Psi (X)$ are empty, open, and disjoint, then $C = A \cap \Psi (X)$ and $C$ is the union of nonempty, open, and disjoint sets thus $C$ is disconnected by *Definition 4.22* and this is a contradiction.
 
 
-For the sake of contradiction assume that the set $X$ is nonempty and bounded above but sup $X$ does not exist. 
 
 **Corollary 5.17: Every nonempty closed and bounded set has a first point and a last point.**
 
-We can prove this by contradiction. Suppose there exists a set $X$ such that $X$ is nonempty, closed, and bounded. Then assume for the sake of contradiction $X$ has no first nor last point. Since $X$ is bounded, then there exists supX and infX by *Theorem 5.16*. The last point is somoe $x \in X$ such that $x /geq a$ where $a \in X$. We know that the sup$x \not \in X$, so if supx $\in X$, then supx $\geq x$ for all $x \in X$. If supx $\not \in X$, then supx $\in$ LP(X) by *Theorem 5.12*. However, this x does not contain all of its limit points, thus $x$ is not closed, causing a contradiction.
+We can prove this by contradiction. Suppose there exists a set $X$ such that $X$ is nonempty, closed, and bounded. Then assume for the sake of contradiction $X$ has no first nor last point. Since $X$ is bounded, then there exists supX and infX by *Theorem 5.16*. The last point is some $x \in X$ such that $x \geq a$ where $a \in X$. We know that the sup$x \not \in X$, so if supx $\in X$, then supx $\geq x$ for all $x \in X$. If supx $\not \in X$, then supx $\in$ LP(X) by *Theorem 5.12*. However, this $X$ does not contain all of its limit points, thus $X$ is not closed, causing a contradiction. The logic is applicable to infX as well.
 
-**alternative**
-Because the set is bounded, the infx exists such that there are 2 cases where the infx is in X or not in X. If it is in x, then infx is the first point, but if its not in X then it is a limit point of X because in 5.12. Applicable to supX as well.
 
 **Exercise 5.18: Is this (Corollary 5.17) true for $\mathbb{Q}$?**
 
