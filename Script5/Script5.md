@@ -4,14 +4,14 @@
 Let's prove this by contradiction. Assume there exists a non-empty subset $A \sub C$ such that $A$ is both open and closed and $A \neq C$.
 
 
-Because $A$ is open and closed and nonempty, its complement $C\backslash A$ is open and nonempty by *Definition 4.7* which states that a set is open if its complement is closed. We also know that because they are complements, $A \cap (C \backslash A) = \empty$ which means they are disjoint as they contain no similar elements. This means we have two nonempty, open sets which contradicts the definition of connected set because $C$ can now be represented as the union of two non-empty disjoint open sets, thus making $C$ disconnected which contradicts the fact that $C$ is connected thus our assumption is false and therefore through proof by contradiction the only subsets of continuum $C$ that are open and closed are $\empty$ and $C$.
+Because $A$ is open and closed and nonempty, its complement $C\backslash A$ is open and nonempty by *Definition 4.7* which states that a set is open if its complement is closed. We also know that because they are complements, $A \cap (C \backslash A) = \empty$ which means they are disjoint as they contain no similar elements. This means we have two nonempty, open sets which contradicts the definition of connected set  of *Definition 4.22* because $C$ can now be represented as the union of two non-empty disjoint open sets, thus making $C$ disconnected which contradicts the fact that $C$ is connected thus our assumption is false and therefore through proof by contradiction the only subsets of continuum $C$ that are open and closed are $\empty$ and $C$.
 
 
 **Corollary 5.2: Every region is infinite.**
 
 Assume, for the sake of contradiction, that there exists a finite region \( R \) denoted as \( \underline{ab} \), where \( a, b \in C \) and \( a < b \). According to this assumption, the elements in the region can be arranged in a finite sequence, due to *Theorem 3.5*. This sequence is of the form \( a < x_1 < x_2 < \ldots < x_n < b \), with \( n \) elements in total where $n\in \N$.
 
-However, this assumption leads to a contradiction. According to this sequence, there are no elements between \( x_1 \) and \( x_2 \). This directly contradicts *Theorem 4.23*, which states that in a connected continuum (which a continuum must be by *Axiom 4*), for any two elements \( x_1, x_2 \in C \) with \( x_1 < x_2 \), there must exist another element \( z \in C \) that lies between \( x_1 \) and \( x_2 \) such that there are an infinite number of points between any two points which is in direct contrast with the cardinality $n$ specified by *Theorem 3.5* for a finite region. Thus our assumption that $R$ is a  finite region is false, and every region must be infinite.
+However, this assumption leads to a contradiction. According to this sequence, there are no elements between \( x_1 \) and \( x_2 \). This directly contradicts *Theorem 4.23*, which states that in a connected continuum (which a continuum must be by *Axiom 4*), for any two elements \( x_1, x_2 \in C \) with \( x_1 < x_2 \), there must exist another element \( z \in C \) that lies between \( x_1 \) and \( x_2 \) such that there are an infinite number of points between any two points which is in direct contrast with the finite cardinality $n$ specified by *Theorem 3.5* for a finite region. Thus our assumption that $R$ is a finite region is false, and every region must be infinite.
 
 
 **Corollary 5.3: Every point of $C$ is a limit point of $C$.**
@@ -31,7 +31,7 @@ Suppose, for the sake of contradiction, that there exists a point \( x \) in the
 However, this assumption leads to a contradiction. Note that \( R \cap \underline{ab} \) is itself a region within \( C \). According to *Corollary 5.2*, every region within \( C \) is infinite. This implies that the region \( R \cap \underline{ab} \) must contain infinitely many points.
 
 Thus, if \( R \cap \underline{ab} \) is infinite, then \( R \cap \underline{ab} \setminus \{x\} \) cannot be empty. There must be other points in \( R \cap \underline{ab} \) besides \( x \). This contradicts our initial assumption that \( R \cap \underline{ab} \) contains only \( x \). Therefore, our assumption that \( x \) is not a limit point of \( \underline{ab} \) is false. It follows that every point in the region \( \underline{ab} \) must be a limit point of \( \underline{ab} \).
-   c 
+
 
 **Exercise 5.7: If sup $X$ exists, then it is unique, and similarly for inf $X$.**
 
@@ -143,7 +143,33 @@ Therefore, \( X \) must have a last point. A similar line of reasoning can be ap
 
 
 **Exercise 5.18: Is this (Corollary 5.17) true for $\mathbb{Q}$?**
+Class notes
 
-Suppose $\mathbb{Q}$ is the continuum $C$, and consider the set $S = \{x \in \mathbb{Q} | x^2 < 2\}$ in $C$. We know that $S$ is bounded above because a number such as 4 is greater than all elements $x$ in $X$. Now, we need to show that there is no first not last element in the set. We can do this by showing that for every $x \in X$, there is another number $y \in X$ such that $x < y < z$ where $z$ is a positive number (but not necessarily rational) that satisfies $z^2 = 2$.
+No, Corollary 5.17 does not hold for \( \mathbb{Q} \) (the set of rational numbers). Let's consider the set \( X \) defined as:
+\[ X = \{ x \in \mathbb{Q} | x^2 < 2 \} \]
 
- Consider for every element $x$, there exists an element $y = \frac {(2x+2)} {(x+2)}$ and we want to show that  $y > x$ and $y \in S$ such that $x$ cannot be the last point. By multiplying by the denominator we have $x^2 + 2x < 2x +2$ such that $x^2 < 2$ which shows that $y > x$. By plugging in for $y$, we get $y^2 = \frac{((2x+2)(2x_2))} {((x+2)(x+2))} < 2$ which simplifies into $\frac {(4x^2+8x+4)} {(x^2+4x+4)} < 2$ which when multiplied by the denominator is equal to $4x^2 + 8x + 4 < 2x^2 + 8x + 8$ which is true thus proving that there exists a $y > x$ and $y^2 < 2$ so *Corollary 5.17* is true for $\mathbb{Q}$.
+First, observe that \( X \) is bounded above and below in \( \mathbb{Q} \). For example, \( x = 5 \) is an upper bound as it is greater than every element of \( X \), and similarly, \( x = -5 \) is a lower bound as it is smaller than every element of \( X \).
+
+To establish that \( X \) does not have a first or last point, we demonstrate that for every rational number \( x \in X \), there is another number \( y \in X \) such that \( x < y < z \), where \( z \) is the positive number (not necessarily rational) satisfying \( z^2 = 2 \).
+
+Starting with the fact that \( x^2 < 2 \), we follow these steps:
+
+1. \( x^2 + 2x < 2x + 2 \)
+2. \( x(x + 2) < 2x + 2 \)
+3. \( x < \frac{2x + 2}{x + 2} \)
+
+Therefore, if \( x^2 < 2 \), then \( \frac{2x + 2}{x + 2} > x \).
+
+Next, we want to show that \( \left( \frac{2x + 2}{x + 2} \right)^2 < 2 \) so that it belongs to \( X \):
+
+1. \( x^2 < 2 \) implies \( 2x^2 < 4 \)
+2. \( 2x^2 + 8x + 2x^2 + 4 < 4 + 8x + 2x^2 + 4 \)
+3. \( 4x^2 + 8x + 4 < 2x^2 + 8x + 8 \)
+4. \( 4x^2 + 8x + 4 < 2(x^2 + 4x + 4) \)
+5. \( \frac{4x^2 + 8x + 4}{x^2 + 4x + 4} < 2 \)
+
+Therefore, \( \left( \frac{2x + 2}{x + 2} \right)^2 < 2 \).
+
+Consequently, for all \( x \in X \), there exists some \( y \in X \) such that \( y = \frac{2x + 2}{x + 2} \) and \( x < y < z \), where \( z^2 = 2 \) and \( z > 0 \). Thus, the set \( X \) has no last point.
+
+Similarly, for all \( x \in X \), there exists some \( a \in X \) such that \( a = \frac{-2x + 2}{x + 2} \) where \( x > a > b \), and \( b \) is a negative number satisfying \( b^2 = 2 \). Hence, the set \( X \) also has no first point.

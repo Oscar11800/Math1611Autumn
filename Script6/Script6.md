@@ -24,3 +24,13 @@ Use *Theorem 5.18* which means there is no last point.
 *Axiom 1: A continuum is a nonempty.*
 *Axiom 2: A continuum has an ordering $<$.*
 *Axiom 3: A continuum has no first or last point.*
+
+
+
+**Exercise 6.6: A nonempty subset of R that is bounded above has a supremum.**
+
+
+
+**Exercise 6.7: Show that $R$ satisfies *Axiom 4***
+
+**Lemma 6.9**
