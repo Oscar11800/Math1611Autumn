@@ -72,7 +72,7 @@ Sup $X$ can be proved by *definition 3.3* for the last point in a similar manner
    1. sup $X=3$, since $3$ is the largest number in the union of the two sets.
    2. inf $⁡X= −7$, because it's the smallest number in the combined set and is included in the set $X$.
 
-**Lemma 5.10: Suppose that $X$ is a nonempty subset of $C$ and $s =$ sup $X$ exists. If $p < s$, then there exists an $x ∈ X$ such that $p < x ≤ s$.**
+**Lemma 5.10: Suppose that $X$ is a nonempty sub   set of $C$ and $s =$ sup $X$ exists. If $p < s$, then there exists an $x ∈ X$ such that $p < x ≤ s$.**
 
 Assume that \( X \) is a nonempty subset of \( C \) and that \( s = \sup X \) exists. Let \( p \) be any element in $C$ such that \( p < s \). For the sake of contradiction, suppose that there does not exist an \( x \in X \) such that \( p < x \leq s\). This means that for all \( x \in X \), \( x \leq p \) or \( x > s \). However, \( x > s \) is impossible by *Definition 5.5* because \( s \) is the least upper bound of \( X \).
 
